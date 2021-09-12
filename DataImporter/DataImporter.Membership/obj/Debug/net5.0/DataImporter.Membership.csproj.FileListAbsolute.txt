@@ -9,3 +9,15 @@ G:\ASP.NET\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Me
 G:\ASP.NET\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.dll
 G:\ASP.NET\DataImporter\DataImporter.Membership\obj\Debug\net5.0\ref\DataImporter.Membership.dll
 G:\ASP.NET\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.pdb
+G:\Final\DataImporter\DataImporter.Membership\bin\Debug\net5.0\DataImporter.Membership.deps.json
+G:\Final\DataImporter\DataImporter.Membership\bin\Debug\net5.0\DataImporter.Membership.dll
+G:\Final\DataImporter\DataImporter.Membership\bin\Debug\net5.0\ref\DataImporter.Membership.dll
+G:\Final\DataImporter\DataImporter.Membership\bin\Debug\net5.0\DataImporter.Membership.pdb
+G:\Final\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.csprojAssemblyReference.cache
+G:\Final\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.GeneratedMSBuildEditorConfig.editorconfig
+G:\Final\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.AssemblyInfoInputs.cache
+G:\Final\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.AssemblyInfo.cs
+G:\Final\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.csproj.CoreCompileInputs.cache
+G:\Final\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.dll
+G:\Final\DataImporter\DataImporter.Membership\obj\Debug\net5.0\ref\DataImporter.Membership.dll
+G:\Final\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.pdb

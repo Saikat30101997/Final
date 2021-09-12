@@ -89,7 +89,7 @@ namespace DataImporter.Web
                 options.SlidingExpiration = true;
             });
 
-            services.Configure<IdentityOptions>(options => //password config er jonno 
+            services.Configure<IdentityOptions>(options => 
             {
                 // Password settings.
                 options.Password.RequireDigit = false;

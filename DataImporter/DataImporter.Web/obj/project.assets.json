@@ -8274,11 +8274,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\ASP.NET\\DataImporter\\DataImporter.Web\\DataImporter.Web.csproj",
+      "projectUniqueName": "G:\\Final\\DataImporter\\DataImporter.Web\\DataImporter.Web.csproj",
       "projectName": "DataImporter.Web",
-      "projectPath": "G:\\ASP.NET\\DataImporter\\DataImporter.Web\\DataImporter.Web.csproj",
+      "projectPath": "G:\\Final\\DataImporter\\DataImporter.Web\\DataImporter.Web.csproj",
       "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
-      "outputPath": "G:\\ASP.NET\\DataImporter\\DataImporter.Web\\obj\\",
+      "outputPath": "G:\\Final\\DataImporter\\DataImporter.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8295,8 +8295,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "G:\\ASP.NET\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj": {
-              "projectPath": "G:\\ASP.NET\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj"
+            "G:\\Final\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj": {
+              "projectPath": "G:\\Final\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj"
             }
           }
         }
