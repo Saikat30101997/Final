@@ -1,0 +1,32 @@
+﻿@model DataImporter.Web.Models.ExportJobModel
+@{
+    ViewData["Title"] = "ExportJob";
+}
+
+@section Styles
+{
+    <link href="~/css/Exports.css" rel="stylesheet" />
+}
+
+<section class="content-header">
+</section>
+
+<div class="card card-body">
+    <form class="row g-3" method="post" asp-antiforgery="true" asp-controller="Dashboard" asp-action="ExportJob">
+        <div class="col-md-3">
+            <label asp-for="DateFrom" class="form-label">Date From</label>
+            <input type="text" class="form-control" id="datefrom" asp-for="DateFrom">
+        </div>
+        <div class="col-md-3">
+            <label asp-for="DateTo" class="form-label">Date To</label>
+            <input type="text" class="form-control" id="dateTo" asp-for="DateTo">
+        </div>
+        <div class="col align-self-end">
+            <button type="submit" class="btn btn-info float-sm-right">Search</button>
+        </div>
+    </form>
+</div>
+
+
+
+

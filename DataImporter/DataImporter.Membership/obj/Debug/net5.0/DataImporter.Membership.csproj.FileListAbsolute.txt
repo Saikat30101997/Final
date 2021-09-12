@@ -1,0 +1,11 @@
+G:\ASP.NET\DataImporter\DataImporter.Membership\bin\Debug\net5.0\DataImporter.Membership.deps.json
+G:\ASP.NET\DataImporter\DataImporter.Membership\bin\Debug\net5.0\DataImporter.Membership.dll
+G:\ASP.NET\DataImporter\DataImporter.Membership\bin\Debug\net5.0\ref\DataImporter.Membership.dll
+G:\ASP.NET\DataImporter\DataImporter.Membership\bin\Debug\net5.0\DataImporter.Membership.pdb
+G:\ASP.NET\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.GeneratedMSBuildEditorConfig.editorconfig
+G:\ASP.NET\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.AssemblyInfoInputs.cache
+G:\ASP.NET\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.AssemblyInfo.cs
+G:\ASP.NET\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.csproj.CoreCompileInputs.cache
+G:\ASP.NET\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.dll
+G:\ASP.NET\DataImporter\DataImporter.Membership\obj\Debug\net5.0\ref\DataImporter.Membership.dll
+G:\ASP.NET\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.pdb

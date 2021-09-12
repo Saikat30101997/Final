@@ -1,0 +1,47 @@
+﻿@model DataImporter.Web.Models.ImportContactModel
+@{
+    ViewData["Title"] = "ImportContact";
+}
+
+<section class="content-header">
+
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-success">
+                    <div class="card-header">
+                        <h3 class="card-title">Import Contacts</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form>
+                        <div class="card-body">
+                          
+                            <div class="form-group">
+                                <label for="exampleInputFile">Upload Excel</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="exampleInputFile" asp-for="ExcelFile">
+                                        <label class="custom-file-label" for="exampleInputFile" asp-for="ExcelFile">Choose file</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Upload</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+       </div>
+    </div>
+</section>
+
+
+
+

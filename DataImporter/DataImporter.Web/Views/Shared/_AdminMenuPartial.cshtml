@@ -1,0 +1,63 @@
+﻿<div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="info">
+            <h3 style="color:aqua">Data Importer</h3>
+        </div>
+    </div>
+
+    <!-- SidebarSearch Form -->
+    <div class="form-inline">
+      
+    </div>
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+                 with font-awesome or any other icon font library -->
+            <li class="nav-item menu-open">
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a asp-controller="Dashboard" asp-action="Create" class="nav-link active">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Groups</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./index2.html" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Custom Fields</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Dashboard" asp-action="Contacts" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Contacts</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Dashboard" asp-action="ImportContact" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Import Contact</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Dashboard" asp-action="ImportJob" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Imports</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Dashboard" asp-action="ExportJob" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Exports</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+         
+         </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+</div>
