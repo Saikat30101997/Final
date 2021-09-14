@@ -1,4 +1,5 @@
 ﻿
+using DataImporter.Common.Utilities;
 using DataImporter.Membership.Entities;
 using DataImporter.Web.Models;
 using DataImporter.Web.Models.Account;
@@ -26,13 +27,15 @@ namespace DataImporter.Web.Controllers
         private readonly RoleManager<Role> _roleManager;
         private readonly IEmailSender _emailSender;
         private readonly IGooglereCaptchaService _googlereCaptchaService;
+        private readonly IEmailService _emailService;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             ILogger<AccountController> logger,
             IEmailSender emailSender, RoleManager<Role> roleManager, 
-            IGooglereCaptchaService googlereCaptchaService)
+            IGooglereCaptchaService googlereCaptchaService,
+            IEmailService emailService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -40,6 +43,7 @@ namespace DataImporter.Web.Controllers
             _emailSender = emailSender;
             _roleManager = roleManager;
             _googlereCaptchaService = googlereCaptchaService;
+            _emailService = emailService;
         }
      
         public async Task<IActionResult> Register(string returnUrl = null)
@@ -74,12 +78,12 @@ namespace DataImporter.Web.Controllers
                     var callbackUrl = Url.ActionLink(
                         "/Account/ConfirmEmail",
                         //   pageHandler: null,
-                        values: new { area = "Identity", userId = user.Id, code = code, returnUrl = model.ReturnUrl },
+                        values: new { userId = user.Id, code = code, returnUrl = model.ReturnUrl },
                         protocol: Request.Scheme);
 
                     await _emailSender.SendEmailAsync(model.Email, "Confirm your email",
                         $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
-
+                    _emailService.SendEmail(model.Email, "Confirm your email", $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
                         return RedirectToAction("RegisterConfirmation", "Account", new { email = model.Email, returnUrl = model.ReturnUrl });

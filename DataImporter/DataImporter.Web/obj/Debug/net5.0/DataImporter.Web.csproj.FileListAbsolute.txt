@@ -920,3 +920,8 @@ G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\DataImporter.Web.dll
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\ref\DataImporter.Web.dll
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\DataImporter.Web.pdb
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\DataImporter.Web.genruntimeconfig.cache
+G:\Final\DataImporter\DataImporter.Web\bin\Debug\net5.0\MailKit.dll
+G:\Final\DataImporter\DataImporter.Web\bin\Debug\net5.0\MimeKit.dll
+G:\Final\DataImporter\DataImporter.Web\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+G:\Final\DataImporter\DataImporter.Web\bin\Debug\net5.0\DataImporter.Common.dll
+G:\Final\DataImporter\DataImporter.Web\bin\Debug\net5.0\DataImporter.Common.pdb

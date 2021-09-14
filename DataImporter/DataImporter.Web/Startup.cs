@@ -1,25 +1,19 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using DataImporter.Common;
 using DataImporter.Membership;
 using DataImporter.Membership.Contexts;
 using DataImporter.Membership.Entities;
 using DataImporter.Membership.Services;
-using DataImporter.Web.Data;
-using DataImporter.Web.Models;
 using DataImporter.Web.Models.ReCaptcha;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DataImporter.Web
 {
@@ -47,7 +41,7 @@ namespace DataImporter.Web
             var connectionInfo = GetConnectionStringAndAssemblyName();
             builder.RegisterModule(new MembershipModule(connectionInfo.connectionString
                 , connectionInfo.migrationAssemblyName));
-
+            builder.RegisterModule(new CommonModule());
             builder.RegisterModule(new WebModule());
         }
         private (string connectionString, string migrationAssemblyName) GetConnectionStringAndAssemblyName()
