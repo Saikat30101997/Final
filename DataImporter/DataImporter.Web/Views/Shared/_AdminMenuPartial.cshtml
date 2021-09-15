@@ -15,49 +15,62 @@
     <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
-                 with font-awesome or any other icon font library -->
+    with font-awesome or any other icon font library -->
             <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
+                    <i class="far fa-arrow-alt-circle-right"></i>
+                    <p>
+                        Groups
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a asp-controller="Dashboard" asp-action="Create" class="nav-link active">
+                        <a asp-controller="Dashboard" asp-action="Create" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <p>Groups</p>
+                            <p>Create Groups</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./index2.html" class="nav-link">
+                        <a asp-controller="Dashboard" asp-action="ManageGroup" class="nav-link active">
                             <i class="far fa-circle nav-icon"></i>
+                            <p>Manage Group</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item menu-open">
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="./index2.html" class="nav-link">
+                            <i class="far fa-arrow-alt-circle-right"></i>
                             <p>Custom Fields</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a asp-controller="Dashboard" asp-action="Contacts" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
+                            <i class="far fa-arrow-alt-circle-right"></i>
                             <p>Contacts</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a asp-controller="Dashboard" asp-action="ImportContact" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Import Contact</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a asp-controller="Dashboard" asp-action="ImportJob" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
+                            <i class="far fa-arrow-alt-circle-right"></i>
                             <p>Imports</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a asp-controller="Dashboard" asp-action="ExportJob" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
+                            <i class="far fa-arrow-alt-circle-right"></i>
                             <p>Exports</p>
                         </a>
                     </li>
                 </ul>
             </li>
-         
-         </ul>
+
+        </ul>
+            <!-- Add icons to the links using the .nav-icon class-->
+          
     </nav>
     <!-- /.sidebar-menu -->
 </div>

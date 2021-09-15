@@ -28,5 +28,21 @@ namespace DataImporter.Membership.Services
                 });
             _membershipUnitOfWork.Save();
         }
+
+        public List<Group> GetGroup()
+        {
+            var groupEntity = _membershipUnitOfWork.Groups.GetAll();
+            var groups =new  List<Group>();
+            foreach (var group in groupEntity)
+            {
+                var gr = new Group()
+                {
+                    GroupName = group.GroupName
+                };
+                groups.Add(gr);
+            }
+            return groups;
+           
+        }
     }
 }

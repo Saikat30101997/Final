@@ -5,12 +5,15 @@
 @section Styles
 {
     <link href="~/css/Contacts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
 }
 @section Scripts
 {
+    <script src="/admin/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script>
         $(document).ready(function () {
-            $.get('Dashboard/GroupName', function (data) {
+            $.get('GroupName', function (data) {
                 console.log(data);
                 $.each(data, function (index, value) {
                     $('<option>').val(value).text(value).appendTo("#groupSelect");
@@ -18,6 +21,17 @@
                 })
             })
         })
+        $(function () {
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
     </script>
 }
 
@@ -37,8 +51,57 @@
             <input type="text" class="form-control" id="dateTo" asp-for="DateTo">
         </div>
         <div class="col align-self-end">
-            <button type="submit" class="btn btn-info float-sm-right" >Search</button>
+            <button type="submit" class="btn btn-info float-sm-right">Search</button>
         </div>
     </form>
 </div>
-
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Contacts</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Fees</th>
+                                    <th>Start Date</th>
+                                    <th style="width:150px">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Asp.net</td>
+                                    <td>
+                                        30000
+                                    </td>
+                                    <td>20/10/2021</td>
+                                    <td></td>
+                                </tr>
+                            <tfoot>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Fees</th>
+                                    <th>Start Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+<!-- /.content-wrapper -->

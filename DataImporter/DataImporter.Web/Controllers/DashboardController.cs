@@ -54,7 +54,8 @@ namespace DataImporter.Web.Controllers
         public JsonResult GroupName()
         {
             var contactModel = new ContactModel();
-            return Json(contactModel.GroupList);
+            var data = contactModel.GetGroups();
+            return Json(data);
         }
 
        

@@ -10,5 +10,6 @@ namespace DataImporter.Membership.Services
     public interface IGroupService
     {
         void Create(Group group);
+        List<Group> GetGroup();
     }
 }
