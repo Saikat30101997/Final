@@ -1,17 +1,15 @@
-﻿using DataImporter.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataImporter.Membership.Entities
+namespace DataImporter.Membership.BusinessObjects
 {
-    public class Group : IEntity<int>
+    public class Group
     {
         public int Id { get; set; }
         public string GroupName { get; set; }
         public Guid UserId { get; set; }
-        public ApplicationUser User { get; set; }
     }
 }

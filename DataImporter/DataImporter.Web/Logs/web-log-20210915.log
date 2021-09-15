@@ -15,3 +15,12 @@
 2021-09-15 00:37:38.220 +06:00 [INF] Application Starting up
 2021-09-15 00:38:04.665 +06:00 [INF] User logged in.
 2021-09-15 00:42:07.192 +06:00 [INF] Application Starting up
+2021-09-15 17:51:18.833 +06:00 [INF] Application Starting up
+2021-09-15 17:52:11.532 +06:00 [INF] User logged in.
+2021-09-15 17:52:21.330 +06:00 [ERR] Product Creation Failed
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'string' to 'System.Guid'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at DataImporter.Web.Controllers.DashboardController.Create(CreateImportModel model) in G:\Final\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 42
+2021-09-15 17:54:44.627 +06:00 [INF] Application Starting up
+2021-09-15 17:57:24.404 +06:00 [INF] Application Starting up

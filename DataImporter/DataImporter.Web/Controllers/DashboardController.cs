@@ -38,11 +38,14 @@ namespace DataImporter.Web.Controllers
         {
             try
             {
-                model.Create();
+                ViewBag.UserId = _userManager.GetUserId(HttpContext.User);
+                string s = ViewBag.UserId;
+                Guid Id = Guid.Parse(s);
+                model.Create(Id);
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError(string.Empty, "Failed to create Product");
+                ModelState.AddModelError(string.Empty, "Failed to create Group");
                 _logger.LogError(ex, "Product Creation Failed");
             }
             return View(model);
@@ -57,8 +60,7 @@ namespace DataImporter.Web.Controllers
        
         public IActionResult Contacts()
         {
-            ViewBag.UserId = _userManager.GetUserId(HttpContext.User);
-            string s = ViewBag.UserId;
+            
             return View();
         }
         public IActionResult ImportContact()

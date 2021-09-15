@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Autofac;
+using DataImporter.Membership.BusinessObjects;
+using DataImporter.Membership.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,11 +12,24 @@ namespace DataImporter.Web.Models
     {
         public string Name { get; set; }
 
-     
-        internal void Create()
+        private readonly IGroupService _groupService;
+        public CreateImportModel()
         {
-            var contactModel = new ContactModel();
-            //contactModel.GroupList.Add(Name);
+            _groupService = Startup.AutofacContainer.Resolve<IGroupService>();
+        }
+        public CreateImportModel(IGroupService groupService)
+        {
+            _groupService = groupService;
+        }
+        internal void Create(Guid id)
+        {
+            var group = new Group
+            {
+                GroupName = Name,
+                UserId = id
+        };
+
+            _groupService.Create(group);
         }
     }
 }
