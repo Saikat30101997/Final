@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xJrL05qYam9O50irW0rnegZqXqYV1ZD6eq6kdt1QxyF8t3n+CSmufYfxn/KZ0OPU2YTyLxhj9V4MErTDjNeZLQ==",
+  "dgSpecHash": "WPouW+OCRmduNOjMkjaWRkVfSXrpxg4EXJzUCs/I8uBLrMMFdSOm7E3XGeiRAQOy3cjDJrxGDX7TFtHuWI4qQA==",
   "success": true,
   "projectFilePath": "G:\\Final\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj",
   "expectedPackageFiles": [
@@ -66,6 +66,7 @@
     "C:\\Users\\Saikat\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saikat\\.nuget\\packages\\system.linq.dynamic.core\\1.2.12\\system.linq.dynamic.core.1.2.12.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",

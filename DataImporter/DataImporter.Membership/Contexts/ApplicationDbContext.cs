@@ -39,10 +39,9 @@ namespace DataImporter.Membership.Contexts
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
-           
-
             base.OnModelCreating(modelBuilder);
         }
+
+        public DbSet<Group> Groups { get; set; }
     }
 }

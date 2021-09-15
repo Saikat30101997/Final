@@ -21,3 +21,6 @@ G:\Final\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Memb
 G:\Final\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.dll
 G:\Final\DataImporter\DataImporter.Membership\obj\Debug\net5.0\ref\DataImporter.Membership.dll
 G:\Final\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.pdb
+G:\Final\DataImporter\DataImporter.Membership\bin\Debug\net5.0\DataImporter.Data.dll
+G:\Final\DataImporter\DataImporter.Membership\bin\Debug\net5.0\DataImporter.Data.pdb
+G:\Final\DataImporter\DataImporter.Membership\obj\Debug\net5.0\DataImporter.Membership.csproj.CopyComplete

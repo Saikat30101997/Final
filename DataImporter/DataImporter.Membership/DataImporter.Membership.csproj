@@ -17,4 +17,8 @@
     <Folder Include="BusinessObjects\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataImporter.Data\DataImporter.Data.csproj" />
+  </ItemGroup>
+
 </Project>

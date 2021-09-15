@@ -1,5 +1,4 @@
-﻿
-using DataImporter.Common.Utilities;
+﻿using DataImporter.Common.Utilities;
 using DataImporter.Membership.Entities;
 using DataImporter.Web.Models;
 using DataImporter.Web.Models.Account;
@@ -11,8 +10,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;

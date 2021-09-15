@@ -162,3 +162,6 @@ MailKit.Security.AuthenticationException: 535: 5.7.8 Username and Password not a
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
 2021-09-14 13:05:06.992 +06:00 [INF] Application Starting up
 2021-09-14 13:05:47.612 +06:00 [INF] User created a new account with password.
+2021-09-14 17:51:11.542 +06:00 [INF] Application Starting up
+2021-09-14 17:52:23.987 +06:00 [INF] User logged in.
+2021-09-14 17:54:54.635 +06:00 [INF] Application Starting up

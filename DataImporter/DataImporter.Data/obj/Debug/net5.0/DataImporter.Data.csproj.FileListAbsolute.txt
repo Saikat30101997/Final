@@ -1,0 +1,12 @@
+G:\Final\DataImporter\DataImporter.Data\bin\Debug\net5.0\DataImporter.Data.deps.json
+G:\Final\DataImporter\DataImporter.Data\bin\Debug\net5.0\DataImporter.Data.dll
+G:\Final\DataImporter\DataImporter.Data\bin\Debug\net5.0\ref\DataImporter.Data.dll
+G:\Final\DataImporter\DataImporter.Data\bin\Debug\net5.0\DataImporter.Data.pdb
+G:\Final\DataImporter\DataImporter.Data\obj\Debug\net5.0\DataImporter.Data.csprojAssemblyReference.cache
+G:\Final\DataImporter\DataImporter.Data\obj\Debug\net5.0\DataImporter.Data.GeneratedMSBuildEditorConfig.editorconfig
+G:\Final\DataImporter\DataImporter.Data\obj\Debug\net5.0\DataImporter.Data.AssemblyInfoInputs.cache
+G:\Final\DataImporter\DataImporter.Data\obj\Debug\net5.0\DataImporter.Data.AssemblyInfo.cs
+G:\Final\DataImporter\DataImporter.Data\obj\Debug\net5.0\DataImporter.Data.csproj.CoreCompileInputs.cache
+G:\Final\DataImporter\DataImporter.Data\obj\Debug\net5.0\DataImporter.Data.dll
+G:\Final\DataImporter\DataImporter.Data\obj\Debug\net5.0\ref\DataImporter.Data.dll
+G:\Final\DataImporter\DataImporter.Data\obj\Debug\net5.0\DataImporter.Data.pdb

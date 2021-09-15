@@ -10,5 +10,7 @@ namespace DataImporter.Web.Models
         public string GroupName { get; set; }
         public DateTime DateFrom { get; set; }
         public DateTime DateTo { get; set; }
+
+        public List<string> GroupList { get; set; }
     }
 }
