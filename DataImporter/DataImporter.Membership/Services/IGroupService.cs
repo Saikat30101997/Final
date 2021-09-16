@@ -11,5 +11,7 @@ namespace DataImporter.Membership.Services
     {
         void Create(Group group);
         List<Group> GetGroup();
+        (IList<Group>records,int total,int totalDisplay) GetGroups(int pageIndex,
+            int pageSize, string searchText, string sortText);
     }
 }

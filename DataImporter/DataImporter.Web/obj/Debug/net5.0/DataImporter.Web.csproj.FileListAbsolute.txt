@@ -928,3 +928,5 @@ G:\Final\DataImporter\DataImporter.Web\bin\Debug\net5.0\DataImporter.Common.pdb
 G:\Final\DataImporter\DataImporter.Web\bin\Debug\net5.0\System.Linq.Dynamic.Core.dll
 G:\Final\DataImporter\DataImporter.Web\bin\Debug\net5.0\DataImporter.Data.dll
 G:\Final\DataImporter\DataImporter.Web\bin\Debug\net5.0\DataImporter.Data.pdb
+G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\ManageGroup.cshtml.g.cs
+G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Shared\_DeletePopUpPartial.cshtml.g.cs

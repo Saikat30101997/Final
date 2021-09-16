@@ -27,6 +27,20 @@ namespace DataImporter.Web.Controllers
             
             return View();
         }
+
+        public IActionResult ManageGroup()
+        {
+            var model = new GroupListModel();
+            return View(model);
+        }
+
+        public JsonResult GetGroupData()
+        {
+            var tableModel = new DataTablesAjaxRequestModel(Request);
+            var model = new GroupListModel();
+            var data = model.GetGroups(tableModel);
+            return Json(data);
+        }
        
         public IActionResult Create()
         {

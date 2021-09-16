@@ -1,4 +1,5 @@
-﻿using DataImporter.Membership.BusinessObjects;
+﻿using AutoMapper;
+using DataImporter.Membership.BusinessObjects;
 using DataImporter.Membership.UnitOfWorks;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,11 @@ namespace DataImporter.Membership.Services
     public class GroupService : IGroupService
     {
         private readonly IMembershipUnitOfWork _membershipUnitOfWork;
-        public GroupService(IMembershipUnitOfWork membershipUnitOfWork)
+        private readonly IMapper _mapper;
+        public GroupService(IMembershipUnitOfWork membershipUnitOfWork,IMapper mapper)
         {
             _membershipUnitOfWork = membershipUnitOfWork;
+            _mapper = mapper;
         }
 
         public void Create(Group group)
@@ -43,6 +46,20 @@ namespace DataImporter.Membership.Services
             }
             return groups;
            
+        }
+
+        public (IList<Group> records, int total, int totalDisplay) GetGroups(int pageIndex, 
+            int pageSize, string searchText, string sortText)
+        {
+            var groupData = _membershipUnitOfWork.Groups.GetDynamic(string.IsNullOrWhiteSpace(searchText) ? 
+                null : x => x.GroupName.Contains(searchText), sortText, 
+                string.Empty, pageIndex, pageSize);
+
+            var resultData = (from grp in groupData.data
+                              select _mapper.Map<Group>(grp)).ToList();
+
+
+            return (resultData, groupData.total, groupData.totalDisplay);
         }
     }
 }
