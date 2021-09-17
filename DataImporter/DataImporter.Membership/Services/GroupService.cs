@@ -48,14 +48,14 @@ namespace DataImporter.Membership.Services
            
         }
 
-        public (IList<Group> records, int total, int totalDisplay) GetGroups(int pageIndex, 
+        public (IList<Group> records, int total, int totalDisplay) GetGroups(Guid id,int pageIndex, 
             int pageSize, string searchText, string sortText)
         {
             var groupData = _membershipUnitOfWork.Groups.GetDynamic(string.IsNullOrWhiteSpace(searchText) ? 
                 null : x => x.GroupName.Contains(searchText), sortText, 
                 string.Empty, pageIndex, pageSize);
 
-            var resultData = (from grp in groupData.data
+            var resultData = (from grp in groupData.data where grp.UserId==id
                               select _mapper.Map<Group>(grp)).ToList();
 
 

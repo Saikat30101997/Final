@@ -27,6 +27,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="wwwroot\EXCELS\" />
 	  <Folder Include="Profiles\" />
 	</ItemGroup>
 

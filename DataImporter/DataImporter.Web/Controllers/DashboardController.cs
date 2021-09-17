@@ -3,6 +3,7 @@ using DataImporter.Web.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -36,15 +37,17 @@ namespace DataImporter.Web.Controllers
 
         public JsonResult GetGroupData()
         {
+            ViewBag.UserId = _userManager.GetUserId(HttpContext.User);
+            string s = ViewBag.UserId;
+            Guid Id = Guid.Parse(s);
             var tableModel = new DataTablesAjaxRequestModel(Request);
             var model = new GroupListModel();
-            var data = model.GetGroups(tableModel);
+            var data = model.GetGroups(tableModel,Id);
             return Json(data);
         }
        
         public IActionResult Create()
         {
-           
             return View();
         }
         [HttpPost,ValidateAntiForgeryToken]
@@ -60,7 +63,7 @@ namespace DataImporter.Web.Controllers
             catch (Exception ex)
             {
                 ModelState.AddModelError(string.Empty, "Failed to create Group");
-                _logger.LogError(ex, "Product Creation Failed");
+                _logger.LogError(ex, "Group Creation Failed");
             }
             return View(model);
         }
@@ -75,12 +78,34 @@ namespace DataImporter.Web.Controllers
        
         public IActionResult Contacts()
         {
-            
+            var contactModel = new ContactModel();
+            var data = contactModel.GetGroups();
+            ViewBag.Groups = new SelectList(data, "Value", "Text");
             return View();
         }
         public IActionResult ImportContact()
         {
             return View();
+        }
+        [HttpPost,ValidateAntiForgeryToken]
+        public IActionResult ImportContact(ImportContactModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                try
+                {
+                    ViewBag.UserId = _userManager.GetUserId(HttpContext.User);
+                    string s = ViewBag.UserId;
+                    Guid Id = Guid.Parse(s);
+                    model.Create(model.Id,Id);
+                }
+                catch(Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Failed to create Excel");
+                    _logger.LogError(ex, "Excel Creation Failed");
+                }
+            }
+            return View(model);
         }
         public IActionResult ImportJob()
         {
