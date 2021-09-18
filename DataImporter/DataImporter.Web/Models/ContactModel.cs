@@ -26,7 +26,7 @@ namespace DataImporter.Web.Models
         }
         public List<Group> GetGroups()
         {
-            var group = _groupService.GetGroup();
+            var group = _groupService.GetGroups();
             return group;
   
         }

@@ -1,0 +1,27 @@
+2021-09-19 00:06:49.331 +06:00 [INF] Application Starting up
+2021-09-19 00:07:50.166 +06:00 [INF] User logged in.
+2021-09-19 00:09:35.971 +06:00 [INF] Application Starting up
+2021-09-19 00:09:56.900 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+DataImporter.Web.Controllers.DashboardController.GroupEdit (DataImporter.Web)
+DataImporter.Web.Controllers.DashboardController.GroupEdit (DataImporter.Web)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-19 00:10:31.331 +06:00 [INF] Application Starting up
+2021-09-19 00:11:10.520 +06:00 [ERR] Excel Creation Failed
+System.InvalidOperationException: Group is not updated
+   at DataImporter.Membership.Services.GroupService.UpdateGroupName(Group group) in G:\Final\DataImporter\DataImporter.Membership\Services\GroupService.cs:line 87
+   at DataImporter.Web.Models.EditGroupModel.Update() in G:\Final\DataImporter\DataImporter.Web\Models\EditGroupModel.cs:line 46
+   at DataImporter.Web.Controllers.DashboardController.GroupEdit(EditGroupModel model) in G:\Final\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 123
+2021-09-19 00:14:16.350 +06:00 [INF] Application Starting up
+2021-09-19 00:16:50.739 +06:00 [INF] Application Starting up
+2021-09-19 00:20:05.595 +06:00 [INF] Application Starting up

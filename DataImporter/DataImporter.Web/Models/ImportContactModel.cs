@@ -1,4 +1,6 @@
 ﻿using Autofac;
+using DataImporter.Membership.BusinessObjects;
+using DataImporter.Membership.Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System;
@@ -16,14 +18,18 @@ namespace DataImporter.Web.Models
         public IFormFile ExcelFile { get; set; }
 
         private readonly IWebHostEnvironment _hostEnvironment;
+        private readonly IGroupService _groupService;
         
         public ImportContactModel()
         {
+            _groupService = Startup.AutofacContainer.Resolve<IGroupService>();
             _hostEnvironment = Startup.AutofacContainer.Resolve<IWebHostEnvironment>();
         }
-        public ImportContactModel(IWebHostEnvironment hostEnvironment)
+        public ImportContactModel(IWebHostEnvironment hostEnvironment,
+            IGroupService groupService)
         {
             _hostEnvironment = hostEnvironment;
+            _groupService = groupService;
 
         }
         internal void Create(int id,Guid Id)
@@ -38,5 +44,7 @@ namespace DataImporter.Web.Models
                 ExcelFile.CopyTo(fileStream);
             }
         }
+
+      
     }
 }

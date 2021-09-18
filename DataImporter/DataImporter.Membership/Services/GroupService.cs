@@ -32,7 +32,18 @@ namespace DataImporter.Membership.Services
             _membershipUnitOfWork.Save();
         }
 
-        public List<Group> GetGroup()
+        public Group GetGroup(int id)
+        {
+            var group = _membershipUnitOfWork.Groups.GetById(id);
+            return new Group
+            {
+                Id = group.Id,
+                UserId = group.UserId,
+                GroupName = group.GroupName
+            };
+        }
+
+        public List<Group> GetGroups()
         {
             var groupEntity = _membershipUnitOfWork.Groups.GetAll();
             var groups =new  List<Group>();
@@ -60,6 +71,20 @@ namespace DataImporter.Membership.Services
 
 
             return (resultData, groupData.total, groupData.totalDisplay);
+        }
+
+        public void UpdateGroupName(Group group)
+        {
+            if (group == null)
+                throw new InvalidOperationException("Group is not provided");
+            var groupEntity = _membershipUnitOfWork.Groups.GetById(group.Id);
+            if(groupEntity!=null)
+            {
+                groupEntity.GroupName = group.GroupName;
+                _membershipUnitOfWork.Save();
+            }
+            else
+                throw new InvalidOperationException("Group is not updated");
         }
     }
 }

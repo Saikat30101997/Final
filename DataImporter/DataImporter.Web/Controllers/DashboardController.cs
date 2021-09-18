@@ -107,6 +107,29 @@ namespace DataImporter.Web.Controllers
             }
             return View(model);
         }
+        public IActionResult GroupEdit(int id)
+        {
+            var model = new EditGroupModel();
+            model.LoadModelData(id);
+            return View(model);
+        }
+        [HttpPost,ValidateAntiForgeryToken]
+        public IActionResult GroupEdit(EditGroupModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    model.Update();
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Failed to Edit Group");
+                    _logger.LogError(ex, "Group Creation Failed");
+                }
+            }
+            return View(model);
+        }
         public IActionResult ImportJob()
         {
             return View();

@@ -17,6 +17,7 @@
         <form class="form-horizontal" method="post" asp-controller="Account" asp-action="Login" asp-antiforgery="true">
             <div class="card-body">
                 <div asp-validation-summary="All" class="text-danger"></div>
+                <input type="hidden" asp-for="ReturnUrl" />
                 <div class="form-group row">
                     <label asp-for="Email" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-10">
