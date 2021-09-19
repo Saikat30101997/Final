@@ -105,7 +105,8 @@ namespace DataImporter.Web.Controllers
                     _logger.LogError(ex, "Excel Creation Failed");
                 }
             }
-            return View(model);
+            //  return View(model);
+            return RedirectToAction(nameof(UploadConfirmation));
         }
         public IActionResult GroupEdit(int id)
         {
@@ -128,6 +129,12 @@ namespace DataImporter.Web.Controllers
                     _logger.LogError(ex, "Group Creation Failed");
                 }
             }
+            return View(model);
+        }
+        public IActionResult UploadConfirmation()
+        {
+            var model = new ImportContactModel();
+            model.ExcelValues();
             return View(model);
         }
         public IActionResult ImportJob()
