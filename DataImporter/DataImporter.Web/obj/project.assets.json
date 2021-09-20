@@ -3081,6 +3081,23 @@
           "bin/placeholder/DataImporter.Data.dll": {}
         }
       },
+      "DataImporter.Importer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "Autofac.Extensions.DependencyInjection": "7.1.0",
+          "DataImporter.Data": "1.0.0",
+          "DataImporter.Membership": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7"
+        },
+        "compile": {
+          "bin/placeholder/DataImporter.Importer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataImporter.Importer.dll": {}
+        }
+      },
       "DataImporter.Membership/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -9965,6 +9982,11 @@
       "path": "../DataImporter.Data/DataImporter.Data.csproj",
       "msbuildProject": "../DataImporter.Data/DataImporter.Data.csproj"
     },
+    "DataImporter.Importer/1.0.0": {
+      "type": "project",
+      "path": "../DataImporter.Importer/DataImporter.Importer.csproj",
+      "msbuildProject": "../DataImporter.Importer/DataImporter.Importer.csproj"
+    },
     "DataImporter.Membership/1.0.0": {
       "type": "project",
       "path": "../DataImporter.Membership/DataImporter.Membership.csproj",
@@ -9976,6 +9998,7 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "Autofac.Extensions.DependencyInjection >= 7.1.0",
       "DataImporter.Common >= 1.0.0",
+      "DataImporter.Importer >= 1.0.0",
       "DataImporter.Membership >= 1.0.0",
       "EPPlus >= 5.7.4",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.7",
@@ -10019,6 +10042,9 @@
           "projectReferences": {
             "G:\\Final\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj": {
               "projectPath": "G:\\Final\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj"
+            },
+            "G:\\Final\\DataImporter\\DataImporter.Importer\\DataImporter.Importer.csproj": {
+              "projectPath": "G:\\Final\\DataImporter\\DataImporter.Importer\\DataImporter.Importer.csproj"
             },
             "G:\\Final\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj": {
               "projectPath": "G:\\Final\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj"

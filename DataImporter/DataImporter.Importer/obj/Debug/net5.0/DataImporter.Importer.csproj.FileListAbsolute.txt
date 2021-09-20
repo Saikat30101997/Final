@@ -10,3 +10,8 @@ G:\Final\DataImporter\DataImporter.Importer\obj\Debug\net5.0\DataImporter.Import
 G:\Final\DataImporter\DataImporter.Importer\obj\Debug\net5.0\DataImporter.Importer.dll
 G:\Final\DataImporter\DataImporter.Importer\obj\Debug\net5.0\ref\DataImporter.Importer.dll
 G:\Final\DataImporter\DataImporter.Importer\obj\Debug\net5.0\DataImporter.Importer.pdb
+G:\Final\DataImporter\DataImporter.Importer\bin\Debug\net5.0\DataImporter.Data.dll
+G:\Final\DataImporter\DataImporter.Importer\bin\Debug\net5.0\DataImporter.Membership.dll
+G:\Final\DataImporter\DataImporter.Importer\bin\Debug\net5.0\DataImporter.Data.pdb
+G:\Final\DataImporter\DataImporter.Importer\bin\Debug\net5.0\DataImporter.Membership.pdb
+G:\Final\DataImporter\DataImporter.Importer\obj\Debug\net5.0\DataImporter.Importer.csproj.CopyComplete

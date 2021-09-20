@@ -21,6 +21,8 @@ namespace DataImporter.Common
             .WithParameter("useSSL", true)
             .WithParameter("from", "saikat.cse1997@gmail.com")
             .InstancePerLifetimeScope();
+            builder.RegisterType<FileSearching>().As<IFileSearching>()
+                .InstancePerLifetimeScope();
             base.Load(builder);
         }
     }

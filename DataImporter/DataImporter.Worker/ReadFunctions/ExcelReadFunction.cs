@@ -7,7 +7,7 @@ namespace DataImporter.Worker.ReadFunctions
     {
         public void ReadExcelData()
         {
-            string path = $"G:/Final/DataImporter/DataImporter.Web/wwwroot/EXCELS";
+            string path = $"G:/Final/DataImporter/DataImporter.Web/wwwroot/Confirm";
             string s = null;
             DirectoryInfo d = new DirectoryInfo(path);
             FileInfo[] Files = d.GetFiles("*.xlsx");

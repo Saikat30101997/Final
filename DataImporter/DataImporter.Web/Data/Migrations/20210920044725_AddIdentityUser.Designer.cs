@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataImporter.Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210908082053_Addfirstnameandlastname")]
-    partial class Addfirstnameandlastname
+    [Migration("20210920044725_AddIdentityUser")]
+    partial class AddIdentityUser
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EO = DataImporter.Membership.Entities;
-using BO = DataImporter.Membership.BusinessObjects;
+using EO = DataImporter.Importer.Entities;
+using BO = DataImporter.Importer.BusinessObjects;
 
-namespace DataImporter.Membership.Profiles
+namespace DataImporter.Importer.Profiles
 {
     public class DataImporterProfile : Profile
     {

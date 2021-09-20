@@ -36,6 +36,7 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
           "Autofac.Extensions.DependencyInjection": "7.1.0",
           "DataImporter.Common": "1.0.0",
+          "DataImporter.Importer": "1.0.0",
           "DataImporter.Membership": "1.0.0",
           "EPPlus": "5.7.4",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.7",
@@ -2598,6 +2599,21 @@
         },
         "compile": {
           "DataImporter.Data.dll": {}
+        }
+      },
+      "DataImporter.Importer/1.0.0": {
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "Autofac.Extensions.DependencyInjection": "7.1.0",
+          "DataImporter.Data": "1.0.0",
+          "DataImporter.Membership": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7"
+        },
+        "runtime": {
+          "DataImporter.Importer.dll": {}
+        },
+        "compile": {
+          "DataImporter.Importer.dll": {}
         }
       },
       "DataImporter.Membership/1.0.0": {
@@ -5646,6 +5662,11 @@
       "sha512": ""
     },
     "DataImporter.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataImporter.Importer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

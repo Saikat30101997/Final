@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DataImporter.Web.Data.Migrations
 {
-    public partial class Addfirstnameandlastname : Migration
+    public partial class AddIdentityUser : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(name: "FK_AspNetUserTokens_AspNetUsers_UserId",
-                  table: "AspNetUserTokens");
+               table: "AspNetUserTokens");
             migrationBuilder.DropForeignKey(name: "FK_AspNetUserRoles_AspNetUsers_UserId",
                 table: "AspNetUserRoles");
             migrationBuilder.DropForeignKey(name: "FK_AspNetUserLogins_AspNetUsers_UserId",

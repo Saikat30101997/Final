@@ -1,9 +1,6 @@
 ﻿using Autofac;
 using DataImporter.Membership.Contexts;
-using DataImporter.Membership.Repositories;
-using DataImporter.Membership.Services;
-using DataImporter.Membership.UnitOfWorks;
-using System;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,12 +31,7 @@ namespace DataImporter.Membership
                 .WithParameter("migrationAssemblyName", _migrationAssemblyName)
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<GroupRepository>().As<IGroupRepository>()
-                .InstancePerLifetimeScope();
-            builder.RegisterType<MembershipUnitOfWork>().As<IMembershipUnitOfWork>()
-                .InstancePerLifetimeScope();
-            builder.RegisterType<GroupService>().As<IGroupService>()
-                .InstancePerLifetimeScope();
+         
             base.Load(builder);
         }
     }

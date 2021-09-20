@@ -91,26 +91,6 @@ namespace DataImporter.Web.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("DataImporter.Membership.Entities.Group", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("GroupName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Groups");
-                });
-
             modelBuilder.Entity("DataImporter.Membership.Entities.Role", b =>
                 {
                     b.Property<Guid>("Id")
@@ -240,17 +220,6 @@ namespace DataImporter.Web.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("DataImporter.Membership.Entities.Group", b =>
-                {
-                    b.HasOne("DataImporter.Membership.Entities.ApplicationUser", "User")
-                        .WithMany("Groups")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("DataImporter.Membership.Entities.RoleClaim", b =>
                 {
                     b.HasOne("DataImporter.Membership.Entities.Role", null)
@@ -300,11 +269,6 @@ namespace DataImporter.Web.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("DataImporter.Membership.Entities.ApplicationUser", b =>
-                {
-                    b.Navigation("Groups");
                 });
 #pragma warning restore 612, 618
         }

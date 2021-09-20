@@ -1,6 +1,6 @@
 ﻿using Autofac;
-using DataImporter.Membership.BusinessObjects;
-using DataImporter.Membership.Services;
+using DataImporter.Importer.BusinessObjects;
+using DataImporter.Importer.Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System;

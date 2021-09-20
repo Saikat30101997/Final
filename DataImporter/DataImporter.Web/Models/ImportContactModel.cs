@@ -1,8 +1,10 @@
 ﻿using Autofac;
-using DataImporter.Membership.BusinessObjects;
-using DataImporter.Membership.Services;
+using DataImporter.Common.Utilities;
+using DataImporter.Importer.BusinessObjects;
+using DataImporter.Importer.Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
@@ -14,6 +16,7 @@ namespace DataImporter.Web.Models
 {
     public class ImportContactModel
     {
+        
         public int Id { get; set; }
         public string ExcelFileName { get; set; }
         public IFormFile ExcelFile { get; set; }
@@ -24,18 +27,22 @@ namespace DataImporter.Web.Models
 
         private readonly IWebHostEnvironment _hostEnvironment;
         private readonly IGroupService _groupService;
+        private readonly IFileSearching _fileSearching;
+       
         
         public ImportContactModel()
         {
             _groupService = Startup.AutofacContainer.Resolve<IGroupService>();
             _hostEnvironment = Startup.AutofacContainer.Resolve<IWebHostEnvironment>();
+            _fileSearching = Startup.AutofacContainer.Resolve<IFileSearching>();
         }
         public ImportContactModel(IWebHostEnvironment hostEnvironment,
-            IGroupService groupService)
+            IGroupService groupService,
+            IFileSearching fileSearching)
         {
             _hostEnvironment = hostEnvironment;
             _groupService = groupService;
-
+            _fileSearching = fileSearching;
         }
         internal void Create(int id,Guid Id)
         {
@@ -54,9 +61,8 @@ namespace DataImporter.Web.Models
         {
             
             string path = $"G:/Final/DataImporter/DataImporter.Web/wwwroot/EXCELS";
+            var Files = _fileSearching.GetExcelFiles(path);
             string s = null;
-            DirectoryInfo d = new DirectoryInfo(path);
-            FileInfo[] Files = d.GetFiles("*.xlsx");
             foreach (var file in Files)
             {
                 s = file.FullName;
@@ -70,10 +76,9 @@ namespace DataImporter.Web.Models
                 using (ExcelPackage package = new ExcelPackage(existingFile))
                 {
                     CountValue = 1;
-                    //get the first worksheet in the workbook
                     ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
-                    int colCount = worksheet.Dimension.End.Column;  //get Column Count
-                    int rowCount = worksheet.Dimension.End.Row;     //get row count
+                    int colCount = worksheet.Dimension.End.Column; 
+                    int rowCount = worksheet.Dimension.End.Row;     
                     for(int col=1;col<=colCount;col++)
                     {
                         listCol.Add(worksheet.Cells[1, col].Value?.ToString().Trim());
@@ -92,10 +97,34 @@ namespace DataImporter.Web.Models
                 }
                 Values = lists;
             }
+        }
+        internal void Upload()
+        {
+            string path = $"G:/Final/DataImporter/DataImporter.Web/wwwroot/EXCELS";
+            string s = null;
+            var Files = _fileSearching.GetExcelFiles(path);
+            foreach (var item in Files)
+            {
+                s = item.FullName;
+                string destination = $"G:/Final/DataImporter/DataImporter.Web/wwwroot/Confirm";
+                string fulldest = destination +"/"+Path.GetFileNameWithoutExtension(s)+".xlsx";
+                File.Move(s, fulldest);
+            }
+        }
 
-          
-
-            
+        internal void Delete()
+        {
+            string path = $"G:/Final/DataImporter/DataImporter.Web/wwwroot/EXCELS";
+            string s = null;
+            var Files = _fileSearching.GetExcelFiles(path);
+            foreach (var file in Files)
+            {
+                s = file.FullName;
+                if(File.Exists(s))
+                {
+                    file.Delete();
+                }
+            }
         }
     }
 }

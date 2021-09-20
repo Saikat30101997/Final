@@ -11,10 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Services\" />
-    <Folder Include="UnitOfWorks\" />
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\DataImporter.Data\DataImporter.Data.csproj" />
+    <ProjectReference Include="..\DataImporter.Membership\DataImporter.Membership.csproj" />
   </ItemGroup>
 
 </Project>

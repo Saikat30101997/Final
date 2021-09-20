@@ -66,6 +66,7 @@ namespace DataImporter.Web.Controllers
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await _userManager.CreateAsync(user, model.Password);
+                await _userManager.AddClaimAsync(user, new System.Security.Claims.Claim("access_permission", "true"));
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
@@ -78,8 +79,6 @@ namespace DataImporter.Web.Controllers
                         values: new { userId = user.Id, code = code, returnUrl = model.ReturnUrl },
                         protocol: Request.Scheme);
 
-                    await _emailSender.SendEmailAsync(model.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
                     _emailService.SendEmail(model.Email, "Confirm your email", $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
@@ -173,7 +172,7 @@ namespace DataImporter.Web.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Dashboard");
+                return RedirectToAction("Index", "Home");
             }
         }
     }

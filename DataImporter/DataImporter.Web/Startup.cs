@@ -1,13 +1,19 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using DataImporter.Common;
+using DataImporter.Importer;
+using DataImporter.Importer.Contexts;
 using DataImporter.Membership;
+using DataImporter.Membership.BusinessObjects;
 using DataImporter.Membership.Contexts;
 using DataImporter.Membership.Entities;
 using DataImporter.Membership.Services;
 using DataImporter.Web.Models.ReCaptcha;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -39,8 +45,10 @@ namespace DataImporter.Web
         public void ConfigureContainer(ContainerBuilder builder)
         {
             var connectionInfo = GetConnectionStringAndAssemblyName();
-            builder.RegisterModule(new MembershipModule(connectionInfo.connectionString
-                , connectionInfo.migrationAssemblyName));
+            builder.RegisterModule(new MembershipModule(connectionInfo.connectionString,
+                 connectionInfo.migrationAssemblyName));
+            builder.RegisterModule(new ImporterModule(connectionInfo.connectionString,
+              connectionInfo.migrationAssemblyName));
             builder.RegisterModule(new CommonModule());
             builder.RegisterModule(new WebModule());
         }
@@ -60,6 +68,9 @@ namespace DataImporter.Web
             services.AddDbContext<ApplicationDbContext>(options => 
                 options.UseSqlServer(connectionInfo.connectionString, b =>
                 b.MigrationsAssembly(connectionInfo.migrationAssemblyName)));
+            services.AddDbContext<ImporterDbContext>(options =>
+              options.UseSqlServer(connectionInfo.connectionString, b =>
+              b.MigrationsAssembly(connectionInfo.migrationAssemblyName)));
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.Configure<ReCaptchaSettings>(Configuration.GetSection("GooglereCaptcha"));
 
@@ -71,6 +82,17 @@ namespace DataImporter.Web
                  .AddSignInManager<SignInManager>()
                  .AddDefaultUI()
                  .AddDefaultTokenProviders();
+
+            //services.AddAuthentication()  // Microsoft.AspNetCore.Authentication.jwtbearer ei package lagbee // jwt r jonno ekta appsettings e config kora lagbe.. 
+            //    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+            //    {
+            //        options.LoginPath = new PathString("/Account/Login");
+            //        options.AccessDeniedPath = new PathString("/Account/Login");
+            //        options.LogoutPath = new PathString("/Account/Logout");
+            //        options.Cookie.Name = "CustomerPortal.Identity";
+            //        options.SlidingExpiration = true;
+            //        options.ExpireTimeSpan = TimeSpan.FromDays(1);
+            //    });
 
             services.ConfigureApplicationCookie(options =>
             {
@@ -103,6 +125,14 @@ namespace DataImporter.Web
                 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
                 options.User.RequireUniqueEmail = false;
             });
+            services.AddAuthorization(options=> {
+                options.AddPolicy("AccessPermission", policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.Requirements.Add(new AccessRequirement());
+                });
+            });
+            services.AddSingleton<IAuthorizationHandler, AccessRequirementHandler>();
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
@@ -135,7 +165,7 @@ namespace DataImporter.Web
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Dashboard}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

@@ -1,5 +1,7 @@
 ﻿using Autofac;
-using DataImporter.Membership.BusinessObjects;
+using DataImporter.Importer.BusinessObjects;
+using DataImporter.Importer.Services;
+
 using DataImporter.Membership.Services;
 using System;
 using System.Collections.Generic;

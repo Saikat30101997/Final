@@ -904,7 +904,6 @@ G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\Cr
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\ExportJob.cshtml.g.cs
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\ImportContact.cshtml.g.cs
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\ImportJob.cshtml.g.cs
-G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\Index.cshtml.g.cs
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Shared\_AdminMenuPartial.cshtml.g.cs
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -936,3 +935,6 @@ G:\Final\DataImporter\DataImporter.Web\bin\Debug\net5.0\EPPlus.dll
 G:\Final\DataImporter\DataImporter.Web\bin\Debug\net5.0\Microsoft.IO.RecyclableMemoryStream.dll
 G:\Final\DataImporter\DataImporter.Web\bin\Debug\net5.0\System.Xml.XPath.XmlDocument.dll
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\UploadConfirmation.cshtml.g.cs
+G:\Final\DataImporter\DataImporter.Web\bin\Debug\net5.0\DataImporter.Importer.dll
+G:\Final\DataImporter\DataImporter.Web\bin\Debug\net5.0\DataImporter.Importer.pdb
+G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs

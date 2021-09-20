@@ -11,8 +11,5 @@ namespace DataImporter.Membership.Entities
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
-        public List<Group> Groups { get; set; }
-
     }
 }

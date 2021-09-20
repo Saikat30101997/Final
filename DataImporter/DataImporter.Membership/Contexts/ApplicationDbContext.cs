@@ -42,6 +42,5 @@ namespace DataImporter.Membership.Contexts
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<Group> Groups { get; set; }
     }
 }

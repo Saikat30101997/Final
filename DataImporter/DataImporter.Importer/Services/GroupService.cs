@@ -1,21 +1,22 @@
 ﻿using AutoMapper;
-using DataImporter.Membership.BusinessObjects;
-using DataImporter.Membership.UnitOfWorks;
+using DataImporter.Importer.BusinessObjects;
+using DataImporter.Importer.UnitOfWorks;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataImporter.Membership.Services
+namespace DataImporter.Importer.Services
 {
     public class GroupService : IGroupService
     {
-        private readonly IMembershipUnitOfWork _membershipUnitOfWork;
+        private readonly IImporterUnitOfWork _importerUnitOfWork;
         private readonly IMapper _mapper;
-        public GroupService(IMembershipUnitOfWork membershipUnitOfWork,IMapper mapper)
+        public GroupService(IImporterUnitOfWork importerUnitOfWork, IMapper mapper)
         {
-            _membershipUnitOfWork = membershipUnitOfWork;
+            _importerUnitOfWork = importerUnitOfWork;
             _mapper = mapper;
         }
 
@@ -23,18 +24,18 @@ namespace DataImporter.Membership.Services
         {
             if (group == null)
                 throw new InvalidOperationException("Group is not Provided");
-            _membershipUnitOfWork.Groups.Add(
+            _importerUnitOfWork.Groups.Add(
                 new Entities.Group
                 {
                     GroupName = group.GroupName,
                     UserId = group.UserId
                 });
-            _membershipUnitOfWork.Save();
+            _importerUnitOfWork.Save();
         }
 
         public Group GetGroup(int id)
         {
-            var group = _membershipUnitOfWork.Groups.GetById(id);
+            var group = _importerUnitOfWork.Groups.GetById(id);
             return new Group
             {
                 Id = group.Id,
@@ -45,8 +46,8 @@ namespace DataImporter.Membership.Services
 
         public List<Group> GetGroups()
         {
-            var groupEntity = _membershipUnitOfWork.Groups.GetAll();
-            var groups =new  List<Group>();
+            var groupEntity = _importerUnitOfWork.Groups.GetAll();
+            var groups = new List<Group>();
             foreach (var group in groupEntity)
             {
                 var gr = new Group()
@@ -56,17 +57,18 @@ namespace DataImporter.Membership.Services
                 groups.Add(gr);
             }
             return groups;
-           
+
         }
 
-        public (IList<Group> records, int total, int totalDisplay) GetGroups(Guid id,int pageIndex, 
+        public (IList<Group> records, int total, int totalDisplay) GetGroups(Guid id, int pageIndex,
             int pageSize, string searchText, string sortText)
         {
-            var groupData = _membershipUnitOfWork.Groups.GetDynamic(string.IsNullOrWhiteSpace(searchText) ? 
-                null : x => x.GroupName.Contains(searchText), sortText, 
+            var groupData = _importerUnitOfWork.Groups.GetDynamic(string.IsNullOrWhiteSpace(searchText) ?
+                null : x => x.GroupName.Contains(searchText), sortText,
                 string.Empty, pageIndex, pageSize);
 
-            var resultData = (from grp in groupData.data where grp.UserId==id
+            var resultData = (from grp in groupData.data
+                              where grp.UserId == id
                               select _mapper.Map<Group>(grp)).ToList();
 
 
@@ -77,11 +79,11 @@ namespace DataImporter.Membership.Services
         {
             if (group == null)
                 throw new InvalidOperationException("Group is not provided");
-            var groupEntity = _membershipUnitOfWork.Groups.GetById(group.Id);
-            if(groupEntity!=null)
+            var groupEntity = _importerUnitOfWork.Groups.GetById(group.Id);
+            if (groupEntity != null)
             {
                 groupEntity.GroupName = group.GroupName;
-                _membershipUnitOfWork.Save();
+                _importerUnitOfWork.Save();
             }
             else
                 throw new InvalidOperationException("Group is not updated");

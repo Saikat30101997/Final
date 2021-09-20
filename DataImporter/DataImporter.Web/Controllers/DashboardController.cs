@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace DataImporter.Web.Controllers
 {
-    [Authorize]
+    [Authorize(Policy = "AccessPermission")]
     public class DashboardController : Controller
     {
         private readonly ILogger<DashboardController> _logger;
@@ -136,6 +136,20 @@ namespace DataImporter.Web.Controllers
             var model = new ImportContactModel();
             model.ExcelValues();
             return View(model);
+        }
+      
+        public IActionResult UploadConfirm()
+        {
+            var model = new ImportContactModel();
+            model.Upload();
+            return RedirectToAction(nameof(ImportJob));
+        }
+
+        public IActionResult DeleteFile()
+        {
+            var model = new ImportContactModel();
+            model.Delete();
+            return RedirectToAction(nameof(ImportContact));
         }
         public IActionResult ImportJob()
         {

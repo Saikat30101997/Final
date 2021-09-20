@@ -24,12 +24,14 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\DataImporter.Common\DataImporter.Common.csproj" />
+		<ProjectReference Include="..\DataImporter.Importer\DataImporter.Importer.csproj" />
 		<ProjectReference Include="..\DataImporter.Membership\DataImporter.Membership.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Folder Include="wwwroot\EXCELS\" />
 	  <Folder Include="Profiles\" />
+	  <Folder Include="wwwroot\Confirm\" />
 	</ItemGroup>
 
 </Project>

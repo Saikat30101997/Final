@@ -1,5 +1,5 @@
 ﻿using Autofac;
-using DataImporter.Membership.Services;
+using DataImporter.Importer.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;

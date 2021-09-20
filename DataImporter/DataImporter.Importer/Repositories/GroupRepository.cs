@@ -1,4 +1,6 @@
 ﻿using DataImporter.Data;
+using DataImporter.Importer.Contexts;
+using DataImporter.Importer.Entities;
 using DataImporter.Membership.Contexts;
 using DataImporter.Membership.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -8,11 +10,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataImporter.Membership.Repositories
+namespace DataImporter.Importer.Repositories
 {
     public class GroupRepository : Repository<Group,int> ,IGroupRepository
     {
-        public GroupRepository(IApplicationDbContext context) : base((DbContext)context)
+        public GroupRepository(IImporterDbContext context) : base((DbContext)context)
         {
 
         }
