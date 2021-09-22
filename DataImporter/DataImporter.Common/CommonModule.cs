@@ -12,15 +12,9 @@ namespace DataImporter.Common
     {
         protected override void Load(ContainerBuilder builder)
         {
-
+            builder.RegisterType<ConfirmationEmailSettings>().AsSelf();
             builder.RegisterType<EmailService>().As<IEmailService>()
-            .WithParameter("host", "smtp.gmail.com")
-            .WithParameter("port", 465)
-            .WithParameter("username", "saikat.cse1997@gmail.com")
-            .WithParameter("password", "hello@saikat")
-            .WithParameter("useSSL", true)
-            .WithParameter("from", "saikat.cse1997@gmail.com")
-            .InstancePerLifetimeScope();
+                .InstancePerLifetimeScope();
             builder.RegisterType<FileSearching>().As<IFileSearching>()
                 .InstancePerLifetimeScope();
             builder.RegisterType<DateTimeUtility>().As<IDateTimeUtility>()

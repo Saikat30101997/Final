@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace DataImporter.Common.Utilities
 {
-    public  class ConfirmationEmailSettings 
+    public  class ConfirmationEmailSettings
     {
         public  string host { get; set; }
         public  int port { get; set; }

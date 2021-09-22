@@ -1,4 +1,5 @@
 ﻿using MailKit.Net.Smtp;
+using Microsoft.Extensions.Options;
 using MimeKit;
 using System;
 using System.Collections.Generic;
@@ -11,28 +12,17 @@ namespace DataImporter.Common.Utilities
 {
     public class EmailService : IEmailService
     {
-        private readonly string _host;
-        private readonly int _port;
-        private readonly string _username;
-        private readonly string _password;
-        private readonly bool _useSSL;
-        private readonly string _from;
+       
 
-
-        public EmailService(string host, int port, string username,
-                   string password, bool useSSL, string from)
+        private ConfirmationEmailSettings _confirmationEmailSettings;
+        public EmailService(IOptions<ConfirmationEmailSettings> confirmationEmailSettings)
         {
-            _host = host;
-            _port = port;
-            _username = username;
-            _password = password;
-            _useSSL = useSSL;
-            _from = from;
+            _confirmationEmailSettings = confirmationEmailSettings.Value;
         }
         public void SendEmail(string receiver, string subject, string body)
         {
             var message = new MimeMessage();
-            message.From.Add(new MailboxAddress(_from, _from));
+            message.From.Add(new MailboxAddress(_confirmationEmailSettings.from, _confirmationEmailSettings.from));
             message.To.Add(new MailboxAddress(receiver, receiver));
             message.Subject = subject;
 
@@ -43,11 +33,11 @@ namespace DataImporter.Common.Utilities
 
             using var client = new SmtpClient();
             client.Timeout = 60000;
-            client.Connect(_host, _port, _useSSL);
+            client.Connect(_confirmationEmailSettings.host, _confirmationEmailSettings.port, _confirmationEmailSettings.useSSL);
 
 
             // Note: only needed if the SMTP server requires authentication
-            client.Authenticate(_username, _password);
+            client.Authenticate(_confirmationEmailSettings.username,_confirmationEmailSettings.password);
 
             client.Send(message);
             client.Disconnect(true);

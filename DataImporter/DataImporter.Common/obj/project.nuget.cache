@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Cy7d8P/PyoVXdn/s1z3a7H718HJXTLHf5p/3ykjLRAMWvLnfxzvCmsy4p4VOTXSuAkegofs8iNCrjq/nT6PPJw==",
+  "dgSpecHash": "KR17r0wRYtBeX6o8v4SYz84kOdCIne4Z7baIxbztlmp/zp6Tjh5JGVvgAB2/MeUUvzzXBogiKAn9vECokYCIkg==",
   "success": true,
   "projectFilePath": "G:\\Final\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Saikat\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\mailkit\\2.15.0\\mailkit.2.15.0.nupkg.sha512",
-    "C:\\Users\\Saikat\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Saikat\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Saikat\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\Saikat\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\mimekit\\2.15.0\\mimekit.2.15.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\portable.bouncycastle\\1.8.10\\portable.bouncycastle.1.8.10.nupkg.sha512",

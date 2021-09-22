@@ -1,6 +1,7 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using DataImporter.Common;
+using DataImporter.Common.Utilities;
 using DataImporter.Importer;
 using DataImporter.Importer.Contexts;
 using DataImporter.Membership;
@@ -73,6 +74,7 @@ namespace DataImporter.Web
               b.MigrationsAssembly(connectionInfo.migrationAssemblyName)));
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.Configure<ReCaptchaSettings>(Configuration.GetSection("GooglereCaptcha"));
+            services.Configure<ConfirmationEmailSettings>(Configuration.GetSection("ConfirmEmail"));
 
             services  
                  .AddIdentity<ApplicationUser, Role>()
@@ -83,16 +85,7 @@ namespace DataImporter.Web
                  .AddDefaultUI()
                  .AddDefaultTokenProviders();
 
-            //services.AddAuthentication()  // Microsoft.AspNetCore.Authentication.jwtbearer ei package lagbee // jwt r jonno ekta appsettings e config kora lagbe.. 
-            //    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
-            //    {
-            //        options.LoginPath = new PathString("/Account/Login");
-            //        options.AccessDeniedPath = new PathString("/Account/Login");
-            //        options.LogoutPath = new PathString("/Account/Logout");
-            //        options.Cookie.Name = "CustomerPortal.Identity";
-            //        options.SlidingExpiration = true;
-            //        options.ExpireTimeSpan = TimeSpan.FromDays(1);
-            //    });
+    
 
             services.ConfigureApplicationCookie(options =>
             {
