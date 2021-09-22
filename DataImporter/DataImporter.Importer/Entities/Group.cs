@@ -12,8 +12,9 @@ namespace DataImporter.Importer.Entities
     {
         public int Id { get; set; }
         public string GroupName { get; set; }
-
         public Guid UserId { get; set; }
         public ApplicationUser User { get; set; }
+        public List<Import> Imports { get; set; }
+        public List<Export> Exports { get; set; }
     }
 }

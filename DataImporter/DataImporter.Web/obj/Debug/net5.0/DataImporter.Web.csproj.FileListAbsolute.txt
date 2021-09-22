@@ -897,7 +897,6 @@ G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\DataImporter.Web.TagHelp
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\DataImporter.Web.RazorCoreGenerate.cache
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
-G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Account\Login1.cshtml.g.cs
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\Contacts.cshtml.g.cs
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\Create.cshtml.g.cs

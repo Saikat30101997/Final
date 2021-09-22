@@ -41,5 +41,9 @@ namespace DataImporter.Importer.Contexts
             base.OnModelCreating(modelBuilder);
         }
 
+        public DbSet<Export> Exports { get; set; }
+        public DbSet<Import> Imports { get; set; }
+        public DbSet<ExcelData> ExcelDatas { get; set; }
+
     }
 }

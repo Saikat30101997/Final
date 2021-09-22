@@ -33,12 +33,25 @@ namespace DataImporter.Importer
                 .WithParameter("connectionString", _connectionString)
                 .WithParameter("migrationAssemblyName", _migrationAssemblyName)
                 .InstancePerLifetimeScope();
+
             builder.RegisterType<GroupRepository>().As<IGroupRepository>()
                 .InstancePerLifetimeScope();
+            builder.RegisterType<ImportRepository>().As<IImportRepository>()
+              .InstancePerLifetimeScope();
+            builder.RegisterType<ExportRepository>().As<IExportRepository>()
+             .InstancePerLifetimeScope();
+            builder.RegisterType<ExcelDataRepository>().As<IExcelDataRepository>()
+             .InstancePerLifetimeScope();
             builder.RegisterType<ImporterUnitOfWork>().As<IImporterUnitOfWork>()
                 .InstancePerLifetimeScope();
             builder.RegisterType<GroupService>().As<IGroupService>()
                 .InstancePerLifetimeScope();
+            builder.RegisterType<ImportService>().As<IImportService>()
+          .InstancePerLifetimeScope();
+            builder.RegisterType<ExportService>().As<IExportService>()
+          .InstancePerLifetimeScope();
+            builder.RegisterType<ExcelDataService>().As<IExcelDataService>()
+          .InstancePerLifetimeScope();
 
             base.Load(builder);
         }

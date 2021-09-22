@@ -15,5 +15,22 @@ namespace DataImporter.Common.Utilities
             FileInfo[] Files = d.GetFiles("*.xlsx");
             return Files;
         }
+
+        public string GetFileName(string fileName)
+        {
+            string name = "";
+            int counter = 0;
+            for(int i=0;i<fileName.Length;i++)
+            {
+                if (fileName[i] == '.') break;
+                if (fileName[i] == '_') 
+                { 
+                    counter++; i++; 
+                }
+                if (counter == 3) name = name + fileName[i];
+            }
+            return name;
+        }
+
     }
 }

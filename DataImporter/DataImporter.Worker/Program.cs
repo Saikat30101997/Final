@@ -1,5 +1,8 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using DataImporter.Common;
+using DataImporter.Importer;
+using DataImporter.Importer.Contexts;
 using DataImporter.Membership;
 using DataImporter.Membership.Contexts;
 using Microsoft.EntityFrameworkCore;
@@ -60,7 +63,11 @@ namespace DataImporter.Worker
                 {
                     builder.RegisterModule(new WorkerModule(_connectionString,
                         _migrationAssemblyName, _configuration));
-                    builder.RegisterModule(new MembershipModule(_connectionString, _migrationAssemblyName));
+                    builder.RegisterModule(new MembershipModule(_connectionString,
+                        _migrationAssemblyName));
+                    builder.RegisterModule(new ImporterModule(_connectionString,
+                        _migrationAssemblyName));
+                    builder.RegisterModule(new CommonModule());
                 })
                 .ConfigureServices((hostContext, services) =>
                 {
@@ -68,12 +75,11 @@ namespace DataImporter.Worker
 
                     _migrationAssemblyName = typeof(Worker).Assembly.FullName;
 
-                    services.AddDbContext<ApplicationDbContext>(options =>
+                    services.AddDbContext<ImporterDbContext>(options =>
                          options.UseSqlServer(_connectionString, b =>
                          b.MigrationsAssembly(_migrationAssemblyName)));
-
+                    services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
                     services.AddHostedService<Worker>();
-
                 });
     }
 }

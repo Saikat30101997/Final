@@ -23,6 +23,8 @@ namespace DataImporter.Common
             .InstancePerLifetimeScope();
             builder.RegisterType<FileSearching>().As<IFileSearching>()
                 .InstancePerLifetimeScope();
+            builder.RegisterType<DateTimeUtility>().As<IDateTimeUtility>()
+                .InstancePerLifetimeScope();
             base.Load(builder);
         }
     }

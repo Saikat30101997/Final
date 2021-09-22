@@ -118,3 +118,5 @@ System.InvalidOperationException: Unable to resolve service for type 'Microsoft.
 2021-09-20 12:56:13.970 +06:00 [INF] User logged in.
 2021-09-20 13:02:19.241 +06:00 [INF] Application Starting up
 2021-09-20 13:04:58.971 +06:00 [INF] Application Starting up
+2021-09-20 15:55:39.696 +06:00 [INF] Application Starting up
+2021-09-20 15:56:17.543 +06:00 [INF] User logged in.

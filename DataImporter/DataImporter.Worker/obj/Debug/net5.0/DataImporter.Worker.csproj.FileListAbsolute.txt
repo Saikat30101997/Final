@@ -79,3 +79,10 @@ G:\Final\DataImporter\DataImporter.Worker\bin\Debug\net5.0\System.Xml.XPath.XmlD
 G:\Final\DataImporter\DataImporter.Worker\bin\Debug\net5.0\Spire.License.dll
 G:\Final\DataImporter\DataImporter.Worker\bin\Debug\net5.0\Spire.Pdf.dll
 G:\Final\DataImporter\DataImporter.Worker\bin\Debug\net5.0\Spire.XLS.dll
+G:\Final\DataImporter\DataImporter.Worker\bin\Debug\net5.0\MailKit.dll
+G:\Final\DataImporter\DataImporter.Worker\bin\Debug\net5.0\MimeKit.dll
+G:\Final\DataImporter\DataImporter.Worker\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+G:\Final\DataImporter\DataImporter.Worker\bin\Debug\net5.0\DataImporter.Common.dll
+G:\Final\DataImporter\DataImporter.Worker\bin\Debug\net5.0\DataImporter.Common.pdb
+G:\Final\DataImporter\DataImporter.Worker\bin\Debug\net5.0\DataImporter.Importer.dll
+G:\Final\DataImporter\DataImporter.Worker\bin\Debug\net5.0\DataImporter.Importer.pdb

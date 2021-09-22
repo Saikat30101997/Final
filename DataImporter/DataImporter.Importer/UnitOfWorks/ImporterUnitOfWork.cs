@@ -14,10 +14,18 @@ namespace DataImporter.Importer.UnitOfWorks
     public class ImporterUnitOfWork : UnitOfWork, IImporterUnitOfWork
     {
         public IGroupRepository Groups { get; private set; }
+        public IImportRepository Imports { get; private set; }
+        public IExportRepository Exports { get; private set; }
+        public IExcelDataRepository ExcelDatas { get; private set; }
         public ImporterUnitOfWork(IImporterDbContext context,
-            IGroupRepository groups):base((DbContext)context)
+            IGroupRepository groups,IImportRepository imports,
+            IExportRepository exports,
+            IExcelDataRepository excelDatas):base((DbContext)context)
         {
             Groups = groups;
+            Imports = imports;
+            Exports = exports;
+            ExcelDatas = excelDatas;
         }
     }
 }

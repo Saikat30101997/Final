@@ -1,83 +1,107 @@
-﻿using OfficeOpenXml;
+﻿using DataImporter.Common.Utilities;
+using DataImporter.Importer.BusinessObjects;
+using DataImporter.Importer.Services;
+using OfficeOpenXml;
 using System;
+using System.Collections.Generic;
 using System.IO;
 namespace DataImporter.Worker.ReadFunctions
 {
     public class ExcelReadFunction : IExcelReaderFunction
     {
+        private readonly IFileSearching _fileSearching;
+        private readonly IDateTimeUtility _dateTimeUtility;
+        private readonly IImportService _importService;
+        private readonly IExcelDataService _excelDataService;
+        public ExcelReadFunction(IFileSearching fileSearching,
+            IDateTimeUtility dateTimeUtility,IImportService importService,
+            IExcelDataService excelDataService)
+        {
+            _fileSearching = fileSearching;
+            _dateTimeUtility = dateTimeUtility;
+            _importService = importService;
+            _excelDataService = excelDataService;
+        }
+        public Guid UserId { get; set; }
+        public int id { get; set; }
+
+        public List<List<string>> Excel { get; set; }
         public void ReadExcelData()
         {
             string path = $"G:/Final/DataImporter/DataImporter.Web/wwwroot/Confirm";
             string s = null;
-            DirectoryInfo d = new DirectoryInfo(path);
-            FileInfo[] Files = d.GetFiles("*.xlsx");
+            var Files = _fileSearching.GetExcelFiles(path);
+
             foreach (FileInfo file in Files)
             {
+                
                 s = file.FullName;
-                string fileName = Path.GetFileNameWithoutExtension(s);
-                Guid? UserId=null;
-                int? id=null;
-                string str = "";
-                char matchCharacter = '_';
-                int j = 0;
-                for(int i=0;i<fileName.Length;i++)
+                string fileNamewithGuid = Path.GetFileNameWithoutExtension(s);
+                var fileNameSplit = fileNamewithGuid.Split('_');
+                var fileName = _fileSearching.GetFileName(fileNamewithGuid);
+                UserId = Guid.Parse(fileNameSplit[0]);
+                id = Convert.ToInt32(fileNameSplit[1]);
+                var import = new Import()
                 {
-                    if (j == 2) break;
-                    char c = fileName[i];
-                    if (c==matchCharacter)
-                    {
-                        if (j == 0)
-                        {
-                            UserId = Guid.Parse(str);
-                            str = "";
-                            j++;
-                        }
-                        else if (j == 1)
-                        {
-                            id = Convert.ToInt32(str);
-                            str = "";
-                            j++;
-                        }
-                    }
-                    else
-                        str = str + fileName[i];
+                    ExcelFileName =fileName,
+                    UserId = UserId,
+                    GroupId = id,
+                    ImportDate = _dateTimeUtility.Now(),
+                    Status = "Pending.."
+                };
+               _importService.Create(import);
+                var importid=_importService.GetImportId(fileName);
+                StoreExcelData(s,importid,id,UserId,fileName);
+                if (File.Exists(s))
+                {
+                    file.Delete();
                 }
-                Console.WriteLine(UserId);
-                Console.WriteLine(id);
-                Console.WriteLine(Path.GetFileNameWithoutExtension(s));
-                readXLS(s);
+                Console.WriteLine("Entry Done");
+                _importService.Completed(importid);
             }
         }
 
-        public void readXLS(string FilePath)
+        public void StoreExcelData(string FilePath,int importId,int GroupId,Guid UserId,string fileName)
         {
             ExcelPackage.LicenseContext = LicenseContext.Commercial;
+           
 
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             FileInfo existingFile = new FileInfo(FilePath);
             using (ExcelPackage package = new ExcelPackage(existingFile))
             {
-                //get the first worksheet in the workbook
+               
                 ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
-                int colCount = worksheet.Dimension.End.Column;  //get Column Count
-                int rowCount = worksheet.Dimension.End.Row;     //get row count
-                //for (int row = 1; row <= rowCount; row++)
-                //{
-                //    for (int col = 1; col <= colCount; col++)
-                //    {
-                //        Console.WriteLine(" Row:" + row + " column:" + col + " Value:" + worksheet.Cells[row, col].Value?.ToString().Trim());
-                //    }
-                //}
-
-                for(int col=1;col<=colCount;col++)
+                int colCount = worksheet.Dimension.End.Column;  
+                int rowCount = worksheet.Dimension.End.Row;
+                var list = new List<string>();
+                for (int row = 1; row <= rowCount; row++)
                 {
-                    for(int row=1;row<=rowCount;row++)
+                    string s = "";
+                    for (int col = 1; col <= colCount; col++)
                     {
-                        Console.WriteLine(worksheet.Cells[1, col].Value?.ToString().Trim());
-                        Console.WriteLine("Row "+ row+" Column "+col+" Value "+ worksheet.Cells[row, col].Value?.ToString().Trim());
+                        s = s + worksheet.Cells[row, col].Value?.ToString().Trim() + '/';
                     }
+                    list.Add(s);
+                }
+                
+
+                for (int i = 1; i < list.Count; i++)
+                {
+                    var ExcelData = new ExcelData
+                    {
+                        ImportId = importId,
+                        UserId = UserId,
+                        GroupId = GroupId,
+                        ImportDate = _dateTimeUtility.Now(),
+                        ExcelFileName = fileName,
+                        ColumnName = list[0],
+                        ColumnValue = list[i]
+                    };
+                    _excelDataService.Create(ExcelData);
                 }
             }
+           
         }
     }
 }

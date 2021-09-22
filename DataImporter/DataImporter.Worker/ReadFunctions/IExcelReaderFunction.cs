@@ -9,6 +9,6 @@ namespace DataImporter.Worker.ReadFunctions
     public interface IExcelReaderFunction
     {
         void ReadExcelData();
-        void readXLS(string FilePath);
+        void StoreExcelData(string FilePath, int importId, int GroupId, Guid UserId,string fileName);
     }
 }

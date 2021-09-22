@@ -19,6 +19,67 @@ namespace DataImporter.Web.Data.Migrations
                 .HasAnnotation("ProductVersion", "5.0.7")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("DataImporter.Importer.Entities.ExcelData", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ColumnName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ColumnValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ExcelFileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("GroupId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ImportDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ImportId")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ImportId");
+
+                    b.ToTable("ExcelDatas");
+                });
+
+            modelBuilder.Entity("DataImporter.Importer.Entities.Export", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ExcelFileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("GroupId")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GroupId");
+
+                    b.ToTable("Exports");
+                });
+
             modelBuilder.Entity("DataImporter.Importer.Entities.Group", b =>
                 {
                     b.Property<int>("Id")
@@ -37,6 +98,35 @@ namespace DataImporter.Web.Data.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Group");
+                });
+
+            modelBuilder.Entity("DataImporter.Importer.Entities.Import", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ExcelFileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("GroupId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ImportDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GroupId");
+
+                    b.ToTable("Imports");
                 });
 
             modelBuilder.Entity("DataImporter.Membership.Entities.ApplicationUser", b =>
@@ -98,6 +188,28 @@ namespace DataImporter.Web.Data.Migrations
                     b.ToTable("AspNetUsers", t => t.ExcludeFromMigrations());
                 });
 
+            modelBuilder.Entity("DataImporter.Importer.Entities.ExcelData", b =>
+                {
+                    b.HasOne("DataImporter.Importer.Entities.Import", "Import")
+                        .WithMany("ExcelDatas")
+                        .HasForeignKey("ImportId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Import");
+                });
+
+            modelBuilder.Entity("DataImporter.Importer.Entities.Export", b =>
+                {
+                    b.HasOne("DataImporter.Importer.Entities.Group", "Group")
+                        .WithMany("Exports")
+                        .HasForeignKey("GroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Group");
+                });
+
             modelBuilder.Entity("DataImporter.Importer.Entities.Group", b =>
                 {
                     b.HasOne("DataImporter.Membership.Entities.ApplicationUser", "User")
@@ -107,6 +219,29 @@ namespace DataImporter.Web.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("DataImporter.Importer.Entities.Import", b =>
+                {
+                    b.HasOne("DataImporter.Importer.Entities.Group", "Group")
+                        .WithMany("Imports")
+                        .HasForeignKey("GroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Group");
+                });
+
+            modelBuilder.Entity("DataImporter.Importer.Entities.Group", b =>
+                {
+                    b.Navigation("Exports");
+
+                    b.Navigation("Imports");
+                });
+
+            modelBuilder.Entity("DataImporter.Importer.Entities.Import", b =>
+                {
+                    b.Navigation("ExcelDatas");
                 });
 #pragma warning restore 612, 618
         }

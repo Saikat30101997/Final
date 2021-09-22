@@ -10,5 +10,6 @@ namespace DataImporter.Common.Utilities
     public interface IFileSearching
     {
         FileInfo[] GetExcelFiles(string path);
+        string GetFileName(string fileName);
     }
 }
