@@ -1,4 +1,6 @@
-﻿using DataImporter.Membership.Entities;
+﻿using Autofac;
+using DataImporter.Common.Utilities;
+using DataImporter.Membership.Entities;
 using DataImporter.Web.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -17,11 +19,13 @@ namespace DataImporter.Web.Controllers
     {
         private readonly ILogger<DashboardController> _logger;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ILifetimeScope _scope;
         public DashboardController(ILogger<DashboardController> logger,
-            UserManager<ApplicationUser>userManager)
+            UserManager<ApplicationUser>userManager,ILifetimeScope scope)
         {
             _logger = logger;
             _userManager = userManager;
+            _scope = scope;
         }
         public IActionResult Index()
         {
@@ -31,7 +35,7 @@ namespace DataImporter.Web.Controllers
 
         public IActionResult ManageGroup()
         {
-            var model = new GroupListModel();
+            var model = _scope.Resolve<GroupListModel>();
             return View(model);
         }
 
@@ -41,7 +45,7 @@ namespace DataImporter.Web.Controllers
             string s = ViewBag.UserId;
             Guid Id = Guid.Parse(s);
             var tableModel = new DataTablesAjaxRequestModel(Request);
-            var model = new GroupListModel();
+            var model = _scope.Resolve<GroupListModel>();
             var data = model.GetGroups(tableModel,Id);
             return Json(data);
         }
@@ -58,7 +62,9 @@ namespace DataImporter.Web.Controllers
                 ViewBag.UserId = _userManager.GetUserId(HttpContext.User);
                 string s = ViewBag.UserId;
                 Guid Id = Guid.Parse(s);
+                model.Resolve(_scope);
                 model.Create(Id);
+                
             }
             catch (Exception ex)
             {
@@ -70,7 +76,7 @@ namespace DataImporter.Web.Controllers
 
         public JsonResult GroupName()
         {
-            var contactModel = new ContactModel();
+            var contactModel = _scope.Resolve<ContactModel>();
             var data = contactModel.GetGroups();
             return Json(data);
         }
@@ -78,7 +84,7 @@ namespace DataImporter.Web.Controllers
        
         public IActionResult Contacts()
         {
-            var contactModel = new ContactModel();
+            var contactModel = _scope.Resolve<ContactModel>();
             var data = contactModel.GetGroups();
             ViewBag.Groups = new SelectList(data, "Value", "Text");
             return View();
@@ -97,7 +103,9 @@ namespace DataImporter.Web.Controllers
                     ViewBag.UserId = _userManager.GetUserId(HttpContext.User);
                     string s = ViewBag.UserId;
                     Guid Id = Guid.Parse(s);
+                    model.Resolve(_scope);
                     model.Create(model.Id,Id);
+                   
                 }
                 catch(Exception ex)
                 {
@@ -110,7 +118,7 @@ namespace DataImporter.Web.Controllers
         }
         public IActionResult GroupEdit(int id)
         {
-            var model = new EditGroupModel();
+            var model = _scope.Resolve<EditGroupModel>();
             model.LoadModelData(id);
             return View(model);
         }
@@ -121,7 +129,9 @@ namespace DataImporter.Web.Controllers
             {
                 try
                 {
+                    model.Resolve(_scope);
                     model.Update();
+                    
                 }
                 catch (Exception ex)
                 {
@@ -133,27 +143,38 @@ namespace DataImporter.Web.Controllers
         }
         public IActionResult UploadConfirmation()
         {
-            var model = new ImportContactModel();
+            var model = _scope.Resolve<ImportContactModel>();
             model.ExcelValues();
             return View(model);
         }
       
         public IActionResult UploadConfirm()
         {
-            var model = new ImportContactModel();
+            var model = _scope.Resolve<ImportContactModel>();
             model.Upload();
             return RedirectToAction(nameof(ImportJob));
         }
 
         public IActionResult DeleteFile()
         {
-            var model = new ImportContactModel();
+            var model = _scope.Resolve<ImportContactModel>();
             model.Delete();
             return RedirectToAction(nameof(ImportContact));
         }
         public IActionResult ImportJob()
         {
             return View();
+        }
+
+        public JsonResult GetImportData()
+        {
+            ViewBag.UserId = _userManager.GetUserId(HttpContext.User);
+            string s = ViewBag.UserId;
+            Guid Id = Guid.Parse(s);
+            var tableModel = new DataTablesAjaxRequestModel(Request);
+            var model = _scope.Resolve<ImportJobModel>();
+            var data = model.GetGroups(tableModel, Id);
+            return Json(data);
         }
         public IActionResult ExportJob()
         {

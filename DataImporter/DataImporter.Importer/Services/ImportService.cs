@@ -57,5 +57,31 @@ namespace DataImporter.Importer.Services
             int id = imports[0].Id;
             return id;
         }
+
+        public string GetGroupName(int id)
+        {
+            var groups = _importerUnitOfWork.Groups.Get(x => x.Id == id);
+            string name = groups[0].GroupName;
+            return name;
+        }
+        public (IList<Import> records, int total, int totalDisplay) GetImports(Guid id,int pageIndex, int pageSize, string searchText, string sortText)
+        {
+            
+            var importData = _importerUnitOfWork.Imports.GetDynamic(string.IsNullOrWhiteSpace(searchText)?null:x=>x.GroupName.Contains(searchText), sortText, string.Empty, pageIndex, pageSize);
+
+            var resultData = (from import in importData.data
+                              where import.UserId == id
+                              select new Import
+                              {
+                                  Id = import.Id,
+                                  ExcelFileName = import.ExcelFileName,
+                                  GroupName = import.GroupName,
+                                  ImportDate = import.ImportDate,
+                                  Status = import.Status,
+                                  GroupId = import.GroupId,
+                              }).ToList();
+
+            return (resultData, importData.total, importData.totalDisplay);
+        }
     }
 }

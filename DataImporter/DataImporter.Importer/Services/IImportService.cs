@@ -12,5 +12,8 @@ namespace DataImporter.Importer.Services
         void Create(Import import);
         int GetImportId(string file1);
         void Completed(int importid);
+        string GetGroupName(int id);
+        (IList<Import>records,int total,int totalDisplay) GetImports(Guid id,int pageIndex, 
+            int pageSize, string searchText, string sortText);
     }
 }

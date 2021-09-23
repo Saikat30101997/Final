@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace DataImporter.Web.Migrations.ImporterDb
+namespace DataImporter.Web.Data.Migrations
 {
     [DbContext(typeof(ImporterDbContext))]
-    [Migration("20210920150832_AddTables")]
+    [Migration("20210923203119_AddTables")]
     partial class AddTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,6 +39,9 @@ namespace DataImporter.Web.Migrations.ImporterDb
 
                     b.Property<int>("GroupId")
                         .HasColumnType("int");
+
+                    b.Property<string>("GroupName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("ImportDate")
                         .HasColumnType("datetime2");
@@ -71,6 +74,9 @@ namespace DataImporter.Web.Migrations.ImporterDb
 
                     b.Property<int>("GroupId")
                         .HasColumnType("int");
+
+                    b.Property<string>("GroupName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
@@ -114,6 +120,9 @@ namespace DataImporter.Web.Migrations.ImporterDb
 
                     b.Property<int>("GroupId")
                         .HasColumnType("int");
+
+                    b.Property<string>("GroupName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("ImportDate")
                         .HasColumnType("datetime2");

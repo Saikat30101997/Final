@@ -17,10 +17,17 @@ namespace DataImporter.Web.Models
         public DateTime DateTo { get; set; }
 
         public List<string> GroupList { get; set; }
-        private readonly IGroupService _groupService;
+        private  IGroupService _groupService;
+        private ILifetimeScope _scope;
         public ContactModel()
         {
-            _groupService = Startup.AutofacContainer.Resolve<IGroupService>();
+           
+        }
+
+        public void Resolve(ILifetimeScope scope)
+        {
+            _scope = scope;
+            _groupService = _scope.Resolve<IGroupService>();
         }
         public ContactModel(IGroupService groupService)
         {

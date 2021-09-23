@@ -16,11 +16,19 @@ namespace DataImporter.Web.Models
         public string Name { get; set; }
        
 
-        private readonly IWebHostEnvironment _hostEnvironment;
-        private readonly IGroupService _groupService;
+        private  IWebHostEnvironment _hostEnvironment;
+        private  IGroupService _groupService;
+        private ILifetimeScope _scope;
         public EditGroupModel()
         {
-            _groupService = Startup.AutofacContainer.Resolve<IGroupService>();
+           
+        }
+
+        public void Resolve(ILifetimeScope scope)
+        {
+            _scope = scope;
+            _groupService = _scope.Resolve<IGroupService>();
+            _hostEnvironment = _scope.Resolve<IWebHostEnvironment>();
         }
         public EditGroupModel(IWebHostEnvironment hostEnvironment,
             IGroupService groupService)

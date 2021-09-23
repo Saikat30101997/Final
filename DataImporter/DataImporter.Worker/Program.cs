@@ -74,8 +74,11 @@ namespace DataImporter.Worker
                     _connectionString = hostContext.Configuration.GetConnectionString("DefaultConnection");
 
                     _migrationAssemblyName = typeof(Worker).Assembly.FullName;
-
                     services.AddDbContext<ImporterDbContext>(options =>
+                        options.UseSqlServer(_connectionString, b =>
+                        b.MigrationsAssembly(_migrationAssemblyName)));
+
+                    services.AddDbContext<ApplicationDbContext>(options =>
                          options.UseSqlServer(_connectionString, b =>
                          b.MigrationsAssembly(_migrationAssemblyName)));
                     services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

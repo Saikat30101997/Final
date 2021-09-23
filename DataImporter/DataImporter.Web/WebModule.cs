@@ -17,8 +17,13 @@ namespace DataImporter.Web
             builder.RegisterType<GooglereCaptchaService>()
                 .As<IGooglereCaptchaService>()
                 .InstancePerLifetimeScope();
-
+            builder.RegisterType<GroupListModel>().AsSelf();
+            builder.RegisterType<EditGroupModel>().AsSelf();
+            builder.RegisterType<ContactModel>().AsSelf();
+            builder.RegisterType<CreateImportModel>().AsSelf();
             builder.RegisterType<ImportContactModel>().AsSelf();
+            builder.RegisterType<ExportJobModel>().AsSelf();
+            builder.RegisterType<ImportJobModel>().AsSelf();
             base.Load(builder);
         }
     }

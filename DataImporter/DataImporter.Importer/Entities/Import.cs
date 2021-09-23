@@ -11,6 +11,7 @@ namespace DataImporter.Importer.Entities
     {
         public int Id { get; set; }
         public string ExcelFileName { get; set; }
+        public string GroupName { get; set; }
         public int GroupId { get; set; }
         public Group Group { get; set; }
         public Guid UserId { get; set; }

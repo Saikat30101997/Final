@@ -38,6 +38,9 @@ namespace DataImporter.Web.Data.Migrations
                     b.Property<int>("GroupId")
                         .HasColumnType("int");
 
+                    b.Property<string>("GroupName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("ImportDate")
                         .HasColumnType("datetime2");
 
@@ -69,6 +72,9 @@ namespace DataImporter.Web.Data.Migrations
 
                     b.Property<int>("GroupId")
                         .HasColumnType("int");
+
+                    b.Property<string>("GroupName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
@@ -112,6 +118,9 @@ namespace DataImporter.Web.Data.Migrations
 
                     b.Property<int>("GroupId")
                         .HasColumnType("int");
+
+                    b.Property<string>("GroupName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("ImportDate")
                         .HasColumnType("datetime2");

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataImporter.Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210920044725_AddIdentityUser")]
-    partial class AddIdentityUser
+    [Migration("20210923202814_AddAspnet")]
+    partial class AddAspnet
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

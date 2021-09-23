@@ -41,17 +41,19 @@ namespace DataImporter.Worker.ReadFunctions
                 var fileName = _fileSearching.GetFileName(fileNamewithGuid);
                 UserId = Guid.Parse(fileNameSplit[0]);
                 id = Convert.ToInt32(fileNameSplit[1]);
+                var groupName = _importService.GetGroupName(id);
                 var import = new Import()
                 {
                     ExcelFileName =fileName,
                     UserId = UserId,
                     GroupId = id,
                     ImportDate = _dateTimeUtility.Now(),
-                    Status = "Pending.."
+                    Status = "Pending..",
+                    GroupName = groupName
                 };
-               _importService.Create(import);
+                _importService.Create(import);
                 var importid=_importService.GetImportId(fileName);
-                StoreExcelData(s,importid,id,UserId,fileName);
+                StoreExcelData(s,importid,id,UserId,fileName,groupName);
                 if (File.Exists(s))
                 {
                     file.Delete();
@@ -61,7 +63,7 @@ namespace DataImporter.Worker.ReadFunctions
             }
         }
 
-        public void StoreExcelData(string FilePath,int importId,int GroupId,Guid UserId,string fileName)
+        public void StoreExcelData(string FilePath,int importId,int GroupId,Guid UserId,string fileName,string groupName)
         {
             ExcelPackage.LicenseContext = LicenseContext.Commercial;
            
@@ -96,7 +98,8 @@ namespace DataImporter.Worker.ReadFunctions
                         ImportDate = _dateTimeUtility.Now(),
                         ExcelFileName = fileName,
                         ColumnName = list[0],
-                        ColumnValue = list[i]
+                        ColumnValue = list[i],
+                        GroupName = groupName
                     };
                     _excelDataService.Create(ExcelData);
                 }

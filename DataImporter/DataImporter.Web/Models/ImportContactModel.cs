@@ -25,16 +25,23 @@ namespace DataImporter.Web.Models
         public List<List<string> >Values { get; set; }
         public int CountValue { get; set; } = 0;
 
-        private readonly IWebHostEnvironment _hostEnvironment;
-        private readonly IGroupService _groupService;
-        private readonly IFileSearching _fileSearching;
+        private IWebHostEnvironment _hostEnvironment;
+        private IGroupService _groupService;
+        private IFileSearching _fileSearching;
+        private ILifetimeScope _scope;
        
         
         public ImportContactModel()
         {
-            _groupService = Startup.AutofacContainer.Resolve<IGroupService>();
-            _hostEnvironment = Startup.AutofacContainer.Resolve<IWebHostEnvironment>();
-            _fileSearching = Startup.AutofacContainer.Resolve<IFileSearching>();
+          
+        }
+
+        public void Resolve(ILifetimeScope scope)
+        {
+            _scope = scope;
+            _groupService = _scope.Resolve<IGroupService>();
+            _hostEnvironment = _scope.Resolve<IWebHostEnvironment>();
+            _fileSearching = _scope.Resolve<IFileSearching>();
         }
         public ImportContactModel(IWebHostEnvironment hostEnvironment,
             IGroupService groupService,

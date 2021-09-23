@@ -13,5 +13,6 @@ namespace DataImporter.Importer.BusinessObjects
         public Guid UserId { get; set; }
         public string ExcelFileName { get; set; }
         public DateTime Date { get; set; }
+        public string GroupName { get; set; }
     }
 }

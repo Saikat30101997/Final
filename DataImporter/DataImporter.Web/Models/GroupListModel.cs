@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using DataImporter.Common.Utilities;
 using DataImporter.Importer.Services;
 using System;
 using System.Collections.Generic;
@@ -9,10 +10,17 @@ namespace DataImporter.Web.Models
 {
     public class GroupListModel
     {
-        private readonly IGroupService _groupService;
+        private  IGroupService _groupService;
+        private ILifetimeScope _scope;
         public GroupListModel()
         {
-            _groupService = Startup.AutofacContainer.Resolve<IGroupService>();
+          
+        }
+
+        public void Resolve(ILifetimeScope scope)
+        {
+            _scope = scope;
+            _groupService = _scope.Resolve<IGroupService>();
         }
         public GroupListModel(IGroupService groupService)
         {

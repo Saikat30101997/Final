@@ -14,5 +14,6 @@ namespace DataImporter.Importer.BusinessObjects
         public Guid UserId { get; set; }
         public DateTime ImportDate { get; set; }
         public string Status { get; set; }
+        public string GroupName { get; set; }
     }
 }
