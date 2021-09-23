@@ -40,3 +40,5 @@ Error Number:547,State:0,Class:16
    at DataImporter.Web.Controllers.DashboardController.Create(CreateImportModel model) in G:\Final\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 66
 2021-09-24 02:33:47.256 +06:00 [INF] Application Starting up
 2021-09-24 02:34:19.097 +06:00 [INF] User created a new account with password.
+2021-09-24 02:38:27.897 +06:00 [INF] Application Starting up
+2021-09-24 02:39:09.480 +06:00 [INF] User logged in.
