@@ -83,5 +83,13 @@ namespace DataImporter.Importer.Services
 
             return (resultData, importData.total, importData.totalDisplay);
         }
+
+        public string GetStatus(string fileName, Guid userId, int id)
+        {
+            var imports = _importerUnitOfWork.Imports.Get(x => x.ExcelFileName == fileName && x.UserId == userId && x.GroupId == id);
+          
+            if (imports.Count>0) return imports[0].Status;
+            else return null;
+        }
     }
 }

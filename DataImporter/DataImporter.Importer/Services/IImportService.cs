@@ -15,5 +15,6 @@ namespace DataImporter.Importer.Services
         string GetGroupName(int id);
         (IList<Import>records,int total,int totalDisplay) GetImports(Guid id,int pageIndex, 
             int pageSize, string searchText, string sortText);
+        string GetStatus(string fileName, Guid userId, int id);
     }
 }

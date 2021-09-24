@@ -26,6 +26,9 @@
         });
     </script>
 }
+
+@if (Model.CountValue==0)
+{
 <section class="content">
     <div class="container-fluid">
         <div class="row">
@@ -73,10 +76,19 @@
     
     <!-- /.container-fluid -->
 </section>
-<!-- /.content-wrapper -->
 <section>
     <div class="card-footer">
         <a class="btn btn-primary float-left" asp-controller="Dashboard" asp-action="UploadConfirm">Upload</a>
         <a class="btn btn-primary float-right" asp-controller="Dashboard" asp-action="DeleteFile">Cancel</a>
     </div>
 </section>
+}
+else
+{
+<section>
+    <h1>File Already Exists.. </h1>
+    <div class="card-footer">
+        <a class="btn btn-primary float-left" asp-controller="Dashboard" asp-action="ImportJob">Return</a>
+    </div>
+</section>
+}

@@ -937,3 +937,4 @@ G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\Up
 G:\Final\DataImporter\DataImporter.Web\bin\Debug\net5.0\DataImporter.Importer.dll
 G:\Final\DataImporter\DataImporter.Web\bin\Debug\net5.0\DataImporter.Importer.pdb
 G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Shared\_Layout1.cshtml.g.cs

@@ -1,0 +1,40 @@
+2021-09-25 00:12:13.485 +06:00 [INF] Application Starting up
+2021-09-25 00:12:34.761 +06:00 [INF] User logged in.
+2021-09-25 00:14:31.315 +06:00 [INF] Application Starting up
+2021-09-25 00:15:51.020 +06:00 [INF] Application Starting up
+2021-09-25 00:20:42.694 +06:00 [INF] Application Starting up
+2021-09-25 00:21:06.437 +06:00 [ERR] Excel Creation Failed
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at DataImporter.Importer.Services.ImportService.GetStatus(String fileName, Guid userId, Int32 id) in G:\Final\DataImporter\DataImporter.Importer\Services\ImportService.cs:line 91
+   at DataImporter.Web.Models.ImportContactModel.Create(Int32 id, Guid Id) in G:\Final\DataImporter\DataImporter.Web\Models\ImportContactModel.cs:line 74
+   at DataImporter.Web.Controllers.DashboardController.ImportContact(ImportContactModel model) in G:\Final\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 107
+2021-09-25 00:23:58.656 +06:00 [INF] Application Starting up
+2021-09-25 00:27:48.203 +06:00 [INF] Application Starting up
+2021-09-25 00:29:28.009 +06:00 [INF] Application Starting up
+2021-09-25 00:31:15.674 +06:00 [INF] Application Starting up
+2021-09-25 00:36:23.401 +06:00 [INF] Application Starting up
+2021-09-25 00:38:49.473 +06:00 [INF] Application Starting up
+2021-09-25 00:41:59.184 +06:00 [INF] Application Starting up
+2021-09-25 00:44:16.844 +06:00 [INF] Application Starting up
+2021-09-25 00:47:24.108 +06:00 [INF] Application Starting up
+2021-09-25 00:48:33.576 +06:00 [INF] Application Starting up
+2021-09-25 00:49:28.903 +06:00 [INF] Application Starting up
+2021-09-25 00:53:12.147 +06:00 [INF] Application Starting up
+2021-09-25 00:56:55.558 +06:00 [INF] Application Starting up
+2021-09-25 00:58:45.788 +06:00 [INF] Application Starting up
+2021-09-25 01:02:03.594 +06:00 [INF] Application Starting up
+2021-09-25 01:04:15.786 +06:00 [INF] Application Starting up
+2021-09-25 01:09:38.753 +06:00 [INF] Application Starting up
+2021-09-25 01:11:00.830 +06:00 [INF] Application Starting up
+2021-09-25 01:12:13.785 +06:00 [INF] Application Starting up
+2021-09-25 01:14:00.654 +06:00 [INF] Application Starting up
+2021-09-25 01:15:18.050 +06:00 [INF] Application Starting up
+2021-09-25 01:18:49.038 +06:00 [INF] Application Starting up
+2021-09-25 01:24:55.628 +06:00 [INF] Application Starting up
+2021-09-25 01:28:32.124 +06:00 [INF] Application Starting up
+2021-09-25 01:31:00.816 +06:00 [INF] Application Starting up
+2021-09-25 01:32:36.242 +06:00 [INF] Application Starting up
+2021-09-25 01:42:05.691 +06:00 [INF] Application Starting up
+2021-09-25 01:44:24.878 +06:00 [INF] Application Starting up
+2021-09-25 01:46:01.572 +06:00 [INF] Application Starting up

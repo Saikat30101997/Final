@@ -42,16 +42,6 @@ namespace DataImporter.Worker.ReadFunctions
                 UserId = Guid.Parse(fileNameSplit[0]);
                 id = Convert.ToInt32(fileNameSplit[1]);
                 var groupName = _importService.GetGroupName(id);
-                var import = new Import()
-                {
-                    ExcelFileName =fileName,
-                    UserId = UserId,
-                    GroupId = id,
-                    ImportDate = _dateTimeUtility.Now(),
-                    Status = "Pending..",
-                    GroupName = groupName
-                };
-                _importService.Create(import);
                 var importid=_importService.GetImportId(fileName);
                 StoreExcelData(s,importid,id,UserId,fileName,groupName);
                 if (File.Exists(s))

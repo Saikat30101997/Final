@@ -3,6 +3,7 @@
 @inject IOptions<DataImporter.Web.Models.ReCaptcha.ReCaptchaSettings> GooglereCaptcha
 @{
     ViewData["Title"] = "Register";
+    Layout = "_Layout1";
 }
 
 @section Styles
@@ -10,7 +11,7 @@
     <link href="~/css/Registration.css" rel="stylesheet" />
     <link href="~/css/RegistrationLTE.css" rel="stylesheet" />
 }
-<section>
+<section class="">
     <div class="card card-blue reg">
         <div class="card-header">
             <h2 class="card-title">Register</h2>
