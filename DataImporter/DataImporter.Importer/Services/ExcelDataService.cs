@@ -27,5 +27,10 @@ namespace DataImporter.Importer.Services
                 _mapper.Map<Entities.ExcelData>(excelData));
             _importerUnitOfWork.Save();
         }
+
+        public IList<ExcelData> GetData(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -47,6 +47,7 @@ namespace DataImporter.Web.Models
                                 record.GroupName,
                                 record.ImportDate.ToString(),
                                 record.Status,
+                                record.Id.ToString()
                                 
                         }
                     ).ToArray()

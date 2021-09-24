@@ -10,5 +10,6 @@ namespace DataImporter.Importer.Services
     public interface IExcelDataService
     {
         void Create(ExcelData excelData);
+        IList<ExcelData> GetData(int id);
     }
 }

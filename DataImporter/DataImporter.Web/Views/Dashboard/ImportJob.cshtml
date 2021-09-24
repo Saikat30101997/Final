@@ -22,7 +22,11 @@
                     {
                         "orderable": false,
                         "render": function (data, type, row) {
-                            return;
+                            return `<button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='/admin/photo/edit/${data}'" value='${data}'>
+                                                    <i class="fas fa-pencil-alt">
+                                                    </i>
+                                                    Edit
+                                                </button>;
                         }
                     }
                 ]
@@ -78,6 +82,7 @@
                                     <th>Group Name</th>
                                     <th >Import Date</th>
                                     <th>Status</th>
+                                    <th style="width:150px">Action</th>
                                 </tr>
                             </thead>
                             <tfoot>
@@ -86,6 +91,7 @@
                                     <th>Group Name</th>
                                     <th>Import Date</th>
                                     <th>Status</th>
+                                    <th style="width:150px">Action</th>
                                 </tr>
                             </tfoot>
                         </table>

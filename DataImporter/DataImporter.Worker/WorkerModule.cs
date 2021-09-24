@@ -27,6 +27,7 @@ namespace DataImporter.Worker
         {
             builder.RegisterType<ExcelReadFunction>().As<IExcelReaderFunction>()
                 .InstancePerLifetimeScope();
+     
             base.Load(builder);
         }
     }

@@ -176,6 +176,13 @@ namespace DataImporter.Web.Controllers
             var data = model.GetGroups(tableModel, Id);
             return Json(data);
         }
+
+        public IActionResult Export(int id)
+        {
+            var model = _scope.Resolve<ExportJobModel>();
+            model.LoadModelData(id);
+            return RedirectToAction(nameof(ExportJob));
+        }
         public IActionResult ExportJob()
         {
             return View();
