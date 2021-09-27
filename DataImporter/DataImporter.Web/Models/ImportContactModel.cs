@@ -5,6 +5,7 @@ using DataImporter.Importer.Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,7 @@ namespace DataImporter.Web.Models
         public string fileName { get; set; } 
         public List<List<string> >Values { get; set; }
         public int CountValue { get; set; } = 0;
+        public int fileMatchValue { get; set; } = 0;
         public Guid UserId { get; set; }
 
         public int id { get; set; }
@@ -33,6 +35,7 @@ namespace DataImporter.Web.Models
         private ILifetimeScope _scope;
         private IDateTimeUtility _dateTimeUtility;
         private IImportService _importService;
+        private FilePath _filePath;
         
         public ImportContactModel()
         {
@@ -51,13 +54,14 @@ namespace DataImporter.Web.Models
         public ImportContactModel(IWebHostEnvironment hostEnvironment,
             IGroupService groupService,
             IFileSearching fileSearching,IDateTimeUtility dateTimeUtility,
-            IImportService importService)
+            IImportService importService,IOptions<FilePath>filepath)
         {
             _hostEnvironment = hostEnvironment;
             _groupService = groupService;
             _fileSearching = fileSearching;
             _dateTimeUtility = dateTimeUtility;
             _importService = importService;
+            _filePath = filepath.Value;
         }
         internal void Create(int id,Guid Id)
         {
@@ -65,19 +69,6 @@ namespace DataImporter.Web.Models
             string wwwRootPath = _hostEnvironment.WebRootPath;
             string fileName = ExcelFile.FileName;
             var files = fileName.Split('.');
-            if (_importService.GetStatus(files[0], Id, id) == null && _importService.GetStatus(files[0], Id, id) != "Completed" && _importService.GetStatus(fileName, UserId, id) != "Pending")
-            {
-               
-                var import = new Import
-                {
-                    GroupId = id,
-                    ExcelFileName = files[0],
-                    UserId = Id,
-                    Status = "Pending",
-                    GroupName = _importService.GetGroupName(id)
-                };
-                _importService.Create(import);
-            }
             ExcelFileName = Id.ToString() + "_" + id.ToString() + "_" + DateTime.Now.ToString("yymmssfff") + "_" + fileName;
             string path = Path.Combine(wwwRootPath + "/EXCELS/", ExcelFileName);
             using (var fileStream = new FileStream(path, FileMode.Create))
@@ -90,7 +81,8 @@ namespace DataImporter.Web.Models
         internal void ExcelValues()
         {
            
-            string path = $"G:/Final/DataImporter/DataImporter.Web/wwwroot/EXCELS";
+            //  string path = $"G:/aspnetb5/DataImporter/DataImporter.Web/wwwroot/EXCELS";
+            string path = _filePath.ExcelsPath;
             var Files = _fileSearching.GetExcelFiles(path);
             string s = null;
             foreach (var file in Files)
@@ -113,11 +105,24 @@ namespace DataImporter.Web.Models
                     
                     ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
                     int colCount = worksheet.Dimension.End.Column; 
-                    int rowCount = worksheet.Dimension.End.Row;     
+                    int rowCount = worksheet.Dimension.End.Row;
+                    string str = "";
                     for(int col=1;col<=colCount;col++)
                     {
                         listCol.Add(worksheet.Cells[1, col].Value?.ToString().Trim());
+
+                        if (col < colCount)
+                            str = str + worksheet.Cells[1, col].Value?.ToString().Trim() + '/';
+                        else if (col == colCount)
+                            str = str + worksheet.Cells[1, col].Value?.ToString().Trim();
                     }
+                    var importList = _importService.GetImportListData(UserId, id);
+                    if (importList.Count>0)
+                    {
+                        if (importList[0].ColumnName != str && importList[0].ColumnName != string.Empty)
+                            fileMatchValue = 1;
+                    }
+
                     for (int row = 2; row <= Math.Min(10,rowCount); row++)
                     {
                         var listVal = new List<string>();
@@ -128,60 +133,119 @@ namespace DataImporter.Web.Models
                         lists.Add(listVal);
                     }
                     listColumn = listCol;
-                   if(_importService.GetStatus(fileName,UserId,id)=="Pending")
-                   {
-                        DeleteFromConfirm();
-                        Upload();
-                   }
-                   else if(_importService.GetStatus(fileName,UserId,id)=="Completed")
-                   {
-                        CountValue = 1;
-                        Delete();
-                    }
+                  
+                
                 }
                 Values = lists;
+                if (_importService.GetStatus(fileName, UserId, id) == "Completed")
+                {
+                    CountValue = 1;
+                    Delete();
+                }
+
+                if (fileMatchValue == 1) Delete();
             }
         }
         internal void Upload()
         {
-            string path = $"G:/Final/DataImporter/DataImporter.Web/wwwroot/EXCELS";
+            //  string path = $"G:/aspnetb5/DataImporter/DataImporter.Web/wwwroot/EXCELS";
+            string path = _filePath.ExcelsPath;
             string s = null;
             var Files = _fileSearching.GetExcelFiles(path);
             foreach (var item in Files)
             {
                 s = item.FullName;
-                string destination = $"G:/Final/DataImporter/DataImporter.Web/wwwroot/Confirm";
-                string fulldest = destination +"/"+Path.GetFileNameWithoutExtension(s)+".xlsx";
-                File.Move(s, fulldest);
+                string fileNamewithGuid = Path.GetFileNameWithoutExtension(s);
+                var fileNameSplit = fileNamewithGuid.Split('_');
+                var fileName = _fileSearching.GetFileName(fileNamewithGuid);
+                UserId = Guid.Parse(fileNameSplit[0]);
+                id = Convert.ToInt32(fileNameSplit[1]);
+                if (_importService.GetStatus(fileNameSplit[3], UserId, id) == null
+                    || _importService.GetStatus(fileNameSplit[3], UserId, id)=="Pending")
+                {
+                    if(_importService.GetStatus(fileNameSplit[3], UserId, id) == "Pending")
+                    {
+                        _importService.DeleteFile(fileNameSplit[3], UserId, id);
+                        DeleteFromConfirm(fileNameSplit[3], UserId, id);
+                    }
+                    string str = "";
+                    FileInfo existingFile = new FileInfo(s);
+                    using (ExcelPackage package = new ExcelPackage(existingFile))
+                    {
+
+                        ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                        int colCount = worksheet.Dimension.End.Column;
+                        int rowCount = worksheet.Dimension.End.Row;
+                       
+                        for (int col = 1; col <= colCount; col++)
+                        {
+                            
+                            if (col < colCount)
+                                str = str + worksheet.Cells[1, col].Value?.ToString().Trim() + '/';
+                            else if (col == colCount)
+                                str = str + worksheet.Cells[1, col].Value?.ToString().Trim();
+                        }
+                    }
+                    var import = new Import
+                    {
+                        GroupId = id,
+                        ExcelFileName = fileNameSplit[3],
+                        UserId = UserId,
+                        Status = "Pending",
+                        GroupName = _importService.GetGroupName(id),
+                        ImportDate = _dateTimeUtility.Now(),
+                        ColumnName = str
+                         
+                       };
+                    _importService.Create(import);
+                    //  string destination = $"G:/aspnetb5/DataImporter/DataImporter.Web/wwwroot/Confirm";
+                    string destination = _filePath.ConfirmPath;
+                    string fulldest = destination + "/" + Path.GetFileNameWithoutExtension(s) + ".xlsx";
+                    File.Move(s, fulldest);
+                }
+            
             }
         }
 
         internal void Delete()
         {
-            string path = $"G:/Final/DataImporter/DataImporter.Web/wwwroot/EXCELS";
+            // string path = $"G:/aspnetb5/DataImporter/DataImporter.Web/wwwroot/EXCELS";
+            string path = _filePath.ExcelsPath;
             string s = null;
             var Files = _fileSearching.GetExcelFiles(path);
             foreach (var file in Files)
             {
                 s = file.FullName;
-                if(File.Exists(s))
+                string fileNamewithGuid = Path.GetFileNameWithoutExtension(s);
+                var fileNameSplit = fileNamewithGuid.Split('_');
+         
+                if (File.Exists(s))
                 {
                     file.Delete();
                 }
             }
         }
 
-        internal void DeleteFromConfirm()
+        internal void DeleteFromConfirm(string FileName,Guid userId,int id)
         {
-            string path = $"G:/Final/DataImporter/DataImporter.Web/wwwroot/Confirm";
+            // string path = $"G:/aspnetb5/DataImporter/DataImporter.Web/wwwroot/Confirm";
+            string path = _filePath.ConfirmPath;
             string s = null;
+       
             var Files = _fileSearching.GetExcelFiles(path);
             foreach (var file in Files)
             {
                 s = file.FullName;
-                if (File.Exists(s))
+                string fileNamewithGuid = Path.GetFileNameWithoutExtension(s);
+                var fileNameSplit = fileNamewithGuid.Split('_');
+                var fileName = _fileSearching.GetFileName(fileNamewithGuid);
+                if (Guid.Parse(fileNameSplit[0]) == userId && 
+                    Convert.ToInt32(fileNameSplit[1]) == id && fileNameSplit[3] == FileName)
                 {
-                    file.Delete();
+                    if (File.Exists(s))
+                    {
+                        file.Delete();
+                    }
                 }
             }
         }

@@ -51,11 +51,16 @@ namespace DataImporter.Importer.Services
             _importerUnitOfWork.Save();
         }
 
-        public int GetImportId(string file1)
+        public List<Import> GetImportList(string file1,Guid userId,int id)
         {
-            var imports = _importerUnitOfWork.Imports.Get(x => x.ExcelFileName == file1);
-            int id = imports[0].Id;
-            return id;
+            var importEntity = _importerUnitOfWork.Imports.Get(x => x.ExcelFileName == file1&&x.UserId==userId&&x.GroupId==id);
+            var imports = new List<Import>();
+            foreach (var item in importEntity)
+            {
+                var import = _mapper.Map<Import>(item);
+                imports.Add(import);
+            }
+            return imports;
         }
 
         public string GetGroupName(int id)
@@ -67,7 +72,8 @@ namespace DataImporter.Importer.Services
         public (IList<Import> records, int total, int totalDisplay) GetImports(Guid id,int pageIndex, int pageSize, string searchText, string sortText)
         {
             
-            var importData = _importerUnitOfWork.Imports.GetDynamic(string.IsNullOrWhiteSpace(searchText)?null:x=>x.GroupName.Contains(searchText), sortText, string.Empty, pageIndex, pageSize);
+            var importData = _importerUnitOfWork.Imports.GetDynamic(string.IsNullOrWhiteSpace(searchText)?null
+                :x=>x.GroupName.Contains(searchText), sortText, string.Empty, pageIndex, pageSize);
 
             var resultData = (from import in importData.data
                               where import.UserId == id
@@ -79,6 +85,7 @@ namespace DataImporter.Importer.Services
                                   ImportDate = import.ImportDate,
                                   Status = import.Status,
                                   GroupId = import.GroupId,
+                                  ColumnName = import.ColumnName
                               }).ToList();
 
             return (resultData, importData.total, importData.totalDisplay);
@@ -86,10 +93,31 @@ namespace DataImporter.Importer.Services
 
         public string GetStatus(string fileName, Guid userId, int id)
         {
-            var imports = _importerUnitOfWork.Imports.Get(x => x.ExcelFileName == fileName && x.UserId == userId && x.GroupId == id);
+            var imports = _importerUnitOfWork.Imports.Get(x => x.ExcelFileName == fileName 
+            && x.UserId == userId && x.GroupId == id);
           
             if (imports.Count>0) return imports[0].Status;
             else return null;
+        }
+
+        public void DeleteFile(string fileName, Guid userId, int id)
+        {
+            var imports = _importerUnitOfWork.Imports.Get(x => x.ExcelFileName == fileName 
+            && x.UserId == userId && x.GroupId == id);
+            _importerUnitOfWork.Imports.Remove(imports[0].Id);
+            _importerUnitOfWork.Save();
+        }
+
+        public List<Import> GetImportListData(Guid userId, int id)
+        {
+            var importEntity = _importerUnitOfWork.Imports.Get(x=> x.UserId == userId && x.GroupId == id);
+            var imports = new List<Import>();
+            foreach (var item in importEntity)
+            {
+                var import = _mapper.Map<Import>(item);
+                imports.Add(import);
+            }
+            return imports;
         }
     }
 }

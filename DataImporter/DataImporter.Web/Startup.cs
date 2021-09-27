@@ -75,7 +75,8 @@ namespace DataImporter.Web
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.Configure<ReCaptchaSettings>(Configuration.GetSection("GooglereCaptcha"));
             services.Configure<ConfirmationEmailSettings>(Configuration.GetSection("ConfirmEmail"));
-
+            services.Configure<SmtpConfiguration>(Configuration.GetSection("Smtp"));
+            services.Configure<FilePath>(Configuration.GetSection("Paths"));
             services  
                  .AddIdentity<ApplicationUser, Role>()
                  .AddEntityFrameworkStores<ApplicationDbContext>()

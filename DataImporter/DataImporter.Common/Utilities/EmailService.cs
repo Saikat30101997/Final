@@ -25,10 +25,11 @@ namespace DataImporter.Common.Utilities
             message.From.Add(new MailboxAddress(_confirmationEmailSettings.from, _confirmationEmailSettings.from));
             message.To.Add(new MailboxAddress(receiver, receiver));
             message.Subject = subject;
-
+            
             message.Body = new TextPart("html")
             {
-                Text = body
+                Text = body,
+                
             };
 
             using var client = new SmtpClient();

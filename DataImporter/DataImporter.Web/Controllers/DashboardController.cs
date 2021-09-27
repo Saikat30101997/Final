@@ -74,20 +74,14 @@ namespace DataImporter.Web.Controllers
             return View(model);
         }
 
-        public JsonResult GroupName()
-        {
-            var contactModel = _scope.Resolve<ContactModel>();
-            var data = contactModel.GetGroups();
-            return Json(data);
-        }
+   
 
        
         public IActionResult Contacts()
         {
             var contactModel = _scope.Resolve<ContactModel>();
-            var data = contactModel.GetGroups();
-            ViewBag.Groups = new SelectList(data, "Value", "Text");
-            return View();
+           contactModel.GetGroups();
+            return View(contactModel);
         }
         public IActionResult ImportContact()
         {
@@ -163,33 +157,62 @@ namespace DataImporter.Web.Controllers
         }
         public IActionResult ImportJob()
         {
-            return View();
+            var model = _scope.Resolve<ImportJobModel>();
+            return View(model);
         }
 
         public JsonResult GetImportData()
         {
+            
             ViewBag.UserId = _userManager.GetUserId(HttpContext.User);
             string s = ViewBag.UserId;
             Guid Id = Guid.Parse(s);
             var tableModel = new DataTablesAjaxRequestModel(Request);
             var model = _scope.Resolve<ImportJobModel>();
-            var data = model.GetGroups(tableModel, Id);
+            var data = model.GetImports(tableModel, Id);
             return Json(data);
         }
 
-        public IActionResult Export(int id)
+        public async Task<ActionResult> Export(int id)
         {
+            var usr =await _userManager.GetUserAsync(User);
+            var email = usr?.Email;
             var model = _scope.Resolve<ExportJobModel>();
-            model.LoadModelData(id);
-            return RedirectToAction(nameof(ExportJob));
+            model.LoadModelData(id,email);
+            return RedirectToAction("ExportJob");
         }
         public IActionResult ExportJob()
         {
-            return View();
+            var model = _scope.Resolve<ExportJobModel>();
+            return View(model);
         }
-        public IActionResult Register1()
+
+        public JsonResult GetExportData()
         {
-            return View();
+            ViewBag.UserId = _userManager.GetUserId(HttpContext.User);
+            string s = ViewBag.UserId;
+            Guid Id = Guid.Parse(s);
+            var tableModel = new DataTablesAjaxRequestModel(Request);
+            var model = _scope.Resolve<ExportJobModel>();
+            var data = model.GetExports(tableModel, Id);
+            return Json(data);
+        }
+
+
+        public async Task<ActionResult> SendEmail(int id)
+        {
+            var usr = await _userManager.GetUserAsync(User);
+            var email = usr?.Email;
+            var model = _scope.Resolve<ExportJobModel>();
+            model.Send(id, email);
+            return RedirectToAction(nameof(ExportJob));
+        }
+
+        public FileStreamResult Download(int id)
+        {
+            var model = _scope.Resolve<ExportJobModel>();
+            var data = model.Download(id);
+            return File(data.fileStream, data.mimetype, data.file);
         }
     }
 }

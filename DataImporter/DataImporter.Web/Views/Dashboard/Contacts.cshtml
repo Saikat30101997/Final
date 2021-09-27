@@ -39,10 +39,14 @@
 <div class="card card-body">
     <form class="row g-3" method="post" asp-antiforgery="true">
         <div class="col-md-3">
-            <label asp-for="GroupName" class="form-label">Group Name</label>
-            <input type="text" class="form-control" id="datefrom" asp-for="GroupName">
-            @*@Html.ListBox("listGroups", ViewBag.Groups as SelectList, new { style = "width:100%" })*@
-        </div>
+            <label asp-for="GroupName">GroupName</label>
+            <select class="custom-select rounded-0" id="exampleSelectRounded0" asp-for="GroupName">
+                @foreach (var item in Model.GroupList)
+                {
+                    <option>@item.GroupName</option>
+                }
+            </select>
+        </div>                                                                                                                                                                 
         <div class="col-md-3">
             <label asp-for="DateFrom" class="form-label">Date From</label>
             <input type="text" class="form-control" id="datefrom" asp-for="DateFrom">

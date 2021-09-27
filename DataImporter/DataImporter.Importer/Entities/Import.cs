@@ -18,5 +18,7 @@ namespace DataImporter.Importer.Entities
         public DateTime ImportDate { get; set; }
         public string Status { get; set; }
         public List<ExcelData> ExcelDatas { get; set; }
+
+        public string ColumnName { get; set; }
     }
 }

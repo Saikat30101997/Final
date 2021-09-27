@@ -16,7 +16,7 @@ namespace DataImporter.Web.Models
         public DateTime DateFrom { get; set; }
         public DateTime DateTo { get; set; }
 
-        public List<string> GroupList { get; set; }
+        public List<Group> GroupList { get; set; }
         private  IGroupService _groupService;
         private ILifetimeScope _scope;
         public ContactModel()
@@ -33,11 +33,9 @@ namespace DataImporter.Web.Models
         {
             _groupService = groupService;
         }
-        public List<Group> GetGroups()
+        public void GetGroups()
         {
-            var group = _groupService.GetGroups();
-            return group;
-  
+            GroupList = _groupService.GetGroups();
         }
     }
 }

@@ -5,6 +5,7 @@ using DataImporter.Importer;
 using DataImporter.Importer.Contexts;
 using DataImporter.Membership;
 using DataImporter.Membership.Contexts;
+using DataImporter.Worker.FilePaths;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -82,6 +83,7 @@ namespace DataImporter.Worker
                          options.UseSqlServer(_connectionString, b =>
                          b.MigrationsAssembly(_migrationAssemblyName)));
                     services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+                    services.Configure<WorkerFilePath>(hostContext.Configuration.GetSection("Path"));
                     services.AddHostedService<Worker>();
                 });
     }

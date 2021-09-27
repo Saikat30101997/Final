@@ -1,0 +1,31 @@
+2021-09-27 01:43:09.774 +06:00 [INF] Application Starting up
+2021-09-27 01:43:17.635 +06:00 [INF] Worker running at: "2021-09-27T01:43:17.6258360+06:00"
+2021-09-27 10:24:55.536 +06:00 [INF] Application Starting up
+2021-09-27 10:24:59.341 +06:00 [INF] Worker running at: "2021-09-27T10:24:59.3359752+06:00"
+2021-09-27 10:29:49.671 +06:00 [INF] Application Starting up
+2021-09-27 10:29:55.713 +06:00 [INF] Worker running at: "2021-09-27T10:29:55.7031087+06:00"
+2021-09-27 10:35:25.789 +06:00 [INF] Application Starting up
+2021-09-27 10:35:29.495 +06:00 [FTL] Application start-up failed
+System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at System.IO.DirectoryInfo..ctor(String path)
+   at DataImporter.Common.Utilities.FileSearching.GetExcelFiles(String path) in G:\aspnetb5\DataImporter\DataImporter.Common\Utilities\FileSearching.cs:line 14
+   at DataImporter.Worker.ReadFunctions.ExcelReadFunction.ReadExcelData() in G:\aspnetb5\DataImporter\DataImporter.Worker\ReadFunctions\ExcelReadFunction.cs:line 37
+   at DataImporter.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\aspnetb5\DataImporter\DataImporter.Worker\Worker.cs:line 27
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at DataImporter.Worker.Program.Main(String[] args) in G:\aspnetb5\DataImporter\DataImporter.Worker\Program.cs:line 43
+2021-09-27 10:36:22.305 +06:00 [INF] Application Starting up
+2021-09-27 10:46:42.577 +06:00 [INF] Application Starting up
+2021-09-27 10:47:37.065 +06:00 [INF] Application Starting up
+2021-09-27 10:48:22.277 +06:00 [INF] Worker running at: "2021-09-27T10:48:22.2669811+06:00"
+2021-09-27 10:48:54.154 +06:00 [INF] Application Starting up
+2021-09-27 10:48:58.505 +06:00 [INF] Worker running at: "2021-09-27T10:48:58.4988166+06:00"
+2021-09-27 10:50:40.610 +06:00 [INF] Application Starting up
+2021-09-27 10:50:44.037 +06:00 [INF] Worker running at: "2021-09-27T10:50:44.0311027+06:00"
+2021-09-27 10:51:22.057 +06:00 [INF] Application Starting up
+2021-09-27 10:51:39.644 +06:00 [INF] Worker running at: "2021-09-27T10:51:39.6326671+06:00"
+2021-09-27 10:53:17.824 +06:00 [INF] Application Starting up
+2021-09-27 10:53:35.753 +06:00 [INF] Worker running at: "2021-09-27T10:53:35.7424824+06:00"

@@ -30,7 +30,14 @@ namespace DataImporter.Importer.Services
 
         public IList<ExcelData> GetData(int id)
         {
-            throw new NotImplementedException();
+            var exceldatas = _importerUnitOfWork.ExcelDatas.Get(x => x.ImportId == id,string.Empty);
+            var data = new List<ExcelData>();
+            foreach (var exceldata in exceldatas)
+            {
+                var excel = _mapper.Map<ExcelData>(exceldata);
+                data.Add(excel);
+            }
+            return data;
         }
     }
 }

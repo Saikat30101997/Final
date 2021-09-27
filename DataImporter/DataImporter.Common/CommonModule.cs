@@ -13,8 +13,11 @@ namespace DataImporter.Common
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<ConfirmationEmailSettings>().AsSelf();
+            builder.RegisterType<SmtpConfiguration>().AsSelf();
             builder.RegisterType<EmailService>().As<IEmailService>()
                 .InstancePerLifetimeScope();
+            builder.RegisterType<ExcelEmailSender>().As<IExcelEmailSender>()
+             .InstancePerLifetimeScope();
             builder.RegisterType<FileSearching>().As<IFileSearching>()
                 .InstancePerLifetimeScope();
             builder.RegisterType<DateTimeUtility>().As<IDateTimeUtility>()

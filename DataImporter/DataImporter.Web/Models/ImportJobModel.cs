@@ -28,7 +28,7 @@ namespace DataImporter.Web.Models
         {
             _importService = importService;
         }
-        internal object GetGroups(DataTablesAjaxRequestModel tableModel, Guid id)
+        internal object GetImports(DataTablesAjaxRequestModel tableModel, Guid id)
         {
             var data = _importService.GetImports(id,
              tableModel.PageIndex,

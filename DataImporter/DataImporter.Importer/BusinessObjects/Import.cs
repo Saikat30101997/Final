@@ -15,5 +15,7 @@ namespace DataImporter.Importer.BusinessObjects
         public DateTime ImportDate { get; set; }
         public string Status { get; set; }
         public string GroupName { get; set; }
+
+        public string ColumnName { get; set; }
     }
 }

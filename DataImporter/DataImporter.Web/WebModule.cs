@@ -24,6 +24,7 @@ namespace DataImporter.Web
             builder.RegisterType<ImportContactModel>().AsSelf();
             builder.RegisterType<ExportJobModel>().AsSelf();
             builder.RegisterType<ImportJobModel>().AsSelf();
+            builder.RegisterType<ExportListModel>().AsSelf();
             base.Load(builder);
         }
     }

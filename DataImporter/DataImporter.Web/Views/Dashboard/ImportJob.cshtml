@@ -1,6 +1,6 @@
 ﻿@model DataImporter.Web.Models.ImportJobModel
 @{
-    ViewData["Title"] = "ImporyJob";
+    ViewData["Title"] = "ImportJob";
 }
 @section Styles
 {
@@ -21,8 +21,13 @@
                 "columnDefs": [
                     {
                         "orderable": false,
+                        "targets": 4,
                         "render": function (data, type, row) {
-                            return;
+                            return `<button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='/dashboard/export/${data}'" value='${data}'>
+                                            <i class="fas fa-file-export"></i>
+                                            Export
+                                        </button>`;
+                                       
                         }
                     }
                 ]
@@ -67,7 +72,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Student Attendance List</h3>
+                        <h3 class="card-title">Import List</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
