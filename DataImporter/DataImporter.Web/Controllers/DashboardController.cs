@@ -85,7 +85,8 @@ namespace DataImporter.Web.Controllers
         }
         public IActionResult ImportContact()
         {
-            return View();
+            var model = _scope.Resolve<ImportContactModel>();
+            return View(model);
         }
         [HttpPost,ValidateAntiForgeryToken]
         public IActionResult ImportContact(ImportContactModel model)
@@ -107,8 +108,9 @@ namespace DataImporter.Web.Controllers
                     _logger.LogError(ex, "Excel Creation Failed");
                 }
             }
-            //  return View(model);
-            return RedirectToAction(nameof(UploadConfirmation));
+            if (model.ExcelFile == null) return View(model);
+            else
+               return RedirectToAction(nameof(UploadConfirmation));
         }
         public IActionResult GroupEdit(int id)
         {

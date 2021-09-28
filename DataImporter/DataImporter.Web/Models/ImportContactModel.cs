@@ -9,6 +9,7 @@ using Microsoft.Extensions.Options;
 using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -120,7 +121,11 @@ namespace DataImporter.Web.Models
                     if (importList.Count>0)
                     {
                         if (importList[0].ColumnName != str && importList[0].ColumnName != string.Empty)
+                        {
                             fileMatchValue = 1;
+                            Delete();
+                        }
+                       
                     }
 
                     for (int row = 2; row <= Math.Min(10,rowCount); row++)
