@@ -18,5 +18,6 @@ namespace DataImporter.Importer.Services
         string GetStatus(string fileName, Guid userId, int id);
         void DeleteFile(string fileName, Guid userId, int id);
         List<Import> GetImportListData(Guid userId, int id);
+        void Delete(int id);
     }
 }

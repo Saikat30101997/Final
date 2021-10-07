@@ -1,0 +1,32 @@
+2021-10-01 00:03:34.253 +06:00 [INF] Application Starting up
+2021-10-01 00:04:12.687 +06:00 [INF] User logged in.
+2021-10-01 00:06:05.675 +06:00 [INF] Application Starting up
+2021-10-01 00:06:56.490 +06:00 [ERR] Data is not get
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at DataImporter.Web.Controllers.DashboardController.Contacts(ContactModel model) in G:\aspnetb5\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 97
+2021-10-01 00:06:58.249 +06:00 [ERR] Data is not get
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at DataImporter.Web.Controllers.DashboardController.Contacts(ContactModel model) in G:\aspnetb5\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 97
+2021-10-01 17:26:20.292 +06:00 [INF] Application Starting up
+2021-10-01 17:26:49.687 +06:00 [INF] User logged in.
+2021-10-01 17:26:58.069 +06:00 [ERR] Data is not get
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at DataImporter.Web.Controllers.DashboardController.Contacts(ContactModel model) in G:\aspnetb5\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 97
+2021-10-01 17:28:15.328 +06:00 [INF] Application Starting up
+2021-10-01 17:28:37.476 +06:00 [ERR] Data is not get
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at DataImporter.Web.Controllers.DashboardController.Contacts(ContactModel model) in G:\aspnetb5\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 97
+2021-10-01 17:29:18.469 +06:00 [INF] Application Starting up
+2021-10-01 17:29:36.013 +06:00 [ERR] Data is not get
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at DataImporter.Web.Controllers.DashboardController.Contacts(ContactModel model) in G:\aspnetb5\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 97
+2021-10-01 17:31:14.589 +06:00 [INF] Application Starting up
+2021-10-01 18:48:58.466 +06:00 [INF] Application Starting up
+2021-10-01 18:49:53.974 +06:00 [INF] User logged in.
+2021-10-01 18:51:40.324 +06:00 [INF] Application Starting up
+2021-10-01 18:59:02.972 +06:00 [INF] Application Starting up

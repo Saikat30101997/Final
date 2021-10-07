@@ -82,7 +82,6 @@ namespace DataImporter.Web.Models
         internal void ExcelValues()
         {
            
-            //  string path = $"G:/aspnetb5/DataImporter/DataImporter.Web/wwwroot/EXCELS";
             string path = _filePath.ExcelsPath;
             var Files = _fileSearching.GetExcelFiles(path);
             string s = null;
@@ -123,7 +122,7 @@ namespace DataImporter.Web.Models
                         if (importList[0].ColumnName != str && importList[0].ColumnName != string.Empty)
                         {
                             fileMatchValue = 1;
-                            Delete();
+                            Delete(UserId,id,fileNameSplit[3]);
                         }
                        
                     }
@@ -145,15 +144,14 @@ namespace DataImporter.Web.Models
                 if (_importService.GetStatus(fileName, UserId, id) == "Completed")
                 {
                     CountValue = 1;
-                    Delete();
+                    Delete(UserId,id,fileName);
                 }
 
-                if (fileMatchValue == 1) Delete();
+                if (fileMatchValue == 1) Delete(UserId,id,fileName);
             }
         }
         internal void Upload()
         {
-            //  string path = $"G:/aspnetb5/DataImporter/DataImporter.Web/wwwroot/EXCELS";
             string path = _filePath.ExcelsPath;
             string s = null;
             var Files = _fileSearching.GetExcelFiles(path);
@@ -203,7 +201,6 @@ namespace DataImporter.Web.Models
                          
                        };
                     _importService.Create(import);
-                    //  string destination = $"G:/aspnetb5/DataImporter/DataImporter.Web/wwwroot/Confirm";
                     string destination = _filePath.ConfirmPath;
                     string fulldest = destination + "/" + Path.GetFileNameWithoutExtension(s) + ".xlsx";
                     File.Move(s, fulldest);
@@ -212,9 +209,8 @@ namespace DataImporter.Web.Models
             }
         }
 
-        internal void Delete()
+        internal void Delete(Guid userid,int id,string filename)
         {
-            // string path = $"G:/aspnetb5/DataImporter/DataImporter.Web/wwwroot/EXCELS";
             string path = _filePath.ExcelsPath;
             string s = null;
             var Files = _fileSearching.GetExcelFiles(path);
@@ -223,17 +219,28 @@ namespace DataImporter.Web.Models
                 s = file.FullName;
                 string fileNamewithGuid = Path.GetFileNameWithoutExtension(s);
                 var fileNameSplit = fileNamewithGuid.Split('_');
-         
-                if (File.Exists(s))
+                Guid Userid = Guid.Parse(fileNameSplit[0]);
+                int Id = Convert.ToInt32(fileNameSplit[1]);
+                if (Userid == userid && id == Id && filename == fileNameSplit[3])
                 {
-                    file.Delete();
+                    if (File.Exists(s))
+                    {
+                        file.Delete();
+                    }
+                }
+                else if(Userid==userid && id==0 && filename==string.Empty)
+                {
+                    if(File.Exists(s))
+                    {
+                        file.Delete();
+                    }
                 }
             }
         }
 
         internal void DeleteFromConfirm(string FileName,Guid userId,int id)
         {
-            // string path = $"G:/aspnetb5/DataImporter/DataImporter.Web/wwwroot/Confirm";
+            
             string path = _filePath.ConfirmPath;
             string s = null;
        

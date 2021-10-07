@@ -38,15 +38,6 @@ namespace DataImporter.Importer.Services
                 throw new InvalidOperationException("Import is not provided");
             _importerUnitOfWork.Imports.Add(
                 _mapper.Map<EO.Import>(import));
-            //_importerUnitOfWork.Imports.Add(
-            //  new Entities.Import
-            //  {
-            //      ExcelFileName = import.ExcelFileName,
-            //      GroupId = import.GroupId,
-            //      UserId = import.UserId,
-            //      Status = import.Status,
-            //      ImportDate = import.ImportDate
-            //  });
 
             _importerUnitOfWork.Save();
         }
@@ -73,20 +64,14 @@ namespace DataImporter.Importer.Services
         {
             
             var importData = _importerUnitOfWork.Imports.GetDynamic(string.IsNullOrWhiteSpace(searchText)?null
-                :x=>x.GroupName.Contains(searchText), sortText, string.Empty, pageIndex, pageSize);
+                :x=>x.GroupName.Contains(searchText) || x.ImportDate.ToString().Contains(searchText), 
+                sortText, string.Empty, pageIndex, pageSize);
 
             var resultData = (from import in importData.data
                               where import.UserId == id
-                              select new Import
-                              {
-                                  Id = import.Id,
-                                  ExcelFileName = import.ExcelFileName,
-                                  GroupName = import.GroupName,
-                                  ImportDate = import.ImportDate,
-                                  Status = import.Status,
-                                  GroupId = import.GroupId,
-                                  ColumnName = import.ColumnName
-                              }).ToList();
+                              orderby import.Id descending
+                              select _mapper.Map<Import>(import)).ToList();
+                 
 
             return (resultData, importData.total, importData.totalDisplay);
         }
@@ -118,6 +103,12 @@ namespace DataImporter.Importer.Services
                 imports.Add(import);
             }
             return imports;
+        }
+
+        public void Delete(int id)
+        {
+            _importerUnitOfWork.Imports.Remove(id);
+            _importerUnitOfWork.Save();
         }
     }
 }

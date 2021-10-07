@@ -28,6 +28,40 @@ namespace DataImporter.Importer.Services
             _importerUnitOfWork.Save();
         }
 
+        public List<ExcelData> GetAllData(Guid id, string groupName, DateTime dateFrom, DateTime dateTo)
+        {
+            var data = new List<ExcelData>();
+            var excelDataEntity = _importerUnitOfWork.ExcelDatas.GetAll();
+            if (dateFrom > dateTo) dateTo = dateFrom;
+            var filterData = (from exceldata in excelDataEntity
+                              where exceldata.GroupName == groupName && exceldata.UserId == id 
+                              select exceldata).ToList();
+
+            if (filterData.Any(x => x.ImportDate == dateFrom) == false && filterData.Any(x=>x.ImportDate==dateTo)==true) 
+                dateFrom = filterData.Min(x => x.ImportDate);
+
+            if (filterData.Any(x => x.ImportDate == dateFrom) == true && filterData.Any(x => x.ImportDate == dateTo) == false)
+                dateTo = dateFrom;
+
+            if (filterData.Any(x => x.ImportDate > dateFrom) == true && filterData.Any(x => x.ImportDate == dateFrom) == false)
+            {
+                dateFrom = (filterData.TakeWhile(x => x.ImportDate > dateFrom)).ToList()[0].ImportDate;
+
+            }
+
+            var filterbydate = (from exceldata in filterData
+                                where exceldata.ImportDate >= dateFrom
+                                && exceldata.ImportDate <= dateTo
+                                select exceldata).ToList();
+            foreach (var item in filterbydate)
+                {
+                    var ex = _mapper.Map<ExcelData>(item);
+                    data.Add(ex);
+                }
+            
+            return data;
+        }
+
         public IList<ExcelData> GetData(int id)
         {
             var exceldatas = _importerUnitOfWork.ExcelDatas.Get(x => x.ImportId == id,string.Empty);

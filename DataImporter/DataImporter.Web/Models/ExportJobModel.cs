@@ -80,7 +80,7 @@ namespace DataImporter.Web.Models
                 GroupId = ExcelDatas[0].GroupId,
                 UserId = ExcelDatas[0].UserId,
                 ExcelFileName = ExcelDatas[0].ExcelFileName,
-                Date = _dateTimeUtility.Now(),
+                Date = _dateTimeUtility.NowWithTime,
                 GroupName = ExcelDatas[0].GroupName
             };
             _exportService.Create(export);
@@ -112,7 +112,7 @@ namespace DataImporter.Web.Models
                 workSheet.Cells.LoadFromDataTable(dataTable, true);
                 package.Save();
                 CountValue = 1;
-                FileInfo fi = new FileInfo(/*@"G:\aspnetb5\DataImporter\DataImporter.Web\wwwroot\SaveFile\"*/ _filePath.SavePath +
+                FileInfo fi = new FileInfo(_filePath.SavePath +
                     ExcelDatas[0].UserId+'_'+ExcelDatas[0].GroupName+'_'+ExcelDatas[0].ExcelFileName + ".xlsx");
                 package.SaveAs(fi);
                 string path = _filePath.SavePath;
@@ -137,8 +137,7 @@ namespace DataImporter.Web.Models
 
         private void Delete(int exportId,Guid userId, string fileName, string groupName)
         {
-            // _exportService.Delete(exportId);
-            // string path = $"G:/aspnetb5/DataImporter/DataImporter.Web/wwwroot/SaveFile/";
+           
             string path = _filePath.SavePath;
             string s = null;
 
@@ -192,7 +191,6 @@ namespace DataImporter.Web.Models
                 s = file.FullName;
                 string fileNamewithGuid = Path.GetFileNameWithoutExtension(s);
                 var fileNameSplit = fileNamewithGuid.Split('_');
-           //     var filename = _fileSearching.GetFileName(fileNamewithGuid);
                 if (Guid.Parse(fileNameSplit[0]) == export[0].UserId && fileNameSplit[1] == export[0].GroupName
                     && fileNameSplit[2] == export[0].ExcelFileName)
                 {
@@ -229,5 +227,8 @@ namespace DataImporter.Web.Models
                     ).ToArray()
             };
         }
+
+        
+        
     }
 }

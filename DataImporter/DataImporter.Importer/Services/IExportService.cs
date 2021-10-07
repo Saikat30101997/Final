@@ -15,5 +15,6 @@ namespace DataImporter.Importer.Services
         List<Export> GetDatabyId(int id);
         (IList<Export>records,int total,int totalDisplay) GetExport(Guid id, int pageIndex,
             int pageSize, string searchText, string sortText);
+   
     }
 }

@@ -10,5 +10,13 @@ namespace DataImporter.Common.Utilities
     {
         public DateTime Now() =>
             DateTime.Today;
+
+        public DateTime NowWithTime
+        {
+            get
+            {
+                return DateTime.Now;
+            }
+        }
     }
 }

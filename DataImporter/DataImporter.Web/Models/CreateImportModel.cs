@@ -30,13 +30,13 @@ namespace DataImporter.Web.Models
         {
             _groupService = groupService;
         }
-        internal void Create(Guid id)
+        public void Create(Guid id)
         {
             var group = new Group
             {
                 GroupName = Name,
                 UserId = id
-        };
+            };
 
             _groupService.Create(group);
         }

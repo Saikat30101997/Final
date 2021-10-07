@@ -37,21 +37,23 @@ namespace DataImporter.Importer
             builder.RegisterType<GroupRepository>().As<IGroupRepository>()
                 .InstancePerLifetimeScope();
             builder.RegisterType<ImportRepository>().As<IImportRepository>()
-              .InstancePerLifetimeScope();
+                .InstancePerLifetimeScope();
             builder.RegisterType<ExportRepository>().As<IExportRepository>()
-             .InstancePerLifetimeScope();
+                .InstancePerLifetimeScope();
             builder.RegisterType<ExcelDataRepository>().As<IExcelDataRepository>()
-             .InstancePerLifetimeScope();
+                .InstancePerLifetimeScope();
             builder.RegisterType<ImporterUnitOfWork>().As<IImporterUnitOfWork>()
                 .InstancePerLifetimeScope();
             builder.RegisterType<GroupService>().As<IGroupService>()
                 .InstancePerLifetimeScope();
             builder.RegisterType<ImportService>().As<IImportService>()
-          .InstancePerLifetimeScope();
+                .InstancePerLifetimeScope();
             builder.RegisterType<ExportService>().As<IExportService>()
-          .InstancePerLifetimeScope();
+                .InstancePerLifetimeScope();
             builder.RegisterType<ExcelDataService>().As<IExcelDataService>()
-          .InstancePerLifetimeScope();
+                .InstancePerLifetimeScope();
+            builder.RegisterType<UpdateService>().As<IUpdateService>()
+                .InstancePerLifetimeScope();
 
             base.Load(builder);
         }

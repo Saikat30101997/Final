@@ -1,108 +1,4 @@
-﻿
-@*@{
-    ViewData["Title"] = "ExportJob";
-}
-
-@section Styles
-{
-    <link rel="stylesheet" href="/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-}
-@section Scripts
-{
-    <script src="/admin/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script>
-        $(function () {
-            $('#exports').DataTable({
-                "processing": true,
-                "serverSide": true,
-                "ajax": "/Dashboard/GetExportData",
-                "columnDefs": [
-                    {
-                        "orderable": false,
-                        "targets": 3,
-                        // "render": function (data, type, row) {
-                        //   return ;
-
-                        //}
-                    }
-                ]
-            });
-            $('#exports').on('click', '.show-bs-modal', function (event) {
-                var id = $(this).data("id");
-                var modal = $("#modal-default");
-                modal.find('.modal-body p').text('Are you sure you want to delete this record?')
-                $("#deleteId").val(id);
-                $("#deleteForm").attr("action", "/dashboard/delete")
-                modal.modal('show');
-            });
-            $("#deleteButton").click(function () {
-                $("#deleteForm").submit();
-            });
-        });
-    </script>
-}-->*@
-@*<section class="content-header">
-    </section>
-
-    <div class="card card-body">
-        <form class="row g-3" method="post" asp-antiforgery="true" asp-controller="Dashboard" asp-action="ExportJob">
-            <div class="col-md-3">
-                <label asp-for="DateFrom" class="form-label">Date From</label>
-                <input type="text" class="form-control" id="datefrom" asp-for="DateFrom">
-            </div>
-            <div class="col-md-3">
-                <label asp-for="DateTo" class="form-label">Date To</label>
-                <input type="text" class="form-control" id="dateTo" asp-for="DateTo">
-            </div>
-            <div class="col align-self-end">
-                <button type="submit" class="btn btn-info float-sm-right">Search</button>
-            </div>
-        </form>
-    </div>*@
-
-<!--<section class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">Export List</h3>
-                    </div>-->
-<!-- /.card-header -->
-<!--<div class="card-body">
-    <table id="exports" class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>Excel File Name</th>
-                <th>Group Name</th>
-                <th>Date</th>
-                <th style="width:150px">Action</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th>Excel File Name</th>
-                <th>Group Name</th>
-                <th>Date</th>
-                <th style="width:150px">Action</th>
-            </tr>
-        </tfoot>
-    </table>
-</div>-->
-<!-- /.card-body -->
-<!--</div>-->
-<!-- /.card -->
-<!--</div>-->
-<!-- /.col -->
-<!--</div>-->
-<!-- /.row -->
-<!--</div>-->
-<!-- /.container-fluid -->
-<!--</section>-->
-<!-- /.content-wrapper -->
-
-@model DataImporter.Web.Models.ExportJobModel
+﻿@model DataImporter.Web.Models.ExportJobModel
 @{
     ViewData["Title"] = "ImportJob";
 }
@@ -128,13 +24,13 @@
                         "targets": 3,
                         "render": function (data, type, row) {
                             return `<button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='/dashboard/sendemail/${data}'" value='${data}'>
-                                               <i class="fas fa-envelope-open-text"></i>
-                                                SendMail
-                                            </button>
-                                    <button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='/dashboard/download/${data}'" value='${data}'>
-                                              <i class="fas fa-download"></i>
-                                                Download
-                                            </button>`;
+                                                       <i class="fas fa-envelope-open-text"></i>
+                                                        SendMail
+                                                    </button>
+                                            <button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='/dashboard/download/${data}'" value='${data}'>
+                                                      <i class="fas fa-download"></i>
+                                                        Download
+                                                    </button>`;
 
                         }
                     }
@@ -145,7 +41,7 @@
                 var modal = $("#modal-default");
                 modal.find('.modal-body p').text('Are you sure you want to delete this record?')
                 $("#deleteId").val(id);
-                $("#deleteForm").attr("action", "/dashboard/delete")
+                $("#deleteForm").attr("action", "/dashboard/deleteexport")
                 modal.modal('show');
             });
             $("#deleteButton").click(function () {
@@ -156,23 +52,10 @@
 }
 
 <section class="content-header">
+
 </section>
 
-<div class="card card-body">
-    <form class="row g-3" method="post" asp-antiforgery="true" asp-controller="Dashboard" asp-action="ImportJob">
-        <div class="col-md-3">
-            <label asp-for="DateFrom" class="form-label">Date From</label>
-            <input type="text" class="form-control" id="datefrom" asp-for="DateFrom">
-        </div>
-        <div class="col-md-3">
-            <label asp-for="DateTo" class="form-label">Date To</label>
-            <input type="text" class="form-control" id="dateTo" asp-for="DateTo">
-        </div>
-        <div class="col align-self-end">
-            <button type="submit" class="btn btn-info float-sm-right">Search</button>
-        </div>
-    </form>
-</div>
+
 
 <section class="content">
     <div class="container-fluid">
@@ -182,7 +65,6 @@
                     <div class="card-header">
                         <h3 class="card-title">Export List</h3>
                     </div>
-                    <!-- /.card-header -->
                     <div class="card-body">
                         <table id="imports" class="table table-bordered table-hover">
                             <thead>
@@ -202,15 +84,12 @@
                                 </tr>
                             </tfoot>
                         </table>
+               
                     </div>
-                    <!-- /.card-body -->
                 </div>
-                <!-- /.card -->
             </div>
-            <!-- /.col -->
         </div>
-        <!-- /.row -->
     </div>
-    <!-- /.container-fluid -->
 </section>
-<!-- /.content-wrapper -->
+
+

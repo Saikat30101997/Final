@@ -48,5 +48,10 @@ namespace DataImporter.Web.Models
                     ).ToArray()
             };
         }
+
+        public void Delete(int id)
+        {
+            _groupService.Delete(id);
+        }
     }
 }

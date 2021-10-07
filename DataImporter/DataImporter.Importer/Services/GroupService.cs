@@ -25,30 +25,22 @@ namespace DataImporter.Importer.Services
             if (group == null)
                 throw new InvalidOperationException("Group is not Provided");
             _importerUnitOfWork.Groups.Add(
-                new Entities.Group
-                {
-                    GroupName = group.GroupName,
-                    UserId = group.UserId
-                });
+                _mapper.Map<Entities.Group>(group));
             _importerUnitOfWork.Save();
         }
 
-        public Group GetGroup(int id)
+        public void Delete(int id)
         {
-            var group = _importerUnitOfWork.Groups.GetById(id);
-            return new Group
-            {
-                Id = group.Id,
-                UserId = group.UserId,
-                GroupName = group.GroupName
-            };
+            _importerUnitOfWork.Groups.Remove(id);
+            _importerUnitOfWork.Save();
         }
 
-        public List<Group> GetGroups()
+        public List<Group> GetGroups(Guid Id)
         {
-            var groupEntity = _importerUnitOfWork.Groups.GetAll();
+            IList<Entities.Group> groupEntity = _importerUnitOfWork.Groups.GetAll();
             var groups = new List<Group>();
-            foreach (var group in groupEntity)
+            var resultData = (from grp in groupEntity where grp.UserId == Id select grp).ToList();
+            foreach (var group in resultData)
             {
                 var gr = new Group()
                 {
@@ -56,7 +48,8 @@ namespace DataImporter.Importer.Services
                 };
                 groups.Add(gr);
             }
-            return groups;
+            if (groups == null) return null;
+            else return groups;
 
         }
 
@@ -75,18 +68,6 @@ namespace DataImporter.Importer.Services
             return (resultData, groupData.total, groupData.totalDisplay);
         }
 
-        public void UpdateGroupName(Group group)
-        {
-            if (group == null)
-                throw new InvalidOperationException("Group is not provided");
-            var groupEntity = _importerUnitOfWork.Groups.GetById(group.Id);
-            if (groupEntity != null)
-            {
-                groupEntity.GroupName = group.GroupName;
-                _importerUnitOfWork.Save();
-            }
-            else
-                throw new InvalidOperationException("Group is not updated");
-        }
+     
     }
 }

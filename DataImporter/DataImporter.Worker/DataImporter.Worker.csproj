@@ -26,4 +26,8 @@
     <ProjectReference Include="..\DataImporter.Importer\DataImporter.Importer.csproj" />
     <ProjectReference Include="..\DataImporter.Membership\DataImporter.Membership.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
 </Project>

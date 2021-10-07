@@ -11,5 +11,6 @@ namespace DataImporter.Importer.Services
     {
         void Create(ExcelData excelData);
         IList<ExcelData> GetData(int id);
+        List<ExcelData> GetAllData(Guid id, string groupName, DateTime dateFrom, DateTime dateTo);
     }
 }

@@ -1402,7 +1402,6 @@ G:\aspnetb5\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard
 G:\aspnetb5\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\ManageGroup.cshtml.g.cs
 G:\aspnetb5\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\UploadConfirmation.cshtml.g.cs
 G:\aspnetb5\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-G:\aspnetb5\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 G:\aspnetb5\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Shared\_AdminMenuPartial.cshtml.g.cs
 G:\aspnetb5\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Shared\_DeletePopUpPartial.cshtml.g.cs
 G:\aspnetb5\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -1417,3 +1416,5 @@ G:\aspnetb5\DataImporter\DataImporter.Web\obj\Debug\net5.0\DataImporter.Web.Razo
 G:\aspnetb5\DataImporter\DataImporter.Web\obj\Debug\net5.0\DataImporter.Web.Views.pdb
 G:\aspnetb5\DataImporter\DataImporter.Web\obj\Debug\net5.0\DataImporter.Web.csproj.CopyComplete
 G:\aspnetb5\DataImporter\DataImporter.Web\obj\Debug\net5.0\DataImporter.Web.genruntimeconfig.cache
+G:\aspnetb5\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\ConfirmExport.cshtml.g.cs
+G:\Final\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\ConfirmExport.cshtml.g.cs

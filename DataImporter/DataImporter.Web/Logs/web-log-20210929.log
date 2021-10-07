@@ -1,0 +1,62 @@
+2021-09-29 16:06:26.037 +06:00 [INF] Application Starting up
+2021-09-29 16:06:54.791 +06:00 [INF] User logged in.
+2021-09-29 16:17:56.117 +06:00 [INF] Application Starting up
+2021-09-29 17:14:12.999 +06:00 [INF] Application Starting up
+2021-09-29 17:14:35.467 +06:00 [INF] User logged in.
+2021-09-29 17:15:00.702 +06:00 [ERR] The view 'Index' was not found. Searched locations: ["/Views/Dashboard/Index.cshtml","/Views/Shared/Index.cshtml","/Pages/Shared/Index.cshtml"]
+2021-09-29 17:15:00.732 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'Index' was not found. The following locations were searched:
+/Views/Dashboard/Index.cshtml
+/Views/Shared/Index.cshtml
+/Pages/Shared/Index.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-29 19:57:08.976 +06:00 [INF] Application Starting up
+2021-09-29 19:57:32.790 +06:00 [WRN] Invalid password for user.
+2021-09-29 19:57:32.798 +06:00 [WRN] User failed to provide the correct password.
+2021-09-29 19:57:41.317 +06:00 [INF] User logged in.
+2021-09-29 19:59:57.526 +06:00 [INF] Application Starting up
+2021-09-29 20:00:15.616 +06:00 [INF] User logged in.
+2021-09-29 20:02:40.187 +06:00 [INF] Application Starting up
+2021-09-29 20:03:03.580 +06:00 [INF] User logged in.
+2021-09-29 20:04:50.050 +06:00 [INF] Application Starting up
+2021-09-29 20:05:38.001 +06:00 [INF] User logged in.
+2021-09-29 20:08:55.342 +06:00 [INF] Application Starting up
+2021-09-29 20:09:13.248 +06:00 [INF] User logged in.
+2021-09-29 20:11:29.446 +06:00 [INF] Application Starting up
+2021-09-29 20:12:51.338 +06:00 [INF] Application Starting up
+2021-09-29 20:13:10.416 +06:00 [INF] User logged in.
+2021-09-29 20:15:50.647 +06:00 [INF] Application Starting up
+2021-09-29 20:16:13.339 +06:00 [INF] User logged in.
+2021-09-29 20:17:22.303 +06:00 [INF] Application Starting up
+2021-09-29 20:18:06.829 +06:00 [INF] User logged in.
+2021-09-29 20:20:43.932 +06:00 [INF] Application Starting up
+2021-09-29 20:21:02.924 +06:00 [INF] User logged in.
+2021-09-29 20:24:16.540 +06:00 [INF] Application Starting up
+2021-09-29 20:24:33.402 +06:00 [INF] User logged in.
+2021-09-29 20:29:39.714 +06:00 [INF] Application Starting up
+2021-09-29 20:30:23.593 +06:00 [INF] User logged in.
+2021-09-29 20:34:35.949 +06:00 [INF] Application Starting up
+2021-09-29 20:34:55.655 +06:00 [INF] User logged in.
+2021-09-29 20:38:28.060 +06:00 [INF] Application Starting up
+2021-09-29 20:38:47.813 +06:00 [INF] User logged in.
+2021-09-29 20:55:59.979 +06:00 [INF] Application Starting up
+2021-09-29 20:56:30.056 +06:00 [INF] User logged in.

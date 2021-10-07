@@ -53,5 +53,10 @@ namespace DataImporter.Web.Models
                     ).ToArray()
             };
         }
+
+        public void Delete(int id)
+        {
+            _importService.Delete(id);
+        }
     }
 }

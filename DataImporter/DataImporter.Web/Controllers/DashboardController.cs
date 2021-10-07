@@ -3,12 +3,14 @@ using DataImporter.Common.Utilities;
 using DataImporter.Membership.Entities;
 using DataImporter.Web.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -74,14 +76,46 @@ namespace DataImporter.Web.Controllers
             return View(model);
         }
 
-   
+        public IActionResult GroupDelete(int id)
+        {
+            var model = _scope.Resolve<GroupListModel>();
+            model.Delete(id);
+            return RedirectToAction(nameof(ManageGroup));
+        }
 
        
         public IActionResult Contacts()
         {
             var contactModel = _scope.Resolve<ContactModel>();
-           contactModel.GetGroups();
+            ViewBag.UserId = _userManager.GetUserId(HttpContext.User);
+            string s = ViewBag.UserId;
+            Guid Id = Guid.Parse(s);
+            contactModel.GetGroups(Id);
             return View(contactModel);
+        }
+        [HttpPost]
+        public IActionResult Contacts(ContactModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                try
+                {
+                    ViewBag.UserId = _userManager.GetUserId(HttpContext.User);
+                    string s = ViewBag.UserId;
+                    Guid Id = Guid.Parse(s);
+                    model.Resolve(_scope);
+                    model.GetGroups(Id);
+                    model.GetContactsData(Id,model.GroupName, model.DateFrom.Value, model.DateTo.Value);
+
+                }
+                catch(Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Failed");
+                    _logger.LogError(ex, "Data is not get");
+
+                }
+            }
+            return View(model);
         }
         public IActionResult ImportContact()
         {
@@ -108,6 +142,7 @@ namespace DataImporter.Web.Controllers
                     _logger.LogError(ex, "Excel Creation Failed");
                 }
             }
+            if (model.fileMatchValue == 1) return View(model);
             if (model.ExcelFile == null) return View(model);
             else
                return RedirectToAction(nameof(UploadConfirmation));
@@ -154,7 +189,10 @@ namespace DataImporter.Web.Controllers
         public IActionResult DeleteFile()
         {
             var model = _scope.Resolve<ImportContactModel>();
-            model.Delete();
+            ViewBag.UserId = _userManager.GetUserId(HttpContext.User);
+            string s = ViewBag.UserId;
+            Guid Id = Guid.Parse(s);
+            model.Delete(Id,0,string.Empty);
             return RedirectToAction(nameof(ImportContact));
         }
         public IActionResult ImportJob()
@@ -181,7 +219,7 @@ namespace DataImporter.Web.Controllers
             var email = usr?.Email;
             var model = _scope.Resolve<ExportJobModel>();
             model.LoadModelData(id,email);
-            return RedirectToAction("ExportJob");
+            return RedirectToAction(nameof(ConfirmExport));
         }
         public IActionResult ExportJob()
         {
@@ -216,5 +254,19 @@ namespace DataImporter.Web.Controllers
             var data = model.Download(id);
             return File(data.fileStream, data.mimetype, data.file);
         }
+
+        public IActionResult DeleteImport(int id)
+        {
+            var model = _scope.Resolve<ImportJobModel>();
+            model.Delete(id);
+            return RedirectToAction(nameof(ImportJob));
+        }
+
+        public IActionResult ConfirmExport()
+        {
+            return View();
+        }
+
+    
     }
 }

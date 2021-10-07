@@ -34,11 +34,14 @@ namespace DataImporter.Importer.Services
             _importerUnitOfWork.Save();
         }
 
+      
+
         public int GetData(Guid userId, string excelFileName, string groupName)
         {
             var exports = _importerUnitOfWork.Exports.Get(x => x.ExcelFileName == excelFileName
             && x.GroupName == groupName && x.UserId == userId, string.Empty);
-            if (exports.Count == 0) return 0;
+            if (exports == null) return 0;
+            else if (exports.Count == 0) return 0;
             else return exports[0].Id;
         }
 
@@ -61,17 +64,13 @@ namespace DataImporter.Importer.Services
         {
             var exportData = _importerUnitOfWork.Exports.GetDynamic(string.IsNullOrWhiteSpace
                 (searchText) ?
-                null : x => x.Date.ToString().Contains(searchText), sortText, string.Empty, pageIndex, pageSize);
-            var resultData = (from export in exportData.data where export.UserId==id
-                              select new Export
-                              {
-                                  Id = export.Id,
-                                  GroupId = export.GroupId,
-                                  UserId = export.UserId,
-                                  Date = export.Date,
-                                  ExcelFileName = export.ExcelFileName,
-                                  GroupName = export.GroupName
-                              }).ToList();
+                null : x => x.Date.ToString().Contains(searchText) || x.GroupName.Contains(searchText), 
+                sortText, string.Empty, pageIndex, pageSize);
+            var resultData = (from export in exportData.data
+                              where export.UserId == id
+                              orderby export.Id descending
+                              select _mapper.Map<Export>(export)).ToList();
+                         
 
             return (resultData, exportData.total, exportData.totalDisplay);
         }

@@ -12,13 +12,15 @@ namespace DataImporter.Web.Models
 {
     public class EditGroupModel
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
        
 
         private  IWebHostEnvironment _hostEnvironment;
         private  IGroupService _groupService;
         private ILifetimeScope _scope;
+
+        private IUpdateService _updateService;
         public EditGroupModel()
         {
            
@@ -29,30 +31,32 @@ namespace DataImporter.Web.Models
             _scope = scope;
             _groupService = _scope.Resolve<IGroupService>();
             _hostEnvironment = _scope.Resolve<IWebHostEnvironment>();
+            _updateService = _scope.Resolve<IUpdateService>();
         }
         public EditGroupModel(IWebHostEnvironment hostEnvironment,
-            IGroupService groupService)
+            IGroupService groupService,IUpdateService updateService)
         {
             _hostEnvironment = hostEnvironment;
             _groupService = groupService;
-
+            _updateService = updateService;
+            
         }
 
-        internal void LoadModelData(int id)
+        public void LoadModelData(int id)
         {
-            var group = _groupService.GetGroup(id);
-            id = group.Id;
+            var group = _updateService.GetGroup(id);
+            Id = group.Id;
             Name = group.GroupName;
         }
 
-        internal void Update()
+        public void Update()
         {
             var group = new Group
             {
-                Id = id,
+                Id = Id,
                 GroupName = Name
             };
-            _groupService.UpdateGroupName(group);
+            _updateService.UpdateGroupName(group);
         }
     }
 }
