@@ -1,0 +1,428 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\aspnetb5\\DataImporter\\DataImporter.Web\\DataImporter.Web.csproj": {}
+  },
+  "projects": {
+    "G:\\aspnetb5\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\aspnetb5\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj",
+        "projectName": "DataImporter.Common",
+        "projectPath": "G:\\aspnetb5\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj",
+        "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
+        "outputPath": "G:\\aspnetb5\\DataImporter\\DataImporter.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.15.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\aspnetb5\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\aspnetb5\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj",
+        "projectName": "DataImporter.Data",
+        "projectPath": "G:\\aspnetb5\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj",
+        "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
+        "outputPath": "G:\\aspnetb5\\DataImporter\\DataImporter.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.2.12, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\aspnetb5\\DataImporter\\DataImporter.Importer\\DataImporter.Importer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\aspnetb5\\DataImporter\\DataImporter.Importer\\DataImporter.Importer.csproj",
+        "projectName": "DataImporter.Importer",
+        "projectPath": "G:\\aspnetb5\\DataImporter\\DataImporter.Importer\\DataImporter.Importer.csproj",
+        "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
+        "outputPath": "G:\\aspnetb5\\DataImporter\\DataImporter.Importer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "G:\\aspnetb5\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj": {
+                "projectPath": "G:\\aspnetb5\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj"
+              },
+              "G:\\aspnetb5\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj": {
+                "projectPath": "G:\\aspnetb5\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\aspnetb5\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\aspnetb5\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj",
+        "projectName": "DataImporter.Membership",
+        "projectPath": "G:\\aspnetb5\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj",
+        "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
+        "outputPath": "G:\\aspnetb5\\DataImporter\\DataImporter.Membership\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "G:\\aspnetb5\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj": {
+                "projectPath": "G:\\aspnetb5\\DataImporter\\DataImporter.Data\\DataImporter.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\aspnetb5\\DataImporter\\DataImporter.Web\\DataImporter.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\aspnetb5\\DataImporter\\DataImporter.Web\\DataImporter.Web.csproj",
+        "projectName": "DataImporter.Web",
+        "projectPath": "G:\\aspnetb5\\DataImporter\\DataImporter.Web\\DataImporter.Web.csproj",
+        "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
+        "outputPath": "G:\\aspnetb5\\DataImporter\\DataImporter.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "G:\\aspnetb5\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj": {
+                "projectPath": "G:\\aspnetb5\\DataImporter\\DataImporter.Common\\DataImporter.Common.csproj"
+              },
+              "G:\\aspnetb5\\DataImporter\\DataImporter.Importer\\DataImporter.Importer.csproj": {
+                "projectPath": "G:\\aspnetb5\\DataImporter\\DataImporter.Importer\\DataImporter.Importer.csproj"
+              },
+              "G:\\aspnetb5\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj": {
+                "projectPath": "G:\\aspnetb5\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[5.7.4, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

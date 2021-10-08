@@ -1,0 +1,14 @@
+2021-09-24 01:46:40.456 +06:00 [INF] Application Starting up
+2021-09-24 01:46:49.779 +06:00 [FTL] Application start-up failed
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at DataImporter.Importer.Services.ImportService.GetGroupName(Int32 id) in G:\Final\DataImporter\DataImporter.Importer\Services\ImportService.cs:line 64
+   at DataImporter.Worker.ReadFunctions.ExcelReadFunction.ReadExcelData() in G:\Final\DataImporter\DataImporter.Worker\ReadFunctions\ExcelReadFunction.cs:line 44
+   at DataImporter.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\Final\DataImporter\DataImporter.Worker\Worker.cs:line 27
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at DataImporter.Worker.Program.Main(String[] args) in G:\Final\DataImporter\DataImporter.Worker\Program.cs:line 43
+2021-09-24 02:35:18.452 +06:00 [INF] Application Starting up
+2021-09-24 02:35:25.844 +06:00 [INF] Worker running at: "2021-09-24T02:35:25.8344921+06:00"

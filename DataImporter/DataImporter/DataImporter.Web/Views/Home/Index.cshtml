@@ -1,0 +1,62 @@
+﻿@model DataImporter.Web.Models.ListModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<!-- Main content -->
+
+<section class="content">
+    <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <!-- small box -->
+                <div class="small-box bg-info">
+                    <div class="col align-self-center" style="padding:10%;">
+                        <h3 style="text-align:center;color:black;">@Model.GroupNumber</h3>
+
+                        <p style="text-align:center;color:black;"><b>Groups</b></p>
+                    </div>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-md-3 col-3">
+                <!-- small box -->
+                <div class="small-box bg-success">
+                    <div class="container-md" style="padding:10%;">
+                        <h3 style="text-align:center;color:black;">@Model.ImportNumber</h3>
+                        <p style="text-align:center;color:black"><b>Imports</b></p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-md-3 col-3">
+                <!-- small box -->
+                <div class="small-box bg-warning">
+                    <div class="container-md" style="padding:10%;">
+                        <h3 style="text-align:center">@Model.ExportNumber</h3>
+                        <p style="text-align:center"><b>Exports</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+@section Scripts
+{
+    <!-- ChartJS -->
+    <script src="/admin/plugins/chart.js/Chart.min.js"></script>
+}

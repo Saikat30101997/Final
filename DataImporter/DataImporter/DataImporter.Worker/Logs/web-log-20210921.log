@@ -1,0 +1,177 @@
+2021-09-21 10:58:47.855 +06:00 [INF] Application Starting up
+2021-09-21 11:08:21.376 +06:00 [INF] Application Starting up
+2021-09-21 11:08:25.765 +06:00 [INF] Worker running at: "2021-09-21T11:08:25.7565983+06:00"
+2021-09-21 11:08:35.841 +06:00 [INF] Worker running at: "2021-09-21T11:08:35.8413019+06:00"
+2021-09-21 11:08:45.889 +06:00 [INF] Worker running at: "2021-09-21T11:08:45.8889882+06:00"
+2021-09-21 11:13:33.558 +06:00 [INF] Application Starting up
+2021-09-21 11:13:36.744 +06:00 [INF] Worker running at: "2021-09-21T11:13:36.7384834+06:00"
+2021-09-21 11:13:46.790 +06:00 [INF] Worker running at: "2021-09-21T11:13:46.7904361+06:00"
+2021-09-21 11:13:56.837 +06:00 [INF] Worker running at: "2021-09-21T11:13:56.8374224+06:00"
+2021-09-21 11:32:35.132 +06:00 [INF] Application Starting up
+2021-09-21 11:32:38.670 +06:00 [INF] Worker running at: "2021-09-21T11:32:38.6648225+06:00"
+2021-09-21 11:32:48.704 +06:00 [INF] Worker running at: "2021-09-21T11:32:48.7047160+06:00"
+2021-09-21 11:33:24.241 +06:00 [INF] Application Starting up
+2021-09-21 11:33:48.073 +06:00 [INF] Worker running at: "2021-09-21T11:33:48.0600934+06:00"
+2021-09-21 11:42:01.397 +06:00 [INF] Application Starting up
+2021-09-21 11:42:06.321 +06:00 [INF] Worker running at: "2021-09-21T11:42:06.3094325+06:00"
+2021-09-21 11:42:16.387 +06:00 [INF] Worker running at: "2021-09-21T11:42:16.3876248+06:00"
+2021-09-21 11:42:36.203 +06:00 [INF] Application Starting up
+2021-09-21 11:42:40.021 +06:00 [INF] Worker running at: "2021-09-21T11:42:40.0142728+06:00"
+2021-09-21 11:42:50.068 +06:00 [INF] Worker running at: "2021-09-21T11:42:50.0681282+06:00"
+2021-09-21 11:46:52.883 +06:00 [INF] Application Starting up
+2021-09-21 11:46:56.817 +06:00 [INF] Worker running at: "2021-09-21T11:46:56.8081171+06:00"
+2021-09-21 11:47:43.630 +06:00 [INF] Application Starting up
+2021-09-21 11:47:47.501 +06:00 [INF] Worker running at: "2021-09-21T11:47:47.4932242+06:00"
+2021-09-21 12:19:55.738 +06:00 [INF] Application Starting up
+2021-09-21 12:19:59.678 +06:00 [INF] Worker running at: "2021-09-21T12:19:59.6692465+06:00"
+2021-09-21 12:50:59.209 +06:00 [INF] Application Starting up
+2021-09-21 12:51:03.099 +06:00 [INF] Worker running at: "2021-09-21T12:51:03.0902538+06:00"
+2021-09-21 13:46:56.241 +06:00 [INF] Application Starting up
+2021-09-21 13:47:00.603 +06:00 [FTL] Application start-up failed
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Import
+System.Object -> DataImporter.Importer.Entities.Import
+   at lambda_method78(Closure , Object , Import , ResolutionContext )
+   at DataImporter.Importer.Services.ImportService.Create(Import import) in G:\Final\DataImporter\DataImporter.Importer\Services\ImportService.cs:line 26
+   at DataImporter.Worker.ReadFunctions.ExcelReadFunction.ReadExcelData() in G:\Final\DataImporter\DataImporter.Worker\ReadFunctions\ExcelReadFunction.cs:line 69
+   at DataImporter.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\Final\DataImporter\DataImporter.Worker\Worker.cs:line 27
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at DataImporter.Worker.Program.Main(String[] args) in G:\Final\DataImporter\DataImporter.Worker\Program.cs:line 42
+2021-09-21 13:48:41.327 +06:00 [INF] Application Starting up
+2021-09-21 13:48:45.807 +06:00 [FTL] Application start-up failed
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Import
+System.Object -> DataImporter.Importer.Entities.Import
+   at lambda_method78(Closure , Object , Import , ResolutionContext )
+   at DataImporter.Importer.Services.ImportService.Create(Import import) in G:\Final\DataImporter\DataImporter.Importer\Services\ImportService.cs:line 26
+   at DataImporter.Worker.ReadFunctions.ExcelReadFunction.ReadExcelData() in G:\Final\DataImporter\DataImporter.Worker\ReadFunctions\ExcelReadFunction.cs:line 69
+   at DataImporter.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\Final\DataImporter\DataImporter.Worker\Worker.cs:line 27
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at DataImporter.Worker.Program.Main(String[] args) in G:\Final\DataImporter\DataImporter.Worker\Program.cs:line 42
+2021-09-21 13:54:59.383 +06:00 [INF] Application Starting up
+2021-09-21 13:55:03.388 +06:00 [FTL] Application start-up failed
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Import
+System.Object -> DataImporter.Importer.Entities.Import
+   at lambda_method78(Closure , Object , Import , ResolutionContext )
+   at DataImporter.Importer.Services.ImportService.Create(Import import) in G:\Final\DataImporter\DataImporter.Importer\Services\ImportService.cs:line 26
+   at DataImporter.Worker.ReadFunctions.ExcelReadFunction.ReadExcelData() in G:\Final\DataImporter\DataImporter.Worker\ReadFunctions\ExcelReadFunction.cs:line 69
+   at DataImporter.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\Final\DataImporter\DataImporter.Worker\Worker.cs:line 27
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at DataImporter.Worker.Program.Main(String[] args) in G:\Final\DataImporter\DataImporter.Worker\Program.cs:line 42
+2021-09-21 13:58:04.162 +06:00 [INF] Application Starting up
+2021-09-21 13:58:09.110 +06:00 [FTL] Application start-up failed
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Import
+System.Object -> DataImporter.Importer.Entities.Import
+   at lambda_method78(Closure , Object , Import , ResolutionContext )
+   at DataImporter.Importer.Services.ImportService.Create(Import import) in G:\Final\DataImporter\DataImporter.Importer\Services\ImportService.cs:line 26
+   at DataImporter.Worker.ReadFunctions.ExcelReadFunction.ReadExcelData() in G:\Final\DataImporter\DataImporter.Worker\ReadFunctions\ExcelReadFunction.cs:line 69
+   at DataImporter.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\Final\DataImporter\DataImporter.Worker\Worker.cs:line 27
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at DataImporter.Worker.Program.Main(String[] args) in G:\Final\DataImporter\DataImporter.Worker\Program.cs:line 42
+2021-09-21 14:01:37.810 +06:00 [INF] Application Starting up
+2021-09-21 14:01:44.800 +06:00 [INF] Worker running at: "2021-09-21T14:01:44.7912542+06:00"
+2021-09-21 14:09:22.164 +06:00 [INF] Application Starting up
+2021-09-21 14:09:27.232 +06:00 [FTL] Application start-up failed
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Import
+System.Object -> DataImporter.Importer.Entities.Import
+   at lambda_method78(Closure , Object , Import , ResolutionContext )
+   at DataImporter.Importer.Services.ImportService.Create(Import import) in G:\Final\DataImporter\DataImporter.Importer\Services\ImportService.cs:line 26
+   at DataImporter.Worker.ReadFunctions.ExcelReadFunction.ReadExcelData() in G:\Final\DataImporter\DataImporter.Worker\ReadFunctions\ExcelReadFunction.cs:line 73
+   at DataImporter.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\Final\DataImporter\DataImporter.Worker\Worker.cs:line 27
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at DataImporter.Worker.Program.Main(String[] args) in G:\Final\DataImporter\DataImporter.Worker\Program.cs:line 42
+2021-09-21 14:30:14.585 +06:00 [INF] Application Starting up
+2021-09-21 14:30:19.471 +06:00 [FTL] Application start-up failed
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Import
+System.Object -> DataImporter.Importer.Entities.Import
+   at lambda_method78(Closure , Object , Import , ResolutionContext )
+   at DataImporter.Importer.Services.ImportService.Create(Import import) in G:\Final\DataImporter\DataImporter.Importer\Services\ImportService.cs:line 26
+   at DataImporter.Worker.ReadFunctions.ExcelReadFunction.ReadExcelData() in G:\Final\DataImporter\DataImporter.Worker\ReadFunctions\ExcelReadFunction.cs:line 72
+   at DataImporter.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\Final\DataImporter\DataImporter.Worker\Worker.cs:line 27
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at DataImporter.Worker.Program.Main(String[] args) in G:\Final\DataImporter\DataImporter.Worker\Program.cs:line 42
+2021-09-21 14:32:18.966 +06:00 [INF] Application Starting up
+2021-09-21 14:33:40.668 +06:00 [FTL] Application start-up failed
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Import
+System.Object -> DataImporter.Importer.Entities.Import
+   at lambda_method78(Closure , Object , Import , ResolutionContext )
+   at DataImporter.Importer.Services.ImportService.Create(Import import) in G:\Final\DataImporter\DataImporter.Importer\Services\ImportService.cs:line 26
+   at DataImporter.Worker.ReadFunctions.ExcelReadFunction.ReadExcelData() in G:\Final\DataImporter\DataImporter.Worker\ReadFunctions\ExcelReadFunction.cs:line 72
+   at DataImporter.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\Final\DataImporter\DataImporter.Worker\Worker.cs:line 27
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at DataImporter.Worker.Program.Main(String[] args) in G:\Final\DataImporter\DataImporter.Worker\Program.cs:line 42
+2021-09-21 14:36:50.458 +06:00 [INF] Application Starting up
+2021-09-21 14:37:53.295 +06:00 [INF] Worker running at: "2021-09-21T14:37:53.2866346+06:00"
+2021-09-21 14:39:59.180 +06:00 [INF] Application Starting up
+2021-09-21 14:40:05.392 +06:00 [INF] Worker running at: "2021-09-21T14:40:05.3859941+06:00"
+2021-09-21 15:38:42.219 +06:00 [INF] Application Starting up
+2021-09-21 15:38:47.070 +06:00 [FTL] Application start-up failed
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Import
+System.Object -> DataImporter.Importer.Entities.Import
+   at lambda_method78(Closure , Object , Import , ResolutionContext )
+   at DataImporter.Importer.Services.ImportService.Create(Import import) in G:\Final\DataImporter\DataImporter.Importer\Services\ImportService.cs:line 27
+   at DataImporter.Worker.ReadFunctions.ExcelReadFunction.ReadExcelData() in G:\Final\DataImporter\DataImporter.Worker\ReadFunctions\ExcelReadFunction.cs:line 72
+   at DataImporter.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\Final\DataImporter\DataImporter.Worker\Worker.cs:line 27
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at DataImporter.Worker.Program.Main(String[] args) in G:\Final\DataImporter\DataImporter.Worker\Program.cs:line 42
+2021-09-21 15:46:40.041 +06:00 [INF] Application Starting up
+2021-09-21 15:46:46.934 +06:00 [INF] Worker running at: "2021-09-21T15:46:46.9269471+06:00"
+2021-09-21 17:40:42.666 +06:00 [INF] Application Starting up
+2021-09-21 17:40:47.632 +06:00 [INF] Worker running at: "2021-09-21T17:40:47.6212172+06:00"
+2021-09-21 17:41:45.211 +06:00 [INF] Application Starting up
+2021-09-21 17:41:51.387 +06:00 [INF] Worker running at: "2021-09-21T17:41:51.3764315+06:00"
+2021-09-21 17:47:01.982 +06:00 [INF] Application Starting up
+2021-09-21 17:47:31.779 +06:00 [INF] Application Starting up
+2021-09-21 17:47:39.188 +06:00 [INF] Worker running at: "2021-09-21T17:47:39.1786245+06:00"
+2021-09-21 19:04:08.050 +06:00 [INF] Application Starting up
+2021-09-21 19:04:17.252 +06:00 [INF] Worker running at: "2021-09-21T19:04:17.2453340+06:00"
+2021-09-21 19:25:07.757 +06:00 [INF] Application Starting up
+2021-09-21 19:25:14.689 +06:00 [INF] Worker running at: "2021-09-21T19:25:14.6802839+06:00"
+2021-09-21 19:28:26.700 +06:00 [INF] Application Starting up
+2021-09-21 19:28:32.230 +06:00 [INF] Worker running at: "2021-09-21T19:28:32.2220506+06:00"

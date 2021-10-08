@@ -1,0 +1,15 @@
+G:\aspnetb5\DataImporter\DataImporter.Membership\bin\Release\net5.0\DataImporter.Membership.deps.json
+G:\aspnetb5\DataImporter\DataImporter.Membership\bin\Release\net5.0\DataImporter.Membership.dll
+G:\aspnetb5\DataImporter\DataImporter.Membership\bin\Release\net5.0\ref\DataImporter.Membership.dll
+G:\aspnetb5\DataImporter\DataImporter.Membership\bin\Release\net5.0\DataImporter.Membership.pdb
+G:\aspnetb5\DataImporter\DataImporter.Membership\bin\Release\net5.0\DataImporter.Data.dll
+G:\aspnetb5\DataImporter\DataImporter.Membership\bin\Release\net5.0\DataImporter.Data.pdb
+G:\aspnetb5\DataImporter\DataImporter.Membership\obj\Release\net5.0\DataImporter.Membership.csprojAssemblyReference.cache
+G:\aspnetb5\DataImporter\DataImporter.Membership\obj\Release\net5.0\DataImporter.Membership.GeneratedMSBuildEditorConfig.editorconfig
+G:\aspnetb5\DataImporter\DataImporter.Membership\obj\Release\net5.0\DataImporter.Membership.AssemblyInfoInputs.cache
+G:\aspnetb5\DataImporter\DataImporter.Membership\obj\Release\net5.0\DataImporter.Membership.AssemblyInfo.cs
+G:\aspnetb5\DataImporter\DataImporter.Membership\obj\Release\net5.0\DataImporter.Membership.csproj.CoreCompileInputs.cache
+G:\aspnetb5\DataImporter\DataImporter.Membership\obj\Release\net5.0\DataImporter.Membership.csproj.CopyComplete
+G:\aspnetb5\DataImporter\DataImporter.Membership\obj\Release\net5.0\DataImporter.Membership.dll
+G:\aspnetb5\DataImporter\DataImporter.Membership\obj\Release\net5.0\ref\DataImporter.Membership.dll
+G:\aspnetb5\DataImporter\DataImporter.Membership\obj\Release\net5.0\DataImporter.Membership.pdb

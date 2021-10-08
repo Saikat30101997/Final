@@ -1,0 +1,42 @@
+2021-09-17 23:28:40.752 +06:00 [INF] Application Starting up
+2021-09-17 23:29:19.420 +06:00 [INF] User logged in.
+2021-09-17 23:29:26.519 +06:00 [INF] User logged out.
+2021-09-17 23:29:37.558 +06:00 [INF] User logged in.
+2021-09-17 23:30:01.542 +06:00 [INF] User logged out.
+2021-09-17 23:46:49.726 +06:00 [INF] Application Starting up
+2021-09-17 23:47:11.277 +06:00 [INF] User logged in.
+2021-09-17 23:47:41.757 +06:00 [ERR] Excel Creation Failed
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'G:\Final\DataImporter\DataImporter.Web\wwwroot\EXCELS\3470dfc1-802b-46a7-5777-08d972e6b1d9_2_214741455_Firstfile.xlsx'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at DataImporter.Web.Models.ImportContactModel.Create(Int32 id, Guid Id) in G:\Final\DataImporter\DataImporter.Web\Models\ImportContactModel.cs:line 31
+   at DataImporter.Web.Controllers.DashboardController.ImportContact(ImportContactModel model) in G:\Final\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 100
+2021-09-17 23:50:10.585 +06:00 [INF] Application Starting up
+2021-09-17 23:50:39.183 +06:00 [ERR] Excel Creation Failed
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'G:\Final\DataImporter\DataImporter.Web\wwwroot\EXCELS\3470dfc1-802b-46a7-5777-08d972e6b1d9_2_215038995_Firstfile.xlsx'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at DataImporter.Web.Models.ImportContactModel.Create(Int32 id, Guid Id) in G:\Final\DataImporter\DataImporter.Web\Models\ImportContactModel.cs:line 31
+   at DataImporter.Web.Controllers.DashboardController.ImportContact(ImportContactModel model) in G:\Final\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 100
+2021-09-17 23:54:59.814 +06:00 [INF] Application Starting up
+2021-09-17 23:55:32.747 +06:00 [ERR] Excel Creation Failed
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'G:\Final\DataImporter\DataImporter.Web\wwwroot\EXCELS\3470dfc1-802b-46a7-5777-08d972e6b1d9_2_215532463_Firstfile.xlsx'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at DataImporter.Web.Models.ImportContactModel.Create(Int32 id, Guid Id) in G:\Final\DataImporter\DataImporter.Web\Models\ImportContactModel.cs:line 31
+   at DataImporter.Web.Controllers.DashboardController.ImportContact(ImportContactModel model) in G:\Final\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 100
+2021-09-17 23:56:30.033 +06:00 [INF] Application Starting up
+2021-09-17 23:56:54.206 +06:00 [ERR] Excel Creation Failed
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'G:\Final\DataImporter\DataImporter.Web\wwwroot\EXCELS\3470dfc1-802b-46a7-5777-08d972e6b1d9_2_215654038_Firstfile.xlsx'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at DataImporter.Web.Models.ImportContactModel.Create(Int32 id, Guid Id) in G:\Final\DataImporter\DataImporter.Web\Models\ImportContactModel.cs:line 31
+   at DataImporter.Web.Controllers.DashboardController.ImportContact(ImportContactModel model) in G:\Final\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 100

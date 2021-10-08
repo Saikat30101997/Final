@@ -1,0 +1,12 @@
+G:\aspnetb5\DataImporter\DataImporter.Common\bin\Release\net5.0\DataImporter.Common.deps.json
+G:\aspnetb5\DataImporter\DataImporter.Common\bin\Release\net5.0\DataImporter.Common.dll
+G:\aspnetb5\DataImporter\DataImporter.Common\bin\Release\net5.0\ref\DataImporter.Common.dll
+G:\aspnetb5\DataImporter\DataImporter.Common\bin\Release\net5.0\DataImporter.Common.pdb
+G:\aspnetb5\DataImporter\DataImporter.Common\obj\Release\net5.0\DataImporter.Common.csprojAssemblyReference.cache
+G:\aspnetb5\DataImporter\DataImporter.Common\obj\Release\net5.0\DataImporter.Common.GeneratedMSBuildEditorConfig.editorconfig
+G:\aspnetb5\DataImporter\DataImporter.Common\obj\Release\net5.0\DataImporter.Common.AssemblyInfoInputs.cache
+G:\aspnetb5\DataImporter\DataImporter.Common\obj\Release\net5.0\DataImporter.Common.AssemblyInfo.cs
+G:\aspnetb5\DataImporter\DataImporter.Common\obj\Release\net5.0\DataImporter.Common.csproj.CoreCompileInputs.cache
+G:\aspnetb5\DataImporter\DataImporter.Common\obj\Release\net5.0\DataImporter.Common.dll
+G:\aspnetb5\DataImporter\DataImporter.Common\obj\Release\net5.0\ref\DataImporter.Common.dll
+G:\aspnetb5\DataImporter\DataImporter.Common\obj\Release\net5.0\DataImporter.Common.pdb

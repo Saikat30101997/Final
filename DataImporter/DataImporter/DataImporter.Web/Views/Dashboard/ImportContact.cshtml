@@ -1,0 +1,60 @@
+﻿@model DataImporter.Web.Models.ImportContactModel
+@{
+    ViewData["Title"] = "ImportContact";
+}
+
+<section class="content-header">
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-success">
+                    <div class="card-header">
+                        <h3 class="card-title">Import Contacts</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form asp-controller="Dashboard" asp-action="ImportContact" enctype="multipart/form-data" asp-antiforgery="true" method="post">
+                        <div class="card-body">
+
+                            <div class="form-group">
+                                <label asp-for="ExcelFile">Upload Excel</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="form-control" id="excelfile" asp-for="ExcelFile" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Create</button>
+                            <input type="hidden" asp-for="ExcelFile" />
+                            <a class="btn btn-primary float-lg-right" asp-controller="Dashboard" asp-action="ManageGroup">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@if (Model.fileMatchValue == 1)
+{
+    <section>
+        <div>
+            <h3 class="content align-content-center">File Column Doesnt Match With Group Columns</h3>
+            <div>
+                <a class="btn btn-primary float-left" asp-controller="Dashboard" asp-action="Create">Return</a>
+            </div>
+        </div>
+
+    </section>
+}
+
+
+
+

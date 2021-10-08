@@ -1,0 +1,139 @@
+﻿@model DataImporter.Web.Models.ImportContactModel
+@{
+    ViewData["Title"] = "UploadConfirmation";
+}
+
+@section Styles
+{
+    <link rel="stylesheet" href="/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+}
+
+
+@section Scripts
+{
+    <script src="/admin/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(function () {
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+    </script>
+}
+
+<div class="content">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+       
+    </div>
+</div>
+@if (Model.fileMatchValue == 0)
+{
+
+
+<section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            @if (Model.CountValue == 0)
+                            {
+                            <h3 class="card-title">Will You Confirm Uploading?</h3>
+                            }
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+
+                            <table id="example2" class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        @foreach (var item in Model.listColumn)
+                                        {
+                                            <th>@item</th>
+                                        }
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @for (var i = 0; i < Model.Values.Count; i++)
+                                    {
+                                        <tr>
+
+                                            @for (var k = 0; k < Model.Values[i].Count; k++)
+                                            {
+                                                <td>@Model.Values[i][k]</td>
+                                            }
+                                        </tr>
+
+                                    }
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+
+        <!-- /.container-fluid -->
+    </section>
+    @if (Model.CountValue == 0)
+    {
+        <section>
+            <div class="card-footer">
+                <a class="btn btn-primary float-left" asp-controller="Dashboard" asp-action="UploadConfirm">Upload</a>
+                <a class="btn btn-primary float-right" asp-controller="Dashboard" asp-action="DeleteFile">Cancel</a>
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="ExcelFile" />
+
+            </div>
+        </section>
+    }
+    else
+    {
+        <section>
+            <h1>File Already Exists.. </h1>
+            <div class="card-footer">
+                <a class="btn btn-primary float-left" asp-controller="Dashboard" asp-action="ImportJob">Return</a>
+            </div>
+        </section>
+    }
+}
+else
+{
+
+    <!-- /.content-header -->
+    <section class="col-md-10 offset-md-2">
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="card card-primary card-outline">
+                            <div class="card-body">
+
+
+                                <h3 class="card-text">
+                                    File Columns does not match with Group Columns
+                                </h3>
+
+                                <a asp-controller="Dashboard" asp-action="ManageGroup" class="btn btn-primary">Return</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}

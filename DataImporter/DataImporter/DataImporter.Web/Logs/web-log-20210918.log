@@ -1,0 +1,35 @@
+2021-09-18 00:09:01.917 +06:00 [INF] Application Starting up
+2021-09-18 00:10:14.419 +06:00 [INF] Application Starting up
+2021-09-18 00:11:11.856 +06:00 [INF] Application Starting up
+2021-09-18 00:11:34.256 +06:00 [ERR] Excel Creation Failed
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'G:\Final\DataImporter\DataImporter.Web\wwwroot\EXCELS\3470dfc1-802b-46a7-5777-08d972e6b1d9_2_211134082_Firstfile.xlsx'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at DataImporter.Web.Models.ImportContactModel.Create(Int32 id, Guid Id) in G:\Final\DataImporter\DataImporter.Web\Models\ImportContactModel.cs:line 31
+   at DataImporter.Web.Controllers.DashboardController.ImportContact(ImportContactModel model) in G:\Final\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 100
+2021-09-18 00:15:11.383 +06:00 [INF] Application Starting up
+2021-09-18 00:15:36.076 +06:00 [ERR] Excel Creation Failed
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'G:\Final\DataImporter\DataImporter.Web\wwwroot\EXCELS\3470dfc1-802b-46a7-5777-08d972e6b1d9_2_211535707_Firstfile.xlsx'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at DataImporter.Web.Models.ImportContactModel.Create(Int32 id, Guid Id) in G:\Final\DataImporter\DataImporter.Web\Models\ImportContactModel.cs:line 36
+   at DataImporter.Web.Controllers.DashboardController.ImportContact(ImportContactModel model) in G:\Final\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 100
+2021-09-18 00:18:32.320 +06:00 [INF] Application Starting up
+2021-09-18 00:19:01.574 +06:00 [ERR] Excel Creation Failed
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'G:\Final\DataImporter\DataImporter.Web\wwwroot\EXCELS\3470dfc1-802b-46a7-5777-08d972e6b1d9_2_211901309_Firstfile.xlsx'.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at DataImporter.Web.Models.ImportContactModel.Create(Int32 id, Guid Id) in G:\Final\DataImporter\DataImporter.Web\Models\ImportContactModel.cs:line 36
+   at DataImporter.Web.Controllers.DashboardController.ImportContact(ImportContactModel model) in G:\Final\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 100
+2021-09-18 00:20:24.014 +06:00 [INF] Application Starting up
+2021-09-18 00:22:35.104 +06:00 [INF] Application Starting up
+2021-09-18 01:01:01.579 +06:00 [INF] Application Starting up
+2021-09-18 01:01:21.637 +06:00 [INF] User logged in.
+2021-09-18 19:39:14.226 +06:00 [INF] Application Starting up
+2021-09-18 19:39:51.050 +06:00 [INF] User logged in.

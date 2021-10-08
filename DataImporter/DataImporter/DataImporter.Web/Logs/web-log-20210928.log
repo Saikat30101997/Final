@@ -1,0 +1,101 @@
+2021-09-28 01:18:40.160 +06:00 [INF] Application Starting up
+2021-09-28 01:22:08.508 +06:00 [INF] Application Starting up
+2021-09-28 01:22:38.111 +06:00 [INF] User logged in.
+2021-09-28 01:24:47.810 +06:00 [INF] Application Starting up
+2021-09-28 01:27:45.068 +06:00 [INF] Application Starting up
+2021-09-28 01:28:40.125 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Dashboard_UploadConfirmation.ExecuteAsync() in G:\Final\DataImporter\DataImporter.Web\Views\Dashboard\UploadConfirmation.cshtml:line 45
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-28 01:32:14.281 +06:00 [INF] Application Starting up
+2021-09-28 01:37:23.683 +06:00 [INF] Application Starting up
+2021-09-28 01:39:32.442 +06:00 [INF] Application Starting up
+2021-09-28 01:44:52.528 +06:00 [INF] Application Starting up
+2021-09-28 01:45:36.520 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Dashboard_UploadConfirmation.ExecuteAsync() in G:\Final\DataImporter\DataImporter.Web\Views\Dashboard\UploadConfirmation.cshtml:line 44
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-28 01:46:39.393 +06:00 [INF] Application Starting up
+2021-09-28 01:49:33.250 +06:00 [INF] Application Starting up
+2021-09-28 01:53:00.193 +06:00 [INF] Application Starting up
+2021-09-28 01:55:37.033 +06:00 [INF] Application Starting up
+2021-09-28 01:57:20.023 +06:00 [INF] Application Starting up
+2021-09-28 02:02:35.069 +06:00 [INF] Application Starting up
+2021-09-28 02:05:20.516 +06:00 [INF] Application Starting up
+2021-09-28 02:12:02.790 +06:00 [INF] Application Starting up
+2021-09-28 10:28:05.608 +06:00 [INF] Application Starting up
+2021-09-28 10:35:23.139 +06:00 [INF] Application Starting up
+2021-09-28 10:36:43.805 +06:00 [INF] User logged in.
+2021-09-28 10:37:40.894 +06:00 [INF] Application Starting up
+2021-09-28 10:40:13.810 +06:00 [INF] Application Starting up
+2021-09-28 10:45:22.497 +06:00 [INF] Application Starting up
+2021-09-28 10:47:09.840 +06:00 [INF] Application Starting up
+2021-09-28 10:48:56.704 +06:00 [INF] Application Starting up
+2021-09-28 10:53:36.720 +06:00 [INF] Application Starting up
+2021-09-28 10:54:39.175 +06:00 [INF] Application Starting up
+2021-09-28 10:55:54.230 +06:00 [INF] Application Starting up
+2021-09-28 10:57:53.873 +06:00 [INF] Application Starting up
+2021-09-28 10:59:41.354 +06:00 [INF] Application Starting up
+2021-09-28 11:02:31.515 +06:00 [INF] Application Starting up
+2021-09-28 11:04:08.466 +06:00 [INF] Application Starting up
+2021-09-28 12:12:34.498 +06:00 [INF] Application Starting up
+2021-09-28 12:13:11.147 +06:00 [WRN] Invalid password for user.
+2021-09-28 12:13:11.158 +06:00 [WRN] User failed to provide the correct password.
+2021-09-28 12:13:26.534 +06:00 [INF] User logged in.
+2021-09-28 12:15:21.656 +06:00 [INF] Application Starting up
+2021-09-28 12:16:58.045 +06:00 [INF] Application Starting up
+2021-09-28 12:18:30.001 +06:00 [INF] Application Starting up
+2021-09-28 12:19:45.643 +06:00 [INF] Application Starting up
+2021-09-28 12:20:41.892 +06:00 [INF] Application Starting up
+2021-09-28 12:22:05.462 +06:00 [INF] Application Starting up
+2021-09-28 12:23:20.111 +06:00 [INF] Application Starting up
+2021-09-28 12:24:13.336 +06:00 [INF] Application Starting up
+2021-09-28 12:25:30.213 +06:00 [INF] Application Starting up

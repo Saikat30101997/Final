@@ -58,3 +58,16 @@ System.ArgumentNullException: Path cannot be null. (Parameter 'path')
 2021-10-08 00:04:54.953 +06:00 [INF] User logged out.
 2021-10-08 00:05:03.325 +06:00 [INF] User logged in.
 2021-10-08 00:12:05.285 +06:00 [INF] User logged out.
+2021-10-08 00:18:49.807 +06:00 [INF] Application Starting up
+2021-10-08 00:19:43.329 +06:00 [INF] User logged in.
+2021-10-08 00:19:46.314 +06:00 [INF] User logged out.
+2021-10-08 00:19:56.820 +06:00 [INF] User logged in.
+2021-10-08 00:20:34.449 +06:00 [INF] User logged out.
+2021-10-08 01:09:58.504 +06:00 [INF] Application Starting up
+2021-10-08 01:10:24.384 +06:00 [INF] User logged in.
+2021-10-08 12:10:33.967 +06:00 [INF] Application Starting up
+2021-10-08 12:11:29.079 +06:00 [INF] User created a new account with password.
+2021-10-08 12:12:45.515 +06:00 [INF] Application Starting up
+2021-10-08 12:13:12.928 +06:00 [INF] User logged in.
+2021-10-08 12:14:52.243 +06:00 [INF] Application Starting up
+2021-10-08 12:15:29.182 +06:00 [INF] User logged in.

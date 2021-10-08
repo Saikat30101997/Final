@@ -1,0 +1,102 @@
+﻿@model DataImporter.Web.Models.ImportJobModel
+@{
+    ViewData["Title"] = "ImportJob";
+}
+@section Styles
+{
+
+    <link href="~/css/ImportJob.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+}
+@section Scripts
+{
+    <script src="/admin/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(function () {
+            $('#imports').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "ajax": "/Dashboard/GetImportData",
+                "columnDefs": [
+                    {
+                        "orderable": false,
+                        "targets": 4,
+                        "render": function (data, type, row) {
+                            return `<button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='/dashboard/export/${data}'" value='${data}'>
+                                            <i class="fas fa-file-export"></i>
+                                            Export
+                                        </button>
+                                         <button type="submit" class="btn btn-danger btn-sm show-bs-modal" href="#" data-id='${data}' value='${data}'>
+                                                <i class="fas fa-trash">
+                                                </i>
+                                                Delete
+                                          </button>`;
+                                       
+                        }
+                    }
+                ]
+            });
+            $('#imports').on('click', '.show-bs-modal', function (event) {
+                var id = $(this).data("id");
+                var modal = $("#modal-default");
+                modal.find('.modal-body p').text('Are you sure you want to delete this record?')
+                $("#deleteId").val(id);
+                $("#deleteForm").attr("action", "/dashboard/deleteimport")
+                modal.modal('show');
+            });
+            $("#deleteButton").click(function () {
+                $("#deleteForm").submit();
+            });
+        });
+    </script>
+}
+
+<section class="content-header">
+</section>
+
+
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Import List</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="imports" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Excel File Name</th>
+                                    <th>Group Name</th>
+                                    <th >Import Date</th>
+                                    <th>Status</th>
+                                    <th style="width:200px">Action</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Excel File Name</th>
+                                    <th>Group Name</th>
+                                    <th>Import Date</th>
+                                    <th>Status</th>
+                                    <th style="width:200px">Action</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <partial name="_DeletePopUpPartial" />
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+<!-- /.content-wrapper -->

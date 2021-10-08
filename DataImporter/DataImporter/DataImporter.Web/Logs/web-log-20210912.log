@@ -1,0 +1,71 @@
+2021-09-12 00:13:10.269 +06:00 [INF] User logged out.
+2021-09-12 00:33:42.597 +06:00 [INF] Application Starting up
+2021-09-12 00:37:17.397 +06:00 [INF] Application Starting up
+2021-09-12 00:38:13.713 +06:00 [INF] Application Starting up
+2021-09-12 00:39:00.881 +06:00 [INF] User logged in.
+2021-09-12 00:55:24.708 +06:00 [INF] Application Starting up
+2021-09-12 00:59:47.646 +06:00 [INF] Application Starting up
+2021-09-12 01:00:46.577 +06:00 [INF] Application Starting up
+2021-09-12 01:02:18.808 +06:00 [INF] Application Starting up
+2021-09-12 01:03:44.965 +06:00 [INF] Application Starting up
+2021-09-12 01:05:16.364 +06:00 [INF] Application Starting up
+2021-09-12 01:09:11.380 +06:00 [INF] Application Starting up
+2021-09-12 01:12:34.700 +06:00 [INF] Application Starting up
+2021-09-12 01:12:52.266 +06:00 [INF] User logged out.
+2021-09-12 01:13:05.896 +06:00 [INF] User logged in.
+2021-09-12 01:18:20.643 +06:00 [INF] Application Starting up
+2021-09-12 01:21:28.171 +06:00 [INF] Application Starting up
+2021-09-12 01:22:44.650 +06:00 [INF] Application Starting up
+2021-09-12 01:28:17.768 +06:00 [INF] Application Starting up
+2021-09-12 01:30:02.811 +06:00 [INF] Application Starting up
+2021-09-12 01:31:52.123 +06:00 [INF] Application Starting up
+2021-09-12 01:32:51.428 +06:00 [INF] Application Starting up
+2021-09-12 01:35:28.117 +06:00 [INF] Application Starting up
+2021-09-12 01:36:11.543 +06:00 [INF] Application Starting up
+2021-09-12 10:53:48.891 +06:00 [INF] Application Starting up
+2021-09-12 10:56:02.340 +06:00 [INF] Application Starting up
+2021-09-12 10:56:47.477 +06:00 [INF] Application Starting up
+2021-09-12 10:58:34.567 +06:00 [INF] Application Starting up
+2021-09-12 11:00:02.987 +06:00 [INF] Application Starting up
+2021-09-12 11:00:46.962 +06:00 [INF] Application Starting up
+2021-09-12 11:01:40.464 +06:00 [INF] Application Starting up
+2021-09-12 11:02:58.088 +06:00 [INF] Application Starting up
+2021-09-12 11:04:52.444 +06:00 [INF] Application Starting up
+2021-09-12 11:18:50.688 +06:00 [INF] Application Starting up
+2021-09-12 11:26:26.485 +06:00 [INF] Application Starting up
+2021-09-12 11:28:52.098 +06:00 [INF] Application Starting up
+2021-09-12 23:09:54.927 +06:00 [INF] Application Starting up
+2021-09-12 23:10:08.117 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'DataImporter.Web.Models.IGooglereCaptchaService' while attempting to activate 'DataImporter.Web.Controllers.AccountController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method563(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-12 23:11:31.118 +06:00 [INF] Application Starting up
+2021-09-12 23:12:04.028 +06:00 [INF] User created a new account with password.
+2021-09-12 23:12:07.523 +06:00 [INF] User logged out.
+2021-09-12 23:15:54.524 +06:00 [INF] Application Starting up
+2021-09-12 23:16:31.429 +06:00 [INF] Application Starting up
+2021-09-12 23:18:45.626 +06:00 [INF] User created a new account with password.
+2021-09-12 23:19:27.411 +06:00 [INF] User logged out.
+2021-09-12 23:20:01.033 +06:00 [INF] User created a new account with password.
+2021-09-12 23:20:04.197 +06:00 [INF] User logged out.
+2021-09-12 23:35:18.489 +06:00 [INF] Application Starting up
+2021-09-12 23:36:27.446 +06:00 [INF] User created a new account with password.
+2021-09-12 23:39:35.238 +06:00 [INF] Application Starting up
+2021-09-12 23:40:01.574 +06:00 [INF] User logged out.
+2021-09-12 23:41:14.650 +06:00 [INF] User created a new account with password.

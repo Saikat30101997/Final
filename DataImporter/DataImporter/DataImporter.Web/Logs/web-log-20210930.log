@@ -1,0 +1,20 @@
+2021-09-30 00:49:23.239 +06:00 [INF] Application Starting up
+2021-09-30 00:49:55.182 +06:00 [INF] User logged in.
+2021-09-30 01:08:04.745 +06:00 [INF] Application Starting up
+2021-09-30 01:19:23.761 +06:00 [INF] Application Starting up
+2021-09-30 01:23:05.820 +06:00 [INF] Application Starting up
+2021-09-30 12:42:25.050 +06:00 [INF] Application Starting up
+2021-09-30 12:42:48.055 +06:00 [INF] User logged in.
+2021-09-30 12:47:43.810 +06:00 [INF] Application Starting up
+2021-09-30 12:50:30.342 +06:00 [INF] Application Starting up
+2021-09-30 12:52:27.870 +06:00 [INF] Application Starting up
+2021-09-30 12:53:28.343 +06:00 [INF] Application Starting up
+2021-09-30 13:00:33.413 +06:00 [INF] Application Starting up
+2021-09-30 13:05:23.499 +06:00 [INF] Application Starting up
+2021-09-30 23:19:59.347 +06:00 [INF] Application Starting up
+2021-09-30 23:20:28.828 +06:00 [INF] User logged in.
+2021-09-30 23:22:38.683 +06:00 [INF] Application Starting up
+2021-09-30 23:22:58.379 +06:00 [ERR] Data is not get
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at DataImporter.Web.Controllers.DashboardController.Contacts(ContactModel model) in G:\aspnetb5\DataImporter\DataImporter.Web\Controllers\DashboardController.cs:line 97

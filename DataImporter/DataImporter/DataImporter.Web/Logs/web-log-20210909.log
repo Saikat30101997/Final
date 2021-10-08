@@ -1,0 +1,101 @@
+2021-09-09 10:45:36.025 +06:00 [INF] Application Starting up
+2021-09-09 10:47:13.180 +06:00 [INF] Application Starting up
+2021-09-09 10:52:30.801 +06:00 [INF] Application Starting up
+2021-09-09 10:54:30.965 +06:00 [INF] Application Starting up
+2021-09-09 10:55:57.646 +06:00 [INF] Application Starting up
+2021-09-09 10:57:09.537 +06:00 [INF] Application Starting up
+2021-09-09 11:00:27.852 +06:00 [INF] Application Starting up
+2021-09-09 11:01:23.811 +06:00 [INF] Application Starting up
+2021-09-09 11:02:14.537 +06:00 [INF] Application Starting up
+2021-09-09 11:16:04.138 +06:00 [INF] Application Starting up
+2021-09-09 11:18:07.838 +06:00 [INF] Application Starting up
+2021-09-09 11:20:07.662 +06:00 [INF] Application Starting up
+2021-09-09 11:20:46.500 +06:00 [INF] Application Starting up
+2021-09-09 11:21:38.203 +06:00 [INF] Application Starting up
+2021-09-09 11:22:42.154 +06:00 [INF] Application Starting up
+2021-09-09 11:23:59.243 +06:00 [INF] Application Starting up
+2021-09-09 11:24:56.982 +06:00 [INF] Application Starting up
+2021-09-09 11:25:53.120 +06:00 [INF] Application Starting up
+2021-09-09 11:26:46.842 +06:00 [INF] Application Starting up
+2021-09-09 11:28:22.106 +06:00 [INF] Application Starting up
+2021-09-09 11:30:15.522 +06:00 [INF] Application Starting up
+2021-09-09 11:31:22.869 +06:00 [INF] Application Starting up
+2021-09-09 11:32:10.738 +06:00 [INF] Application Starting up
+2021-09-09 11:33:34.192 +06:00 [INF] Application Starting up
+2021-09-09 11:34:44.208 +06:00 [INF] Application Starting up
+2021-09-09 11:35:49.304 +06:00 [INF] Application Starting up
+2021-09-09 11:37:17.069 +06:00 [INF] Application Starting up
+2021-09-09 11:39:37.556 +06:00 [INF] Application Starting up
+2021-09-09 11:40:30.723 +06:00 [INF] Application Starting up
+2021-09-09 11:43:24.427 +06:00 [INF] Application Starting up
+2021-09-09 11:45:12.502 +06:00 [INF] Application Starting up
+2021-09-09 11:45:48.618 +06:00 [INF] Application Starting up
+2021-09-09 11:46:36.026 +06:00 [INF] Application Starting up
+2021-09-09 11:47:13.208 +06:00 [INF] Application Starting up
+2021-09-09 11:48:23.069 +06:00 [INF] Application Starting up
+2021-09-09 11:49:23.541 +06:00 [INF] Application Starting up
+2021-09-09 11:50:45.780 +06:00 [INF] Application Starting up
+2021-09-09 11:51:38.531 +06:00 [INF] Application Starting up
+2021-09-09 11:52:22.972 +06:00 [INF] Application Starting up
+2021-09-09 11:53:22.246 +06:00 [INF] Application Starting up
+2021-09-09 11:54:38.539 +06:00 [INF] Application Starting up
+2021-09-09 11:56:44.252 +06:00 [INF] Application Starting up
+2021-09-09 11:57:36.394 +06:00 [INF] Application Starting up
+2021-09-09 11:58:11.995 +06:00 [INF] Application Starting up
+2021-09-09 11:59:14.328 +06:00 [INF] Application Starting up
+2021-09-09 12:02:26.430 +06:00 [INF] Application Starting up
+2021-09-09 12:03:05.879 +06:00 [INF] Application Starting up
+2021-09-09 12:07:01.985 +06:00 [INF] Application Starting up
+2021-09-09 12:24:22.422 +06:00 [INF] Application Starting up
+2021-09-09 12:28:45.962 +06:00 [INF] Application Starting up
+2021-09-09 12:45:23.880 +06:00 [INF] Application Starting up
+2021-09-09 12:47:13.507 +06:00 [INF] Application Starting up
+2021-09-09 12:48:18.900 +06:00 [INF] Application Starting up
+2021-09-09 12:49:28.981 +06:00 [INF] Application Starting up
+2021-09-09 12:51:17.589 +06:00 [INF] Application Starting up
+2021-09-09 12:52:41.965 +06:00 [INF] Application Starting up
+2021-09-09 13:10:20.735 +06:00 [INF] Application Starting up
+2021-09-09 23:07:30.902 +06:00 [INF] Application Starting up
+2021-09-09 23:17:47.055 +06:00 [INF] Application Starting up
+2021-09-09 23:18:17.649 +06:00 [ERR] The view 'Register1' was not found. Searched locations: ["/Views/Dashboard/Register1.cshtml","/Views/Shared/Register1.cshtml","/Pages/Shared/Register1.cshtml"]
+2021-09-09 23:18:17.674 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'Register1' was not found. The following locations were searched:
+/Views/Dashboard/Register1.cshtml
+/Views/Shared/Register1.cshtml
+/Pages/Shared/Register1.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-09 23:19:04.356 +06:00 [INF] Application Starting up
+2021-09-09 23:20:07.865 +06:00 [INF] Application Starting up
+2021-09-09 23:22:27.213 +06:00 [INF] Application Starting up
+2021-09-09 23:24:36.409 +06:00 [INF] Application Starting up
+2021-09-09 23:26:48.475 +06:00 [INF] Application Starting up
+2021-09-09 23:27:30.953 +06:00 [INF] Application Starting up
+2021-09-09 23:28:27.269 +06:00 [INF] Application Starting up
+2021-09-09 23:29:53.504 +06:00 [INF] Application Starting up
+2021-09-09 23:31:14.365 +06:00 [INF] Application Starting up
+2021-09-09 23:32:11.263 +06:00 [INF] Application Starting up
+2021-09-09 23:33:52.923 +06:00 [INF] Application Starting up
+2021-09-09 23:34:57.566 +06:00 [INF] Application Starting up
+2021-09-09 23:36:31.324 +06:00 [INF] Application Starting up
+2021-09-09 23:38:06.166 +06:00 [INF] Application Starting up
+2021-09-09 23:38:57.835 +06:00 [INF] Application Starting up
+2021-09-09 23:45:26.446 +06:00 [INF] Application Starting up
+2021-09-09 23:47:55.026 +06:00 [INF] Application Starting up

@@ -1,0 +1,112 @@
+2021-09-18 12:46:19.596 +06:00 [INF] Application Starting up
+2021-09-18 12:46:23.916 +06:00 [INF] Worker running at: "2021-09-18T12:46:23.9030962+06:00"
+2021-09-18 12:46:24.963 +06:00 [INF] Worker running at: "2021-09-18T12:46:24.9637716+06:00"
+2021-09-18 12:46:25.994 +06:00 [INF] Worker running at: "2021-09-18T12:46:25.9944723+06:00"
+2021-09-18 12:46:27.012 +06:00 [INF] Worker running at: "2021-09-18T12:46:27.0128260+06:00"
+2021-09-18 12:46:28.032 +06:00 [INF] Worker running at: "2021-09-18T12:46:28.0322902+06:00"
+2021-09-18 12:46:29.049 +06:00 [INF] Worker running at: "2021-09-18T12:46:29.0491598+06:00"
+2021-09-18 12:46:30.062 +06:00 [INF] Worker running at: "2021-09-18T12:46:30.0622340+06:00"
+2021-09-18 12:46:31.076 +06:00 [INF] Worker running at: "2021-09-18T12:46:31.0763474+06:00"
+2021-09-18 12:46:32.095 +06:00 [INF] Worker running at: "2021-09-18T12:46:32.0951133+06:00"
+2021-09-18 12:46:33.106 +06:00 [INF] Worker running at: "2021-09-18T12:46:33.1065255+06:00"
+2021-09-18 12:46:34.115 +06:00 [INF] Worker running at: "2021-09-18T12:46:34.1155073+06:00"
+2021-09-18 13:04:53.979 +06:00 [INF] Application Starting up
+2021-09-18 13:04:55.164 +06:00 [INF] Worker running at: "2021-09-18T13:04:55.1582091+06:00"
+2021-09-18 13:04:56.203 +06:00 [INF] Worker running at: "2021-09-18T13:04:56.2029662+06:00"
+2021-09-18 13:04:57.218 +06:00 [INF] Worker running at: "2021-09-18T13:04:57.2187930+06:00"
+2021-09-18 13:04:58.223 +06:00 [INF] Worker running at: "2021-09-18T13:04:58.2238380+06:00"
+2021-09-18 13:04:59.239 +06:00 [INF] Worker running at: "2021-09-18T13:04:59.2395844+06:00"
+2021-09-18 13:06:38.055 +06:00 [INF] Application Starting up
+2021-09-18 13:06:39.552 +06:00 [INF] Worker running at: "2021-09-18T13:06:39.5424458+06:00"
+2021-09-18 13:06:40.612 +06:00 [INF] Worker running at: "2021-09-18T13:06:40.6126619+06:00"
+2021-09-18 13:06:41.632 +06:00 [INF] Worker running at: "2021-09-18T13:06:41.6325409+06:00"
+2021-09-18 13:06:42.634 +06:00 [INF] Worker running at: "2021-09-18T13:06:42.6339895+06:00"
+2021-09-18 13:06:43.654 +06:00 [INF] Worker running at: "2021-09-18T13:06:43.6546613+06:00"
+2021-09-18 13:06:44.665 +06:00 [INF] Worker running at: "2021-09-18T13:06:44.6656894+06:00"
+2021-09-18 13:06:45.675 +06:00 [INF] Worker running at: "2021-09-18T13:06:45.6752620+06:00"
+2021-09-18 13:06:46.685 +06:00 [INF] Worker running at: "2021-09-18T13:06:46.6850969+06:00"
+2021-09-18 13:06:47.687 +06:00 [INF] Worker running at: "2021-09-18T13:06:47.6873475+06:00"
+2021-09-18 13:06:48.698 +06:00 [INF] Worker running at: "2021-09-18T13:06:48.6986226+06:00"
+2021-09-18 13:06:49.707 +06:00 [INF] Worker running at: "2021-09-18T13:06:49.7069095+06:00"
+2021-09-18 13:06:50.718 +06:00 [INF] Worker running at: "2021-09-18T13:06:50.7188260+06:00"
+2021-09-18 13:07:18.777 +06:00 [INF] Application Starting up
+2021-09-18 13:07:20.506 +06:00 [INF] Worker running at: "2021-09-18T13:07:20.4974383+06:00"
+2021-09-18 13:07:21.563 +06:00 [INF] Worker running at: "2021-09-18T13:07:21.5636636+06:00"
+2021-09-18 13:07:22.570 +06:00 [INF] Worker running at: "2021-09-18T13:07:22.5706994+06:00"
+2021-09-18 13:07:23.577 +06:00 [INF] Worker running at: "2021-09-18T13:07:23.5772052+06:00"
+2021-09-18 13:07:55.262 +06:00 [INF] Application Starting up
+2021-09-18 13:07:57.291 +06:00 [FTL] Application start-up failed
+OfficeOpenXml.LicenseException: Please set the ExcelPackage.LicenseContext property. See https://epplussoftware.com/developers/licenseexception
+   at OfficeOpenXml.ExcelPackage.get_Workbook()
+   at DataImporter.Worker.ReadFunctions.ExcelReadFunction.readXLS(String FilePath) in G:\Final\DataImporter\DataImporter.Worker\ReadFunctions\ExcelReadFunction.cs:line 25
+   at DataImporter.Worker.ReadFunctions.ExcelReadFunction.ReadExcelData() in G:\Final\DataImporter\DataImporter.Worker\ReadFunctions\ExcelReadFunction.cs:line 16
+   at DataImporter.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\Final\DataImporter\DataImporter.Worker\Worker.cs:line 27
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at DataImporter.Worker.Program.Main(String[] args) in G:\Final\DataImporter\DataImporter.Worker\Program.cs:line 40
+2021-09-18 13:10:55.274 +06:00 [INF] Application Starting up
+2021-09-18 13:12:54.308 +06:00 [INF] Application Starting up
+2021-09-18 13:12:56.194 +06:00 [INF] Worker running at: "2021-09-18T13:12:56.1825982+06:00"
+2021-09-18 13:12:57.278 +06:00 [INF] Worker running at: "2021-09-18T13:12:57.2784284+06:00"
+2021-09-18 13:12:58.303 +06:00 [INF] Worker running at: "2021-09-18T13:12:58.3035954+06:00"
+2021-09-18 13:12:59.318 +06:00 [INF] Worker running at: "2021-09-18T13:12:59.3183109+06:00"
+2021-09-18 13:13:00.327 +06:00 [INF] Worker running at: "2021-09-18T13:13:00.3274992+06:00"
+2021-09-18 13:13:01.347 +06:00 [INF] Worker running at: "2021-09-18T13:13:01.3476972+06:00"
+2021-09-18 13:13:02.362 +06:00 [INF] Worker running at: "2021-09-18T13:13:02.3627140+06:00"
+2021-09-18 13:13:03.385 +06:00 [INF] Worker running at: "2021-09-18T13:13:03.3852134+06:00"
+2021-09-18 13:13:04.403 +06:00 [INF] Worker running at: "2021-09-18T13:13:04.4031675+06:00"
+2021-09-18 13:13:05.421 +06:00 [INF] Worker running at: "2021-09-18T13:13:05.4216992+06:00"
+2021-09-18 13:13:06.451 +06:00 [INF] Worker running at: "2021-09-18T13:13:06.4515546+06:00"
+2021-09-18 13:13:07.487 +06:00 [INF] Worker running at: "2021-09-18T13:13:07.4870460+06:00"
+2021-09-18 13:13:08.522 +06:00 [INF] Worker running at: "2021-09-18T13:13:08.5220819+06:00"
+2021-09-18 13:13:09.538 +06:00 [INF] Worker running at: "2021-09-18T13:13:09.5384271+06:00"
+2021-09-18 13:13:10.560 +06:00 [INF] Worker running at: "2021-09-18T13:13:10.5609224+06:00"
+2021-09-18 13:13:11.579 +06:00 [INF] Worker running at: "2021-09-18T13:13:11.5794736+06:00"
+2021-09-18 17:03:44.439 +06:00 [INF] Application Starting up
+2021-09-18 17:03:46.473 +06:00 [INF] Worker running at: "2021-09-18T17:03:46.4667579+06:00"
+2021-09-18 17:03:47.524 +06:00 [INF] Worker running at: "2021-09-18T17:03:47.5243221+06:00"
+2021-09-18 17:03:48.530 +06:00 [INF] Worker running at: "2021-09-18T17:03:48.5305367+06:00"
+2021-09-18 17:03:49.536 +06:00 [INF] Worker running at: "2021-09-18T17:03:49.5361270+06:00"
+2021-09-18 17:03:50.547 +06:00 [INF] Worker running at: "2021-09-18T17:03:50.5474657+06:00"
+2021-09-18 17:03:51.565 +06:00 [INF] Worker running at: "2021-09-18T17:03:51.5658246+06:00"
+2021-09-18 17:04:28.742 +06:00 [INF] Application Starting up
+2021-09-18 17:04:29.954 +06:00 [INF] Worker running at: "2021-09-18T17:04:29.9437954+06:00"
+2021-09-18 17:04:31.015 +06:00 [INF] Worker running at: "2021-09-18T17:04:31.0153562+06:00"
+2021-09-18 17:04:32.024 +06:00 [INF] Worker running at: "2021-09-18T17:04:32.0244121+06:00"
+2021-09-18 17:04:33.039 +06:00 [INF] Worker running at: "2021-09-18T17:04:33.0392327+06:00"
+2021-09-18 17:04:34.051 +06:00 [INF] Worker running at: "2021-09-18T17:04:34.0511166+06:00"
+2021-09-18 17:04:35.067 +06:00 [INF] Worker running at: "2021-09-18T17:04:35.0670896+06:00"
+2021-09-18 17:04:36.082 +06:00 [INF] Worker running at: "2021-09-18T17:04:36.0825489+06:00"
+2021-09-18 17:04:37.097 +06:00 [INF] Worker running at: "2021-09-18T17:04:37.0976986+06:00"
+2021-09-18 17:04:38.110 +06:00 [INF] Worker running at: "2021-09-18T17:04:38.1102164+06:00"
+2021-09-18 17:05:45.369 +06:00 [INF] Application Starting up
+2021-09-18 17:05:47.551 +06:00 [INF] Worker running at: "2021-09-18T17:05:47.5374106+06:00"
+2021-09-18 17:05:57.597 +06:00 [INF] Worker running at: "2021-09-18T17:05:57.5975666+06:00"
+2021-09-18 17:06:13.684 +06:00 [INF] Worker running at: "2021-09-18T17:06:13.6843249+06:00"
+2021-09-18 17:09:15.349 +06:00 [INF] Application Starting up
+2021-09-18 17:09:18.435 +06:00 [INF] Worker running at: "2021-09-18T17:09:18.4230255+06:00"
+2021-09-18 17:09:28.525 +06:00 [INF] Worker running at: "2021-09-18T17:09:28.5250015+06:00"
+2021-09-18 17:09:38.545 +06:00 [INF] Worker running at: "2021-09-18T17:09:38.5451063+06:00"
+2021-09-18 17:18:45.323 +06:00 [INF] Application Starting up
+2021-09-18 17:18:47.057 +06:00 [INF] Worker running at: "2021-09-18T17:18:47.0474185+06:00"
+2021-09-18 17:18:57.086 +06:00 [INF] Worker running at: "2021-09-18T17:18:57.0868306+06:00"
+2021-09-18 17:29:39.112 +06:00 [INF] Application Starting up
+2021-09-18 17:29:41.631 +06:00 [INF] Worker running at: "2021-09-18T17:29:41.6183230+06:00"
+2021-09-18 17:31:03.062 +06:00 [INF] Application Starting up
+2021-09-18 17:31:05.333 +06:00 [INF] Worker running at: "2021-09-18T17:31:05.3235203+06:00"
+2021-09-18 17:31:15.394 +06:00 [INF] Worker running at: "2021-09-18T17:31:15.3939803+06:00"
+2021-09-18 17:32:05.292 +06:00 [INF] Application Starting up
+2021-09-18 17:32:06.820 +06:00 [INF] Worker running at: "2021-09-18T17:32:06.8137645+06:00"
+2021-09-18 17:48:03.934 +06:00 [INF] Application Starting up
+2021-09-18 17:48:05.800 +06:00 [INF] Worker running at: "2021-09-18T17:48:05.7883280+06:00"
+2021-09-18 17:48:15.898 +06:00 [INF] Worker running at: "2021-09-18T17:48:15.8982727+06:00"
+2021-09-18 17:48:48.047 +06:00 [INF] Application Starting up
+2021-09-18 18:38:47.048 +06:00 [INF] Application Starting up
+2021-09-18 18:50:07.153 +06:00 [INF] Application Starting up
+2021-09-18 18:50:09.278 +06:00 [INF] Worker running at: "2021-09-18T18:50:09.2701123+06:00"
+2021-09-18 23:00:52.315 +06:00 [INF] Application Starting up
+2021-09-18 23:00:54.236 +06:00 [INF] Worker running at: "2021-09-18T23:00:54.2259491+06:00"
+2021-09-18 23:01:04.285 +06:00 [INF] Worker running at: "2021-09-18T23:01:04.2850156+06:00"
+2021-09-18 23:01:14.334 +06:00 [INF] Worker running at: "2021-09-18T23:01:14.3344512+06:00"
