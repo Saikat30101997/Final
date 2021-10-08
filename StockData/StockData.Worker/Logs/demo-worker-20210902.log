@@ -1,0 +1,28 @@
+2021-09-02 00:00:52.880 +06:00 [INF] Application Starting up
+2021-09-02 00:00:59.906 +06:00 [FTL] Application start-up failed
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at StockData.Stock.Services.StockPriceService.GetId(String name) in G:\ASP.NET\StockData\StockData.Stock\Services\StockPriceService.cs:line 44
+   at StockData.Stock.Services.StockPriceService.Create(StockPrice stockPrice) in G:\ASP.NET\StockData\StockData.Stock\Services\StockPriceService.cs:line 23
+   at StockData.Worker.DataStores.StockDataStore.GetStockData() in G:\ASP.NET\StockData\StockData.Worker\DataStores\StockDataStore.cs:line 75
+   at StockData.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\ASP.NET\StockData\StockData.Worker\Worker.cs:line 34
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockData.Worker.Program.Main(String[] args) in G:\ASP.NET\StockData\StockData.Worker\Program.cs:line 41
+2021-09-02 00:01:44.064 +06:00 [INF] Application Starting up
+2021-09-02 00:01:53.870 +06:00 [INF] Worker running at: "2021-09-02T00:01:53.8605246+06:00"
+2021-09-02 00:02:15.527 +06:00 [INF] Worker running at: "2021-09-02T00:02:15.5274485+06:00"
+2021-09-02 00:06:00.368 +06:00 [INF] Application Starting up
+2021-09-02 00:06:13.980 +06:00 [INF] Worker running at: "2021-09-02T00:06:13.9681293+06:00"
+2021-09-02 00:06:33.915 +06:00 [INF] Worker running at: "2021-09-02T00:06:33.9150689+06:00"
+2021-09-02 00:09:54.582 +06:00 [INF] Application Starting up
+2021-09-02 00:10:06.800 +06:00 [INF] Worker running at: "2021-09-02T00:10:06.7882329+06:00"
+2021-09-02 00:16:19.729 +06:00 [INF] Application Starting up
+2021-09-02 00:16:31.080 +06:00 [INF] Worker running at: "2021-09-02T00:16:31.0662797+06:00"
+2021-09-02 00:46:42.000 +06:00 [INF] Application Starting up
+2021-09-02 00:46:53.198 +06:00 [INF] Worker running at: "2021-09-02T00:46:53.1859499+06:00"
+2021-09-02 00:49:35.466 +06:00 [INF] Application Starting up
+2021-09-02 00:49:45.998 +06:00 [INF] Worker running at: "2021-09-02T00:49:45.9903699+06:00"
+2021-09-02 00:50:06.335 +06:00 [INF] Worker running at: "2021-09-02T00:50:06.3352192+06:00"

@@ -1,0 +1,413 @@
+2021-09-01 00:19:32.664 +06:00 [INF] Application Starting up
+2021-09-01 00:19:47.179 +06:00 [INF] Worker running at: "2021-09-01T00:19:47.1651388+06:00"
+2021-09-01 00:19:49.978 +06:00 [INF] Worker running at: "2021-09-01T00:19:49.9767005+06:00"
+2021-09-01 11:20:40.529 +06:00 [INF] Application Starting up
+2021-09-01 11:20:43.040 +06:00 [FTL] Application start-up failed
+System.Net.WebException: No such host is known. (www.dse.com.bd:443)
+ ---> System.Net.Http.HttpRequestException: No such host is known. (www.dse.com.bd:443)
+ ---> System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress)
+   at System.Net.Sockets.Socket.Connect(String host, Int32 port)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Net.Http.ConnectHelper.Connect(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.Connect(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClientHandler.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageInvoker.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.SendAsyncCore(HttpRequestMessage request, HttpCompletionOption completionOption, Boolean async, Boolean emitTelemetryStartStop, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.Send(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken)
+   at System.Net.HttpWebRequest.SendRequest(Boolean async)
+   at System.Net.HttpWebRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at HtmlAgilityPack.HtmlWeb.Get(Uri uri, String method, String path, HtmlDocument doc, IWebProxy proxy, ICredentials creds)
+   at HtmlAgilityPack.HtmlWeb.LoadUrl(Uri uri, String method, WebProxy proxy, NetworkCredential creds)
+   at HtmlAgilityPack.HtmlWeb.Load(Uri uri, String method)
+   at HtmlAgilityPack.HtmlWeb.Load(String url, String method)
+   at HtmlAgilityPack.HtmlWeb.Load(String url)
+   at StockData.Worker.DataStores.StockDataStore.GetStockData() in G:\ASP.NET\StockData\StockData.Worker\DataStores\StockDataStore.cs:line 16
+   at StockData.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\ASP.NET\StockData\StockData.Worker\Worker.cs:line 36
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockData.Worker.Program.Main(String[] args) in G:\ASP.NET\StockData\StockData.Worker\Program.cs:line 41
+2021-09-01 11:56:18.871 +06:00 [INF] Application Starting up
+2021-09-01 11:56:26.673 +06:00 [INF] Worker running at: "2021-09-01T11:56:26.6588741+06:00"
+2021-09-01 11:56:37.704 +06:00 [INF] Worker running at: "2021-09-01T11:56:37.7039724+06:00"
+2021-09-01 12:16:17.714 +06:00 [INF] Application Starting up
+2021-09-01 12:16:49.065 +06:00 [INF] Worker running at: "2021-09-01T12:16:49.0564466+06:00"
+2021-09-01 12:18:42.725 +06:00 [INF] Application Starting up
+2021-09-01 12:18:56.294 +06:00 [INF] Worker running at: "2021-09-01T12:18:56.2806057+06:00"
+2021-09-01 12:19:14.869 +06:00 [INF] Application Starting up
+2021-09-01 12:19:27.327 +06:00 [INF] Worker running at: "2021-09-01T12:19:27.3197622+06:00"
+2021-09-01 12:26:35.927 +06:00 [INF] Application Starting up
+2021-09-01 12:26:39.121 +06:00 [INF] Worker running at: "2021-09-01T12:26:39.1033673+06:00"
+2021-09-01 12:26:41.004 +06:00 [INF] Worker running at: "2021-09-01T12:26:41.0043542+06:00"
+2021-09-01 12:26:46.478 +06:00 [INF] Worker running at: "2021-09-01T12:26:46.4787066+06:00"
+2021-09-01 12:30:56.401 +06:00 [INF] Application Starting up
+2021-09-01 12:30:59.258 +06:00 [INF] Worker running at: "2021-09-01T12:30:59.2441667+06:00"
+2021-09-01 12:31:01.214 +06:00 [INF] Worker running at: "2021-09-01T12:31:01.2142762+06:00"
+2021-09-01 12:31:03.130 +06:00 [INF] Worker running at: "2021-09-01T12:31:03.1307932+06:00"
+2021-09-01 12:31:15.138 +06:00 [INF] Worker running at: "2021-09-01T12:31:15.1382413+06:00"
+2021-09-01 12:31:49.061 +06:00 [INF] Application Starting up
+2021-09-01 12:31:52.300 +06:00 [INF] Worker running at: "2021-09-01T12:31:52.2854338+06:00"
+2021-09-01 12:31:54.496 +06:00 [INF] Worker running at: "2021-09-01T12:31:54.4963955+06:00"
+2021-09-01 12:32:05.154 +06:00 [INF] Worker running at: "2021-09-01T12:32:05.1543506+06:00"
+2021-09-01 12:32:14.105 +06:00 [INF] Worker running at: "2021-09-01T12:32:14.1056247+06:00"
+2021-09-01 12:32:39.434 +06:00 [INF] Application Starting up
+2021-09-01 12:32:43.900 +06:00 [INF] Worker running at: "2021-09-01T12:32:43.8862151+06:00"
+2021-09-01 12:33:03.204 +06:00 [INF] Worker running at: "2021-09-01T12:33:03.2043471+06:00"
+2021-09-01 12:33:53.774 +06:00 [INF] Application Starting up
+2021-09-01 12:33:56.534 +06:00 [INF] Worker running at: "2021-09-01T12:33:56.5215937+06:00"
+2021-09-01 12:33:59.936 +06:00 [INF] Worker running at: "2021-09-01T12:33:59.9361049+06:00"
+2021-09-01 12:34:34.941 +06:00 [INF] Application Starting up
+2021-09-01 12:34:38.144 +06:00 [INF] Worker running at: "2021-09-01T12:34:38.1242829+06:00"
+2021-09-01 12:34:43.811 +06:00 [INF] Worker running at: "2021-09-01T12:34:43.8110873+06:00"
+2021-09-01 12:58:36.881 +06:00 [INF] Application Starting up
+2021-09-01 12:58:41.419 +06:00 [INF] Worker running at: "2021-09-01T12:58:41.4076114+06:00"
+2021-09-01 12:58:43.614 +06:00 [INF] Worker running at: "2021-09-01T12:58:43.6143649+06:00"
+2021-09-01 12:58:45.879 +06:00 [INF] Worker running at: "2021-09-01T12:58:45.8796424+06:00"
+2021-09-01 12:58:59.073 +06:00 [INF] Worker running at: "2021-09-01T12:58:59.0731903+06:00"
+2021-09-01 12:59:13.644 +06:00 [INF] Application Starting up
+2021-09-01 12:59:16.834 +06:00 [INF] Worker running at: "2021-09-01T12:59:16.8195897+06:00"
+2021-09-01 12:59:18.988 +06:00 [INF] Worker running at: "2021-09-01T12:59:18.9878375+06:00"
+2021-09-01 12:59:28.884 +06:00 [INF] Worker running at: "2021-09-01T12:59:28.8841570+06:00"
+2021-09-01 13:00:06.777 +06:00 [INF] Application Starting up
+2021-09-01 13:00:09.772 +06:00 [INF] Worker running at: "2021-09-01T13:00:09.7595429+06:00"
+2021-09-01 13:00:13.658 +06:00 [INF] Worker running at: "2021-09-01T13:00:13.6586987+06:00"
+2021-09-01 13:00:26.105 +06:00 [INF] Application Starting up
+2021-09-01 13:00:28.630 +06:00 [INF] Worker running at: "2021-09-01T13:00:28.6149692+06:00"
+2021-09-01 13:00:32.374 +06:00 [INF] Worker running at: "2021-09-01T13:00:32.3741627+06:00"
+2021-09-01 13:00:52.163 +06:00 [INF] Application Starting up
+2021-09-01 13:00:55.143 +06:00 [INF] Worker running at: "2021-09-01T13:00:55.1295073+06:00"
+2021-09-01 13:01:09.446 +06:00 [INF] Worker running at: "2021-09-01T13:01:09.4459684+06:00"
+2021-09-01 13:23:53.035 +06:00 [INF] Application Starting up
+2021-09-01 13:24:04.971 +06:00 [INF] Worker running at: "2021-09-01T13:24:04.9569903+06:00"
+2021-09-01 13:24:11.709 +06:00 [INF] Worker running at: "2021-09-01T13:24:11.7096225+06:00"
+2021-09-01 13:24:16.077 +06:00 [INF] Worker running at: "2021-09-01T13:24:16.0769347+06:00"
+2021-09-01 13:29:19.653 +06:00 [INF] Application Starting up
+2021-09-01 13:29:29.731 +06:00 [INF] Worker running at: "2021-09-01T13:29:29.7169870+06:00"
+2021-09-01 13:35:56.406 +06:00 [INF] Application Starting up
+2021-09-01 13:37:54.948 +06:00 [INF] Application Starting up
+2021-09-01 13:37:56.135 +06:00 [FTL] Application start-up failed
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating λ:Microsoft.Extensions.Hosting.IHostedService[] -> StockData.Worker.Worker -> StockData.Worker.DataStores.StockDataStore -> StockData.Stock.Services.StockPriceService.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'StockData.Stock.Services.StockPriceService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AutoMapper.IMapper mapper' of constructor 'Void .ctor(StockData.Stock.UnitOFWorks.IStockDataUnitOfWork, AutoMapper.IMapper)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetAllBindings(ConstructorBinder[] availableConstructors, IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<ConfigurePipeline>b__11_0(ResolveRequestContext ctxt, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DelegateMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.RegistrationPipelineInvokeMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(ResolveRequest request)
+   at Autofac.Core.Lifetime.LifetimeScope.ResolveComponent(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockData.Worker.Program.Main(String[] args) in G:\ASP.NET\StockData\StockData.Worker\Program.cs:line 41
+2021-09-01 13:56:47.164 +06:00 [INF] Application Starting up
+2021-09-01 13:56:49.329 +06:00 [FTL] Application start-up failed
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating λ:Microsoft.Extensions.Hosting.IHostedService[] -> StockData.Worker.Worker -> StockData.Worker.DataStores.StockDataStore -> StockData.Stock.Services.StockPriceService.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'StockData.Stock.Services.StockPriceService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AutoMapper.IMapper mapper' of constructor 'Void .ctor(StockData.Stock.UnitOFWorks.IStockDataUnitOfWork, AutoMapper.IMapper)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetAllBindings(ConstructorBinder[] availableConstructors, IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<ConfigurePipeline>b__11_0(ResolveRequestContext ctxt, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DelegateMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.RegistrationPipelineInvokeMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(ResolveRequest request)
+   at Autofac.Core.Lifetime.LifetimeScope.ResolveComponent(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockData.Worker.Program.Main(String[] args) in G:\ASP.NET\StockData\StockData.Worker\Program.cs:line 41
+2021-09-01 13:57:22.919 +06:00 [INF] Application Starting up
+2021-09-01 13:57:35.831 +06:00 [INF] Worker running at: "2021-09-01T13:57:35.8193216+06:00"
+2021-09-01 15:22:22.796 +06:00 [INF] Application Starting up
+2021-09-01 15:22:23.723 +06:00 [FTL] Application start-up failed
+System.ArgumentException: The type 'StockData.Stock.Repositories.StockPriceRepository' is not assignable to service 'StockData.Stock.Services.IStockPriceService'.
+   at Autofac.Builder.RegistrationBuilder.CreateRegistration(Guid id, RegistrationData data, IInstanceActivator activator, IResolvePipelineBuilder pipelineBuilder, Service[] services, IComponentRegistration target)
+   at Autofac.Builder.RegistrationBuilder.CreateRegistration[TLimit,TActivatorData,TSingleRegistrationStyle](IRegistrationBuilder`3 builder)
+   at Autofac.Builder.RegistrationBuilder.RegisterSingleComponent[TLimit,TActivatorData,TSingleRegistrationStyle](IComponentRegistryBuilder cr, IRegistrationBuilder`3 builder)
+   at Autofac.RegistrationExtensions.<>c__DisplayClass37_0`1.<RegisterType>b__0(IComponentRegistryBuilder cr)
+   at Autofac.ContainerBuilder.Build(IComponentRegistryBuilder componentRegistry, Boolean excludeDefaultModules)
+   at Autofac.ContainerBuilder.UpdateRegistry(IComponentRegistryBuilder componentRegistry)
+   at Autofac.Module.Configure(IComponentRegistryBuilder componentRegistry)
+   at Autofac.ContainerBuilder.Build(IComponentRegistryBuilder componentRegistry, Boolean excludeDefaultModules)
+   at Autofac.ContainerBuilder.Build(ContainerBuildOptions options)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProviderFactory.CreateServiceProvider(ContainerBuilder containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at StockData.Worker.Program.Main(String[] args) in G:\ASP.NET\StockData\StockData.Worker\Program.cs:line 41
+2021-09-01 15:23:41.886 +06:00 [INF] Application Starting up
+2021-09-01 15:23:43.627 +06:00 [FTL] Application start-up failed
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating λ:Microsoft.Extensions.Hosting.IHostedService[] -> StockData.Worker.Worker -> StockData.Worker.DataStores.StockDataStore -> StockData.Stock.Services.StockPriceService.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'StockData.Stock.Services.StockPriceService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AutoMapper.IMapper mapper' of constructor 'Void .ctor(StockData.Stock.UnitOFWorks.IStockDataUnitOfWork, AutoMapper.IMapper)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetAllBindings(ConstructorBinder[] availableConstructors, IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<ConfigurePipeline>b__11_0(ResolveRequestContext ctxt, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DelegateMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.RegistrationPipelineInvokeMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(ResolveRequest request)
+   at Autofac.Core.Lifetime.LifetimeScope.ResolveComponent(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockData.Worker.Program.Main(String[] args) in G:\ASP.NET\StockData\StockData.Worker\Program.cs:line 41
+2021-09-01 15:28:10.998 +06:00 [INF] Application Starting up
+2021-09-01 15:28:12.807 +06:00 [FTL] Application start-up failed
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating λ:Microsoft.Extensions.Hosting.IHostedService[] -> StockData.Worker.Worker -> StockData.Worker.DataStores.StockDataStore -> StockData.Stock.Services.CompanyService.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'StockData.Stock.Services.CompanyService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AutoMapper.IMapper mapper' of constructor 'Void .ctor(StockData.Stock.UnitOFWorks.IStockDataUnitOfWork, AutoMapper.IMapper)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetAllBindings(ConstructorBinder[] availableConstructors, IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<ConfigurePipeline>b__11_0(ResolveRequestContext ctxt, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DelegateMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.RegistrationPipelineInvokeMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Pipeline.ResolvePipelineBuilder.<>c__DisplayClass14_0.<BuildPipeline>b__1(ResolveRequestContext ctxt)
+   at Autofac.Core.Pipeline.ResolvePipeline.Invoke(ResolveRequestContext ctxt)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(ResolveRequest request)
+   at Autofac.Core.Lifetime.LifetimeScope.ResolveComponent(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveOptional(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockData.Worker.Program.Main(String[] args) in G:\ASP.NET\StockData\StockData.Worker\Program.cs:line 41
+2021-09-01 20:53:48.207 +06:00 [INF] Application Starting up
+2021-09-01 20:53:58.600 +06:00 [INF] Worker running at: "2021-09-01T20:53:58.5925554+06:00"
+2021-09-01 21:10:24.213 +06:00 [INF] Application Starting up
+2021-09-01 21:11:06.706 +06:00 [INF] Application Starting up
+2021-09-01 21:11:12.014 +06:00 [INF] Worker running at: "2021-09-01T21:11:11.9977287+06:00"
+2021-09-01 21:11:13.928 +06:00 [INF] Worker running at: "2021-09-01T21:11:13.9285840+06:00"
+2021-09-01 21:11:29.935 +06:00 [INF] Application Starting up
+2021-09-01 21:11:34.037 +06:00 [INF] Worker running at: "2021-09-01T21:11:34.0253000+06:00"
+2021-09-01 21:11:35.970 +06:00 [INF] Worker running at: "2021-09-01T21:11:35.9705222+06:00"
+2021-09-01 21:11:37.861 +06:00 [INF] Worker running at: "2021-09-01T21:11:37.8609345+06:00"
+2021-09-01 22:22:01.642 +06:00 [INF] Application Starting up
+2021-09-01 22:22:10.288 +06:00 [INF] Worker running at: "2021-09-01T22:22:10.2789852+06:00"
+2021-09-01 23:07:54.573 +06:00 [INF] Application Starting up
+2021-09-01 23:07:58.195 +06:00 [FTL] Application start-up failed
+System.InvalidCastException: Unable to cast object of type 'Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[StockData.Stock.Entities.Company]' to type 'StockData.Stock.Entities.Company'.
+   at StockData.Stock.Repositories.CompanyRepository.StockData.Stock.Repositories.ICompanyRepository.GetName(Expression`1 filter) in G:\ASP.NET\StockData\StockData.Stock\Repositories\CompanyRepository.cs:line 30
+   at StockData.Stock.Services.StockPriceService.GetId(String name) in G:\ASP.NET\StockData\StockData.Stock\Services\StockPriceService.cs:line 42
+   at StockData.Stock.Services.StockPriceService.Create(StockPrice stockPrice) in G:\ASP.NET\StockData\StockData.Stock\Services\StockPriceService.cs:line 23
+   at StockData.Worker.DataStores.StockDataStore.GetStockData() in G:\ASP.NET\StockData\StockData.Worker\DataStores\StockDataStore.cs:line 73
+   at StockData.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\ASP.NET\StockData\StockData.Worker\Worker.cs:line 34
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockData.Worker.Program.Main(String[] args) in G:\ASP.NET\StockData\StockData.Worker\Program.cs:line 41
+2021-09-01 23:12:05.387 +06:00 [INF] Application Starting up
+2021-09-01 23:12:11.401 +06:00 [FTL] Application start-up failed
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at StockData.Stock.Services.StockPriceService.GetId(String name) in G:\ASP.NET\StockData\StockData.Stock\Services\StockPriceService.cs:line 43
+   at StockData.Stock.Services.StockPriceService.Create(StockPrice stockPrice) in G:\ASP.NET\StockData\StockData.Stock\Services\StockPriceService.cs:line 23
+   at StockData.Worker.DataStores.StockDataStore.GetStockData() in G:\ASP.NET\StockData\StockData.Worker\DataStores\StockDataStore.cs:line 73
+   at StockData.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\ASP.NET\StockData\StockData.Worker\Worker.cs:line 34
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockData.Worker.Program.Main(String[] args) in G:\ASP.NET\StockData\StockData.Worker\Program.cs:line 41
+2021-09-01 23:16:44.586 +06:00 [INF] Application Starting up
+2021-09-01 23:16:50.740 +06:00 [FTL] Application start-up failed
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at StockData.Stock.Services.StockPriceService.GetId(String name) in G:\ASP.NET\StockData\StockData.Stock\Services\StockPriceService.cs:line 43
+   at StockData.Stock.Services.StockPriceService.Create(StockPrice stockPrice) in G:\ASP.NET\StockData\StockData.Stock\Services\StockPriceService.cs:line 23
+   at StockData.Worker.DataStores.StockDataStore.GetStockData() in G:\ASP.NET\StockData\StockData.Worker\DataStores\StockDataStore.cs:line 73
+   at StockData.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\ASP.NET\StockData\StockData.Worker\Worker.cs:line 34
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockData.Worker.Program.Main(String[] args) in G:\ASP.NET\StockData\StockData.Worker\Program.cs:line 41
+2021-09-01 23:23:03.389 +06:00 [INF] Application Starting up
+2021-09-01 23:23:08.767 +06:00 [FTL] Application start-up failed
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at StockData.Stock.Services.StockPriceService.GetId(String name) in G:\ASP.NET\StockData\StockData.Stock\Services\StockPriceService.cs:line 44
+   at StockData.Stock.Services.StockPriceService.Create(StockPrice stockPrice) in G:\ASP.NET\StockData\StockData.Stock\Services\StockPriceService.cs:line 23
+   at StockData.Worker.DataStores.StockDataStore.GetStockData() in G:\ASP.NET\StockData\StockData.Worker\DataStores\StockDataStore.cs:line 73
+   at StockData.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\ASP.NET\StockData\StockData.Worker\Worker.cs:line 34
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockData.Worker.Program.Main(String[] args) in G:\ASP.NET\StockData\StockData.Worker\Program.cs:line 41
+2021-09-01 23:25:39.586 +06:00 [INF] Application Starting up
+2021-09-01 23:26:33.493 +06:00 [INF] Application Starting up
+2021-09-01 23:26:38.416 +06:00 [FTL] Application start-up failed
+System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Convert.ToDouble(String value)
+   at StockData.Worker.DataStores.StockDataStore.GetStockData() in G:\ASP.NET\StockData\StockData.Worker\DataStores\StockDataStore.cs:line 64
+   at StockData.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\ASP.NET\StockData\StockData.Worker\Worker.cs:line 34
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockData.Worker.Program.Main(String[] args) in G:\ASP.NET\StockData\StockData.Worker\Program.cs:line 41
+2021-09-01 23:27:57.192 +06:00 [INF] Application Starting up
+2021-09-01 23:28:02.981 +06:00 [FTL] Application start-up failed
+System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Convert.ToDouble(String value)
+   at StockData.Worker.DataStores.StockDataStore.GetStockData() in G:\ASP.NET\StockData\StockData.Worker\DataStores\StockDataStore.cs:line 65
+   at StockData.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\ASP.NET\StockData\StockData.Worker\Worker.cs:line 34
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockData.Worker.Program.Main(String[] args) in G:\ASP.NET\StockData\StockData.Worker\Program.cs:line 41
+2021-09-01 23:28:59.608 +06:00 [INF] Application Starting up
+2021-09-01 23:29:05.160 +06:00 [FTL] Application start-up failed
+System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Convert.ToDouble(String value)
+   at StockData.Worker.DataStores.StockDataStore.GetStockData() in G:\ASP.NET\StockData\StockData.Worker\DataStores\StockDataStore.cs:line 65
+   at StockData.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\ASP.NET\StockData\StockData.Worker\Worker.cs:line 34
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockData.Worker.Program.Main(String[] args) in G:\ASP.NET\StockData\StockData.Worker\Program.cs:line 41
+2021-09-01 23:29:38.573 +06:00 [INF] Application Starting up
+2021-09-01 23:29:42.969 +06:00 [FTL] Application start-up failed
+System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Convert.ToDouble(String value)
+   at StockData.Worker.DataStores.StockDataStore.GetStockData() in G:\ASP.NET\StockData\StockData.Worker\DataStores\StockDataStore.cs:line 65
+   at StockData.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\ASP.NET\StockData\StockData.Worker\Worker.cs:line 34
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockData.Worker.Program.Main(String[] args) in G:\ASP.NET\StockData\StockData.Worker\Program.cs:line 41
+2021-09-01 23:39:38.791 +06:00 [INF] Application Starting up
+2021-09-01 23:39:47.183 +06:00 [INF] Worker running at: "2021-09-01T23:39:47.1745902+06:00"
+2021-09-01 23:40:24.759 +06:00 [INF] Worker running at: "2021-09-01T23:40:24.7594230+06:00"
+2021-09-01 23:44:06.632 +06:00 [INF] Application Starting up
+2021-09-01 23:44:18.329 +06:00 [INF] Worker running at: "2021-09-01T23:44:18.3205422+06:00"
+2021-09-01 23:45:42.661 +06:00 [INF] Application Starting up
+2021-09-01 23:45:50.151 +06:00 [FTL] Application start-up failed
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at StockData.Stock.Services.StockPriceService.GetId(String name) in G:\ASP.NET\StockData\StockData.Stock\Services\StockPriceService.cs:line 44
+   at StockData.Stock.Services.StockPriceService.Create(StockPrice stockPrice) in G:\ASP.NET\StockData\StockData.Stock\Services\StockPriceService.cs:line 23
+   at StockData.Worker.DataStores.StockDataStore.GetStockData() in G:\ASP.NET\StockData\StockData.Worker\DataStores\StockDataStore.cs:line 75
+   at StockData.Worker.Worker.ExecuteAsync(CancellationToken stoppingToken) in G:\ASP.NET\StockData\StockData.Worker\Worker.cs:line 34
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at StockData.Worker.Program.Main(String[] args) in G:\ASP.NET\StockData\StockData.Worker\Program.cs:line 41
+2021-09-01 23:56:56.710 +06:00 [INF] Application Starting up
+2021-09-01 23:57:11.030 +06:00 [INF] Worker running at: "2021-09-01T23:57:11.0215827+06:00"
