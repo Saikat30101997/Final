@@ -1,0 +1,15 @@
+G:\Final\CreationalPatterns\Builder\bin\Debug\net5.0\Builder.exe
+G:\Final\CreationalPatterns\Builder\bin\Debug\net5.0\Builder.deps.json
+G:\Final\CreationalPatterns\Builder\bin\Debug\net5.0\Builder.runtimeconfig.json
+G:\Final\CreationalPatterns\Builder\bin\Debug\net5.0\Builder.runtimeconfig.dev.json
+G:\Final\CreationalPatterns\Builder\bin\Debug\net5.0\Builder.dll
+G:\Final\CreationalPatterns\Builder\bin\Debug\net5.0\ref\Builder.dll
+G:\Final\CreationalPatterns\Builder\bin\Debug\net5.0\Builder.pdb
+G:\Final\CreationalPatterns\Builder\obj\Debug\net5.0\Builder.GeneratedMSBuildEditorConfig.editorconfig
+G:\Final\CreationalPatterns\Builder\obj\Debug\net5.0\Builder.AssemblyInfoInputs.cache
+G:\Final\CreationalPatterns\Builder\obj\Debug\net5.0\Builder.AssemblyInfo.cs
+G:\Final\CreationalPatterns\Builder\obj\Debug\net5.0\Builder.csproj.CoreCompileInputs.cache
+G:\Final\CreationalPatterns\Builder\obj\Debug\net5.0\Builder.dll
+G:\Final\CreationalPatterns\Builder\obj\Debug\net5.0\ref\Builder.dll
+G:\Final\CreationalPatterns\Builder\obj\Debug\net5.0\Builder.pdb
+G:\Final\CreationalPatterns\Builder\obj\Debug\net5.0\Builder.genruntimeconfig.cache
