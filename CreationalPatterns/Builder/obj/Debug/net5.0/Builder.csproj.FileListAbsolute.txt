@@ -13,3 +13,4 @@ G:\Final\CreationalPatterns\Builder\obj\Debug\net5.0\Builder.dll
 G:\Final\CreationalPatterns\Builder\obj\Debug\net5.0\ref\Builder.dll
 G:\Final\CreationalPatterns\Builder\obj\Debug\net5.0\Builder.pdb
 G:\Final\CreationalPatterns\Builder\obj\Debug\net5.0\Builder.genruntimeconfig.cache
+G:\Final\CreationalPatterns\Builder\obj\Debug\net5.0\Builder.csprojAssemblyReference.cache
