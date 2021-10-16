@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Final\\CreationalPatterns\\Prototype\\Prototype.csproj",
-      "projectName": "Prototype",
-      "projectPath": "G:\\Final\\CreationalPatterns\\Prototype\\Prototype.csproj",
+      "projectUniqueName": "G:\\Final\\CreationalPatterns\\AbstractFactory\\AbstractFactory.csproj",
+      "projectName": "AbstractFactory",
+      "projectPath": "G:\\Final\\CreationalPatterns\\AbstractFactory\\AbstractFactory.csproj",
       "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
-      "outputPath": "G:\\Final\\CreationalPatterns\\Prototype\\obj\\",
+      "outputPath": "G:\\Final\\CreationalPatterns\\AbstractFactory\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",

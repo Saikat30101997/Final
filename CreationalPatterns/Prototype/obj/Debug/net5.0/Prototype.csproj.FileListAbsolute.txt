@@ -1,0 +1,16 @@
+G:\Final\CreationalPatterns\Prototype\bin\Debug\net5.0\Prototype.exe
+G:\Final\CreationalPatterns\Prototype\bin\Debug\net5.0\Prototype.deps.json
+G:\Final\CreationalPatterns\Prototype\bin\Debug\net5.0\Prototype.runtimeconfig.json
+G:\Final\CreationalPatterns\Prototype\bin\Debug\net5.0\Prototype.runtimeconfig.dev.json
+G:\Final\CreationalPatterns\Prototype\bin\Debug\net5.0\Prototype.dll
+G:\Final\CreationalPatterns\Prototype\bin\Debug\net5.0\ref\Prototype.dll
+G:\Final\CreationalPatterns\Prototype\bin\Debug\net5.0\Prototype.pdb
+G:\Final\CreationalPatterns\Prototype\obj\Debug\net5.0\Prototype.csprojAssemblyReference.cache
+G:\Final\CreationalPatterns\Prototype\obj\Debug\net5.0\Prototype.GeneratedMSBuildEditorConfig.editorconfig
+G:\Final\CreationalPatterns\Prototype\obj\Debug\net5.0\Prototype.AssemblyInfoInputs.cache
+G:\Final\CreationalPatterns\Prototype\obj\Debug\net5.0\Prototype.AssemblyInfo.cs
+G:\Final\CreationalPatterns\Prototype\obj\Debug\net5.0\Prototype.csproj.CoreCompileInputs.cache
+G:\Final\CreationalPatterns\Prototype\obj\Debug\net5.0\Prototype.dll
+G:\Final\CreationalPatterns\Prototype\obj\Debug\net5.0\ref\Prototype.dll
+G:\Final\CreationalPatterns\Prototype\obj\Debug\net5.0\Prototype.pdb
+G:\Final\CreationalPatterns\Prototype\obj\Debug\net5.0\Prototype.genruntimeconfig.cache

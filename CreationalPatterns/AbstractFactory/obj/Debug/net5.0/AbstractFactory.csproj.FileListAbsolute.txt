@@ -1,0 +1,16 @@
+G:\Final\CreationalPatterns\AbstractFactory\bin\Debug\net5.0\AbstractFactory.exe
+G:\Final\CreationalPatterns\AbstractFactory\bin\Debug\net5.0\AbstractFactory.deps.json
+G:\Final\CreationalPatterns\AbstractFactory\bin\Debug\net5.0\AbstractFactory.runtimeconfig.json
+G:\Final\CreationalPatterns\AbstractFactory\bin\Debug\net5.0\AbstractFactory.runtimeconfig.dev.json
+G:\Final\CreationalPatterns\AbstractFactory\bin\Debug\net5.0\AbstractFactory.dll
+G:\Final\CreationalPatterns\AbstractFactory\bin\Debug\net5.0\ref\AbstractFactory.dll
+G:\Final\CreationalPatterns\AbstractFactory\bin\Debug\net5.0\AbstractFactory.pdb
+G:\Final\CreationalPatterns\AbstractFactory\obj\Debug\net5.0\AbstractFactory.csprojAssemblyReference.cache
+G:\Final\CreationalPatterns\AbstractFactory\obj\Debug\net5.0\AbstractFactory.GeneratedMSBuildEditorConfig.editorconfig
+G:\Final\CreationalPatterns\AbstractFactory\obj\Debug\net5.0\AbstractFactory.AssemblyInfoInputs.cache
+G:\Final\CreationalPatterns\AbstractFactory\obj\Debug\net5.0\AbstractFactory.AssemblyInfo.cs
+G:\Final\CreationalPatterns\AbstractFactory\obj\Debug\net5.0\AbstractFactory.csproj.CoreCompileInputs.cache
+G:\Final\CreationalPatterns\AbstractFactory\obj\Debug\net5.0\AbstractFactory.dll
+G:\Final\CreationalPatterns\AbstractFactory\obj\Debug\net5.0\ref\AbstractFactory.dll
+G:\Final\CreationalPatterns\AbstractFactory\obj\Debug\net5.0\AbstractFactory.pdb
+G:\Final\CreationalPatterns\AbstractFactory\obj\Debug\net5.0\AbstractFactory.genruntimeconfig.cache
