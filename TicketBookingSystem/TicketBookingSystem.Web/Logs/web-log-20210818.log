@@ -1,0 +1,28 @@
+2021-08-18 23:09:57.387 +06:00 [INF] Application Starting up
+2021-08-18 23:09:59.586 +06:00 [FTL] Application start-up failed
+System.ArgumentException: The type 'TicketBookingSystem.Booking.Repositories.TicketRepository' is not assignable to service 'TicketBookingSystem.Booking.Repositories.ITicketRepository'.
+   at Autofac.Builder.RegistrationBuilder.CreateRegistration(Guid id, RegistrationData data, IInstanceActivator activator, IResolvePipelineBuilder pipelineBuilder, Service[] services, IComponentRegistration target)
+   at Autofac.Builder.RegistrationBuilder.CreateRegistration[TLimit,TActivatorData,TSingleRegistrationStyle](IRegistrationBuilder`3 builder)
+   at Autofac.Builder.RegistrationBuilder.RegisterSingleComponent[TLimit,TActivatorData,TSingleRegistrationStyle](IComponentRegistryBuilder cr, IRegistrationBuilder`3 builder)
+   at Autofac.RegistrationExtensions.<>c__DisplayClass37_0`1.<RegisterType>b__0(IComponentRegistryBuilder cr)
+   at Autofac.ContainerBuilder.Build(IComponentRegistryBuilder componentRegistry, Boolean excludeDefaultModules)
+   at Autofac.ContainerBuilder.UpdateRegistry(IComponentRegistryBuilder componentRegistry)
+   at Autofac.Module.Configure(IComponentRegistryBuilder componentRegistry)
+   at Autofac.ContainerBuilder.Build(IComponentRegistryBuilder componentRegistry, Boolean excludeDefaultModules)
+   at Autofac.ContainerBuilder.Build(ContainerBuildOptions options)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProviderFactory.CreateServiceProvider(ContainerBuilder containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at TicketBookingSystem.Web.Program.Main(String[] args) in G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Web\Program.cs:line 33
+2021-08-18 23:11:22.040 +06:00 [INF] Application Starting up
+2021-08-18 23:12:40.750 +06:00 [INF] Application Starting up
+2021-08-18 23:16:36.250 +06:00 [INF] Application Starting up
+2021-08-18 23:23:38.445 +06:00 [INF] Application Starting up
+2021-08-18 23:25:23.796 +06:00 [INF] Application Starting up
+2021-08-18 23:25:48.017 +06:00 [INF] Application Starting up
+2021-08-18 23:26:46.214 +06:00 [INF] Application Starting up
+2021-08-18 23:29:29.401 +06:00 [INF] Application Starting up
+2021-08-18 23:35:43.414 +06:00 [INF] Application Starting up
+2021-08-18 23:42:21.409 +06:00 [INF] Application Starting up
+2021-08-18 23:46:10.208 +06:00 [INF] Application Starting up
